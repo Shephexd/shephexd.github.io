@@ -1,6 +1,6 @@
 ---
 layout: default
-lang: fr
+lang: en
 ---
 <section class="article page" {% if page.center %}style="text-align: center;"{% endif %}>
 
@@ -22,3 +22,13 @@ lang: fr
 </article>
 
 </section>
+
+  {% unless page.comments == false %}
+        {% if site.invitationmsg %}
+        <div id="footer" class="invitation">
+  	  <div>
+  	      <span class="oi" data-glyph="chat" style="padding-right: 12px;"></span> {{ site.invitationmsg }}
+  	  </div>
+        </div>
+        {% endif %}
+  {% endunless %}

@@ -1,6 +1,7 @@
 ---
 layout: post
 published: True
+excerpt: What is Hacking? It is simple introduction about this.
 title: 해킹 기술 개념 정리
 ---
 

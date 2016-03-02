@@ -6,7 +6,7 @@
 
 # Global
 safe: false
-url: http://bootex.github.io/blog/
+url: http://bootex.github.io/
 source:      .
 destination: ./_site
 plugins:     ./_plugins
@@ -17,7 +17,7 @@ port: 4000
 # Build options
 future:      true
 lsi:         false
-highlighter: pygments
+highlighter: rouge
 markdown:    kramdown
 permalink:   date
 auto_ids:    true
@@ -28,17 +28,17 @@ auto_ids:    true
 
 # Enter below your name or pseudo & a short description
 #    | These don't appear on the website. They are used to set the <META>s
-author: Your Name
-description: A clean and minimalist Jekyll template. Designed for prose.
+author: Bootex(MinorCreator)
+description: Computer engineer.
 title: Schrift template  # Appears in the window title of the browser. Stands alone on the homepage, sits beside the post title on post pages.
 
 # Enter below the headtitle of your weblog/website
 #    | It appears on the main navigation bar. You use <span></span> to nicely fade out some part of it
-maintitle: Schrift <span>for Jekyll</span>
+maintitle: Bootex <span>for blog</span>
 
 # Enter below a short description that will sit next to your head title.
 #    | {optional}
-maindesc: <a href=https://github.com/Schoewilliam/Schrift><span class=oi data-glyph=fork></span> Fork me</a>
+maindesc: <a href=https://github.com/Bootex/pages><span class=oi data-glyph=fork></span> Fork me</a>
 
 # Enter below the items of your main menu
 #    | Keep it a small amount. It is designed for a small menu.
@@ -46,14 +46,17 @@ menus:
 - text: Archive
   url: /archive
   openiconic: list
-- text: some page
-  url: /anotherpage.html
+- text: projects
+  url: /menus/projects.html
   openiconic: list-rich
-- text: an About page
+- text: About
   url: /about.html
+  openiconic: list-rich
+- text: Contact
+  url: /menus/contact.html
   openiconic: info
   
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment
 #    | {optional}
-invitationmsg: If you have any feedback you would like me to read, please don't hesitate to send them over to <a href=mailto:you@domain.xyz>you@domain.xyz</a>.
+invitationmsg: If you have any feedback you would like me to read, please don't hesitate to send them over to <a href=mailto:furorluna@gmail.com>furorluna@gmail.com</a>.
