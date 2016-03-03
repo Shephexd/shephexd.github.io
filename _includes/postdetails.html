@@ -18,25 +18,61 @@
           {{ content }}
       </div>
       </article>
-    <article>
-      {% include disqus.html %}
-    </article>
+
+      <article>
+          <div class="readnext">
+        {% if page.previous.url %}
+        <div>
+          <a href="{{page.previous.url}}" title="Next Post: {{page.previous.title}}">
+            <span>
+              <span class="oi" style="margin-right:12px" data-glyph="script"></span> Read previous
+            </span>
+              <div class="desc">
+                  <span class="oi" data-glyph="chevron-left">      
+                  </span>
+                  {{page.previous.title}}
+              </div>
+          </a>
+        </div>
+        {% endif %}
+
+        {% if page.next.url %}
+        <div>
+          <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">
+            <span>
+              <span class="oi" style="margin-right:12px" data-glyph="script"></span> Read next
+            </span>
+
+              <div class="desc">              
+                  {{page.next.title}}
+                  <span class="oi" data-glyph="chevron-right">      
+                  </span>
+              </div>
+          </a>
+          </div>
+        {% endif %}
+          </div>
+      </article>
+
+      {% if page.title %}
+        <article>
+          {% include disqus.html %}
+        </article>
+      {% endif %}
   </section>
 
 
-  {% if page.next.url %}
+  {% if page.previous.url %}
     <div class="readnext">
-    <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">
-      <span>
-        <span class="oi" style="margin-right:12px" data-glyph="script"></span> Read next
-      </span>
-      <h1>{{page.next.title}}</h1></a>
-    
-    <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
-      <span>
-        <span class="oi" style="margin-right:12px" data-glyph="script"></span> Read previous
-      </span>
-      <h1>{{page.previous.title}}</h1></a>
+      <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
+        <span>
+          <span class="oi" style="margin-right:12px" data-glyph="script"></span> Read previous
+        </span>
+        <h1>{{page.previous.title}}</h1>
+        <div class="desc">
+          <span class="oi" data-glyph="chevron-right"></span>
+        </div>
+      </a>
     </div> 
   {% endif %}
 
