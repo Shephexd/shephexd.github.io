@@ -587,6 +587,18 @@ blockquote {
     100% { transform: translate(0, 0); opacity: 1; }
 }
 
+#tags{
+    font-size: .875rem;
+    color: #005f97;
+    display: inline-block;
+    border: 1px solid #005f97;
+    border-radius: .313rem;
+    padding: .25rem .625rem;
+    margin-right: .125rem;
+    margin-bottom: .5rem;
+    text-decoration: none;
+}
+
 #comments{
     position: relative;
     bottom:0px;

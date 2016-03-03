@@ -29,8 +29,8 @@ auto_ids:    true
 # Enter below your name or pseudo & a short description
 #    | These don't appear on the website. They are used to set the <META>s
 author: Bootex(MinorCreator)
-description: Computer engineer.
-title: Schrift template  # Appears in the window title of the browser. Stands alone on the homepage, sits beside the post title on post pages.
+description: Computer programmer interested in security and machine learning.
+title: Bootex page  # Appears in the window title of the browser. Stands alone on the homepage, sits beside the post title on post pages.
 
 # Enter below the headtitle of your weblog/website
 #    | It appears on the main navigation bar. You use <span></span> to nicely fade out some part of it
@@ -44,14 +44,21 @@ maindesc: <a href=https://github.com/Bootex/pages><span class=oi data-glyph=fork
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
 - text: Archive
-  url: /archive
+  url: /menus/archive.tags
   openiconic: list
+
 - text: projects
   url: /menus/projects.html
   openiconic: list-rich
+
 - text: About
   url: /about.html
   openiconic: list-rich
+
+- text: tags
+  url: /menus/tags.html
+  openiconic: list
+
 - text: Contact
   url: /menus/contact.html
   openiconic: info

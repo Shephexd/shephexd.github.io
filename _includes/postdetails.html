@@ -20,38 +20,34 @@
       </article>
 
       <article>
-          <div class="readnext">
+        <div class="readnext">
+          <nav class = "pagination">
         {% if page.previous.url %}
-        <div>
-          <a href="{{page.previous.url}}" title="Next Post: {{page.previous.title}}">
+
+          <a style="float:left;" href="{{page.previous.url}}" title="Next Post: {{page.previous.title}}">
             <span>
-              <span class="oi" style="margin-right:12px" data-glyph="script"></span> Read previous
+              <span class="oi" style="margin-right:12px" data-glyph="script"></span>Read previous
             </span>
-              <div class="desc">
-                  <span class="oi" data-glyph="chevron-left">      
-                  </span>
-                  {{page.previous.title}}
-              </div>
-          </a>
-        </div>
+                  <div class="desc">
+                    <span class="oi" data-glyph="chevron-left"></span>
+                    {{page.previous.title}}                    
+                  </div>
+            </a>
         {% endif %}
 
         {% if page.next.url %}
-        <div>
-          <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">
-            <span>
-              <span class="oi" style="margin-right:12px" data-glyph="script"></span> Read next
+          <a style="float:right;" href="{{page.next.url}}" title="Next Post: {{page.next.title}}">
+            <span align="right">
+              Read next  <span class="oi"  style="margin-right:12px" data-glyph="script"></span>
             </span>
-
-              <div class="desc">              
-                  {{page.next.title}}
-                  <span class="oi" data-glyph="chevron-right">      
-                  </span>
-              </div>
-          </a>
-          </div>
+                  <div class ="desc">
+                    {{page.next.title}}
+                    <span class="oi" data-glyph="chevron-right"></span>
+                  </div>
+            </a>
         {% endif %}
-          </div>
+          </nav>
+        </div>
       </article>
 
       {% if page.title %}
