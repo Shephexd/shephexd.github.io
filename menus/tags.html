@@ -3,6 +3,22 @@ title: "TAGS"
 layout: page
 ---
 
-{% for tag in post.tags %}
-	<li>{{ tag | downcase }}</li>
+{% for post in site.posts %}
+		{% for tag in post.tags %}
+			<div id="tags">{{tag}}</div>
+		{% endfor %}
+
+		{% for tag in post.tags %}
+			<div id="tags">{{tag}}</div>
+		{% endfor %}
+
+
+{% endfor %}
+
+{% for category in site.categories %}
+    <li style="font-size: {{ category | last | size | times: 100 | divided_by: site.categories.size }}%">
+        <a href="/{{ category | first | slugize }}/">
+            {{ category | first }}
+        </a>
+    </li>
 {% endfor %}

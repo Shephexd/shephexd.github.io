@@ -9,7 +9,7 @@ safe: false
 url: http://bootex.github.io/
 source:      .
 destination: ./_site
-plugins:     ./_plugins
+plugins:     ./_plugin
 
 # Server
 port: 4000
@@ -18,11 +18,17 @@ port: 4000
 future:      true
 lsi:         false
 highlighter: rouge
-markdown:    kramdown
+# Build settings
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "tables", "with_toc_data"]
+
 permalink:   date
 auto_ids:    true
 
+#fenced_code_blocks: true
 #
+
 # Schrift template configuration
 #
 
@@ -44,7 +50,7 @@ maindesc: <a href=https://github.com/Bootex/pages><span class=oi data-glyph=fork
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
 - text: Archive
-  url: /menus/archive.tags
+  url: /menus/archive.html
   openiconic: list
 
 - text: projects

@@ -2,6 +2,8 @@
 layout: post
 published: True
 title: ubuntu 서버 구축
+excerpt: Introduction about basic method to install APM(Apache,Php,Mysql)
+categories: Programming
 tags:
 - server
 - ubuntu

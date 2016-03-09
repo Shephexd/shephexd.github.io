@@ -4,16 +4,16 @@ role: home
 ---
 {% for post in site.posts %}
 	<article class="post">
-
-		<h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
-
-			<div class="entry">
-		{{ post.excerpt | strip_html | truncate: 160 }}
-			</div>
-
+ 
+		<div class="entry">
+			<b><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></b>
+		<div>
+	{{ post.excerpt | strip_html | truncate: 160 }}
+		</div>
 		{% for tag in post.tags %}
 			<div id="tags">{{tag}}</div>
 		{% endfor %}
+		</div>
 
 	</article>
 {% endfor %}

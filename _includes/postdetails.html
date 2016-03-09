@@ -58,21 +58,6 @@
   </section>
 
 
-  {% if page.previous.url %}
-    <div class="readnext">
-      <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
-        <span>
-          <span class="oi" style="margin-right:12px" data-glyph="script"></span> Read previous
-        </span>
-        <h1>{{page.previous.title}}</h1>
-        <div class="desc">
-          <span class="oi" data-glyph="chevron-right"></span>
-        </div>
-      </a>
-    </div> 
-  {% endif %}
-
-
   {% unless page.comments == false %}
     {% if site.invitationmsg %}
         <div id="footer" class="invitation">

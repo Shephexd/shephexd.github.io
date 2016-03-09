@@ -1,13 +1,11 @@
 ---
 layout: post
 published: True
-title: Data Structure
+title: Data Structure(1)
+excerpt: Introduction data structrue, Stack and Que.
+categories: Programming
+tags: Development, Algorithm
 ---
-
-자료구조 정리(1)
-=========
-
-[TOC]
 
 **용어 정리**
 ------------
@@ -103,22 +101,25 @@ $$O(1)< O(logn) < O(n) < O(nlogn) < O(n^2) < O (2^n) < O(n!)$$
 2. 변수의 이름
 	소문자를 사용, 언더라인을 사용하여 단어 분리.
 	약어사용은 지양
-    	int add(ListNode *node)			// 혼동이 없는 경우
-        int list_add(ListNode *node)	// 혼동이 생길 우려가 있는 경우
+
+    int add(ListNode *node)         // 혼동이 없는 경우
+    int list_add(ListNode *node)    // 혼동이 생길 우려가 있는 경우
 3. typedef의 사용
-	사용자 정의 데이터 타입을 정의
+	사용자 정의 데이터 타입을 정의  
+
 		typedef <타입의 정의><타입 이름>;
-	자료 구조 안의 노드의 구조 등에 대해서 이름을 부여할 때 사용.
+
+자료 구조 안의 노드의 구조 등에 대해서 이름을 부여할 때 사용.  
+
     	typedef int element;
         tpyedef struct ListNode{
 		element data;
         struct ListNode *link;
         } ListNode;
-
 **자료구조의 표기방법**
 
 1. 자료구조의 요소
-	자료구조는 요소들의 집합.
+	자료구조는 요c소들의 집합.
     요소들은 다양한 변수값으로 정의 가능.
 
 2. 자료 구조에 관련된 데이터
@@ -129,7 +130,7 @@ $$O(1)< O(logn) < O(n) < O(nlogn) < O(n^2) < O (2^n) < O(n!)$$
 -------------------
 #####순환(Recursion)은 어떤 알고리즘이나 함수가 자기 사진을 호 출하여 문제를 해결하는 프로그래밍 기법.
 
-**example**
+**example**  
 ```c
 int factorial(int n){
 	if n<1 return 1;
@@ -152,7 +153,9 @@ int fib(int n){
 	else return (fib(n-1) + fib(n-2));
 }
 ```
+
 **하노이의 탑**
+
 ```c
 void hanoi_tower(int n, char from, char tmp, char to){
 	if(n==1){
@@ -200,6 +203,7 @@ store(A,i,item) ::= 배열 A의 i번째 위치에 item저장
 - 객체
     n개의 element형으로 구성된 순서 있는 집합
 - 연산
+
     add_last(list, item) : 맨 끝에 요소를 추가.
     add_first(list, item) : 맨 앞에 요소를 추가.
 	add(list, pos, item) : pos 위치에 있는 요소를 추가.

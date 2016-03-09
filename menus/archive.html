@@ -9,9 +9,19 @@ role: index
 	   <a href="/flux.xml"><span class="oi" data-glyph="rss"></span> <em>RSS Feed</em></a>
    </div>
    <div>
-	<ul>
+
+
+   <ul>
+
    {% for post in site.posts %}
-	    <li>
+      {% capture category %}{{ post.categories }}{% endcapture %}
+      {% capture ncategory %}{{ post.next.categories }}{% endcapture %}
+        </ul>
+      {% if category != ncategory %}
+        <h3>{{ category }}</h3>
+      {% endif %}
+	    <ul class="past">
+        <li>
 		<a {% if post.en %}class="en"{% endif %}{% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
 		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
 		{{ post.title }}
