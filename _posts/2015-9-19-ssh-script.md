@@ -15,13 +15,6 @@ tags:
 ##소스코드
 #### 여러 ip목록에서 id,pw값을 기준으로   접속을 시도하는 스크립트이다.
 
-{% highlight c %}
-#include <stdio.h>
-
-printf("%d",111);
-
-{% enhighlight%}
-
 ```ruby
 # This is highlighted code
 def foo
