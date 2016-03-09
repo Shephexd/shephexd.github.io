@@ -19,10 +19,12 @@ future:      true
 lsi:         false
 highlighter: rouge
 # Build settings
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "tables", "with_toc_data"]
-
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  use_coderay: true
+  
 permalink:   date
 auto_ids:    true
 

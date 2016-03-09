@@ -4,7 +4,9 @@ published: True
 title: Data Structure(2)
 excerpt: Introduction Tree and Sotring.
 categories: Programming
-tags: Development, Algorithm
+tags: 
+- Development
+- Algorithm
 ---
 
 자료구조 정리(2)

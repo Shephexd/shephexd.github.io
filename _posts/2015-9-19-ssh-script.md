@@ -13,16 +13,28 @@ tags:
 ---
 
 ##소스코드
-#### 여러 ip목록에서 id,pw값을 기준으로 접속을 시도하는 스크립트이다.
+#### 여러 ip목록에서 id,pw값을 기준으로   접속을 시도하는 스크립트이다.
 
-```c
+{% highlight c %}
 #include <stdio.h>
 
 printf("%d",111);
 
+{% enhighlight%}
+
+```ruby
+# This is highlighted code
+def foo
+  puts 'foo'
+end
+```
+```python
+# Here is some in python
+def foo():
+  print 'foo'
 ```
 
-```python
+~~~python
 
 import pxssh
 import time
@@ -65,7 +77,7 @@ for target_ip in data:
 
 count+=1
 time.sleep(30)
-```
+~~~
 
 ##소스코드 설명
 ####id와 pw값에 대하여 ip_list파일에 대하여 ssh접속시도를 한 후, 결과를 result_ssh에 대한 결과를 저장한다.

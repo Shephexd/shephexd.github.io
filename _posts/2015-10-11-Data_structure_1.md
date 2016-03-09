@@ -4,7 +4,9 @@ published: True
 title: Data Structure(1)
 excerpt: Introduction data structrue, Stack and Que.
 categories: Programming
-tags: Development, Algorithm
+tags: 
+- Development
+- Algorithm
 ---
 
 **용어 정리**
@@ -22,9 +24,9 @@ tags: Development, Algorithm
 **데이터 타입**
 :	데이터의 집합과 이러한 데이터에 적용할 수 있는 연산의 집합
 
-**추상 데이터 타입(ADT:Abstarct Data Type)**
-	1. 데이터 타입의 정의가 그 데이터 타입의 구현으로부터 분리된 데이터 타입을 의미.
-	2. 데이터의 연산이 무엇(What)인지는 정의되지만, 데이터나 연산을 어떻게(How) 컴퓨터 상에서 구현할 것인지는 정의되지 않음.
+**추상 데이터 타입(ADT:Abstarct Data Type)**  
+:	데이터 타입의 정의가 그 데이터 타입의 구현으로부터 분리된 데이터 타입을 의미.
+:	데이터의 연산이 무엇(What)인지는 정의되지만, 데이터나 연산을 어떻게(How) 컴퓨터 상에서 구현할 것인지는 정의되지 않음.
 
 **자료구조(Data Structure)**
 ---------
@@ -47,10 +49,12 @@ tags: Development, Algorithm
 	- 명백성 : 각 명령어의 의미는 모호하지 않고 명확해야 한다.
 	- 유한성 : 한정된 수의 단계 후에는 반드시 종료되어야 한다.
 	- 유효성 : 각 명령어들은 실행 가능한 연산이여야 한다.
+
 - **기술 방법**
 	1. 자연어(영어, 한국어 등등)
 	2. 흐름도(Flow Chart)
 	3. 유사 코드(pseudo-doce)
+
 - **성능분석**
     - 필요성
         - 처리할 데이터의 규모의 증가.
@@ -102,20 +106,26 @@ $$O(1)< O(logn) < O(n) < O(nlogn) < O(n^2) < O (2^n) < O(n!)$$
 	소문자를 사용, 언더라인을 사용하여 단어 분리.
 	약어사용은 지양
 
-    int add(ListNode *node)         // 혼동이 없는 경우
-    int list_add(ListNode *node)    // 혼동이 생길 우려가 있는 경우
+~~~c
+int add(ListNode *node)         // 혼동이 없는 경우
+int list_add(ListNode *node)    // 혼동이 생길 우려가 있는 경우
+~~~
+
 3. typedef의 사용
 	사용자 정의 데이터 타입을 정의  
-
-		typedef <타입의 정의><타입 이름>;
-
+~~~c
+typedef <타입의 정의><타입 이름>;
+~~~
 자료 구조 안의 노드의 구조 등에 대해서 이름을 부여할 때 사용.  
 
-    	typedef int element;
-        tpyedef struct ListNode{
-		element data;
-        struct ListNode *link;
-        } ListNode;
+~~~c
+typedef int element;
+typedef struct ListNode{
+element data;
+struct ListNode *link;
+} ListNode;
+~~~
+
 **자료구조의 표기방법**
 
 1. 자료구조의 요소
@@ -131,12 +141,12 @@ $$O(1)< O(logn) < O(n) < O(nlogn) < O(n^2) < O (2^n) < O(n!)$$
 #####순환(Recursion)은 어떤 알고리즘이나 함수가 자기 사진을 호 출하여 문제를 해결하는 프로그래밍 기법.
 
 **example**  
-```c
+~~~c
 int factorial(int n){
 	if n<1 return 1;
     else return(n * factorial(n-1));
 }
-```
+~~~
 
 **순환 알고리즘의 구조**
 순환 알고리즘은 자기 자신을 순환적으로 호출하므로, **순환을 멈추는 부분**,**순환을 호출하는 부분**이 존재한다.
@@ -146,17 +156,17 @@ int factorial(int n){
 
 **피보나치 수열**
 
-```c
+~~~c
 int fib(int n){
 	if(n==0) return 0;
     else if (n==1) return 1;
 	else return (fib(n-1) + fib(n-2));
 }
-```
+~~~
 
 **하노이의 탑**
 
-```c
+~~~c
 void hanoi_tower(int n, char from, char tmp, char to){
 	if(n==1){
 	printf("%c에서 %c로 옮긴다",from,to);
@@ -167,7 +177,7 @@ void hanoi_tower(int n, char from, char tmp, char to){
         hanoi_tower(n-1, tmp,from, to);
     }
 }
-```
+~~~
 
 **배열, 구조체, 포인터**
 -------------------
@@ -181,8 +191,6 @@ store(A,i,item) ::= 배열 A의 i번째 위치에 item저장
 
 **배열의 응용**
 1. 다항식의 덧셈
-	1. ㅇㅇ
-	2.
 2. 희소 행렬
 
 #####구조체(Structure)
@@ -204,19 +212,20 @@ store(A,i,item) ::= 배열 A의 i번째 위치에 item저장
     n개의 element형으로 구성된 순서 있는 집합
 - 연산
 
-    add_last(list, item) : 맨 끝에 요소를 추가.
-    add_first(list, item) : 맨 앞에 요소를 추가.
-	add(list, pos, item) : pos 위치에 있는 요소를 추가.
-	delete(list, pos) : pos 위치에 있는 데이터를 제거.
-    clear(list) : 리스트의 모든 요소를 제거.
-    replace(list,pos,item) : pos위치의 요소를 item으로 변환.
-    is_in_list(list, item) : item이 리스트 안에 있는지를 검사.
-    get_entry(list, pos) : pos위치의 요소를 반환.
-    get_length(list) : 리스트의 길이를 반환.
-    is_empty(list) : list가 비었는지 검사.
-    is_full(list) : list가 꽉 찼는지 검사.
-    display(list) : 리스트의 모든 요소를 출력.
-
+~~~
+add_last(list, item) : 맨 끝에 요소를 추가.
+add_first(list, item) : 맨 앞에 요소를 추가.
+add(list, pos, item) : pos 위치에 있는 요소를 추가.
+delete(list, pos) : pos 위치에 있는 데이터를 제거.
+clear(list) : 리스트의 모든 요소를 제거.
+replace(list,pos,item) : pos위치의 요소를 item으로 변환.
+is_in_list(list, item) : item이 리스트 안에 있는지를 검사.
+get_entry(list, pos) : pos위치의 요소를 반환.
+get_length(list) : 리스트의 길이를 반환.
+is_empty(list) : list가 비었는지 검사.
+is_full(list) : list가 꽉 찼는지 검사.
+display(list) : 리스트의 모든 요소를 출력.
+~~~
 
 **구현**
 1. 배열로 구현된 리스트
@@ -228,10 +237,11 @@ store(A,i,item) ::= 배열 A의 i번째 위치에 item저장
 	- 가변 크기.
 
 **연결 리스트**
-**물리적으로 흩어져 있는 자료들을 서로 연결하여 하나로 묶는 자료구조**
+**물리적으로 흩어져 있는 자료들을 서로 연결하여 하나로 묶는 자료구조**  
+
 - 노드와 노드 간의 연결
 - 데이터 필드와 링크 필드
--
+
 
 1. 단순 연결 리스트
 	- 노드들이 하나의 링크 필드를 가지며 이 링크 필드를 이용하여, 모든 노드들이 연결되어 있음.
@@ -317,6 +327,3 @@ store(A,i,item) ::= 배열 A의 i번째 위치에 item저장
 ####응용
 1. 버퍼
 2. 시뮬레이션
-
-$3+3=6
-$$$3=3
