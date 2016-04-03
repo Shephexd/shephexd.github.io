@@ -1,7 +1,8 @@
+1
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight {
-  color: #faf6e4;
+  color: #FFFFFF;
   background-color: #122b3b;
 }
 .highlight .gl {
@@ -162,3 +163,4 @@
   color: #a8e1fe;
   font-weight: bold;
 }
+

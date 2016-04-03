@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="./flux.xml" />
-
     <meta charset="UTF-8">
     <title>
     {% if page.title %}
@@ -34,4 +33,9 @@
     {{ content }}
 
   </body>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+<script src="/assets/js/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+
 </html>
