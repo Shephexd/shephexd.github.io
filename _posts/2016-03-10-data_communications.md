@@ -18,7 +18,7 @@ Routing
 ##Network model  
 **network model**  
 
-###seven layers of the OSI model
+###seven layers of the OSI model  
 1. Physical Layer
 	- consist of hardware communication.
 	- It like 0101110101010001, just binary data.
@@ -189,11 +189,32 @@ Type5: Redirection
 | 10, 9     | Router solicitation and advertisement | 해당 TCP |
 
 
-####Address-mask request and Reply
+####Address-mask request and Reply  
 **Host가 Router에 subnet mask를 요청**
 - Type 17(request), Type18(Reply)
 - Code: 0
 
-####Router solicitation and advertisement
+####Router solicitation and advertisement  
 **Router가 subnet내의 Router주소를 광고**
 - Type10
+
+
+####Traceroute
+**경로 추적을 위해 사용됨**
+1. Send UDP Packet with TTL = 1
+	- R1의 IP주소와 소요 시간을 IP Header를 통해 알 수 있음.
+2. Send UDP Packet with TTL = 2
+	- R2의 IP주소와 소요 시간을 IP Header를 통해 알 수 있음.
+3. Send UDP Packet with TTL = 3
+
+####Routing table
+- **How to write routing table in router**
+
+####Delivery
+
+####Forwarding
+	포워딩(Forwarding)은 패킷을 목적지로 가는 경로에 위치시키는 것.
+
+1. Next-hop Method
+	- 완전 경로가 아닌 다음 홉의 주소만을 테이블에 기록.
+2. Host-specific Method
