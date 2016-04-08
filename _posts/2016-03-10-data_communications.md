@@ -9,26 +9,28 @@ tags:
 - network
 ---
 
-#Computer Network
+##Computer Network
+computer network
+: Computer network based on TCP/IP
+
 ##Basic definition
 Routing
-: When use network, It is route setting to send specific packet to other places.
+: When use network, It is necessary to set route to send specific packet to other network devices.
 
-
-##Network model  
-**network model**  
+##Network model
+modelA
+: **network model**  
 
 ###seven layers of the OSI model  
 1. Physical Layer
 	- consist of hardware communication.
-	- It like 0101110101010001, just binary data.
+	- It like $$0101110101010001,$$ just binary data.
 2. Data Link Layer
 	- Flow control
 3. Network Layer
 	- Routing function to send packet via nodes.
 	- IP protocol
 4. Transport Layer
-	-
 	- TCP Protocol
 5. Session Layer
 	- ,
@@ -85,15 +87,15 @@ IP address
 : Class full address
 - There are 5 classes, A,B,C,D,E.
 - A class first binary number is 0. First 1 byte is network address.last 3 bytes are host address.
-$$
-network address :2^7 = 128 bit\\
-host address :2^{24} = 16,777,216 bit
-$$
+
+network address :$$2^7 = 128 bit$$  
+host address :$$2^{24} = 16,777,216 bit$$
+
 - B class first binary number is 0. First 1 byte is network address.last 3 bytes are host address.
-$$
-network address :2^{16} = 16,384 bit\\
-host address :2^{24} = 65,536 bit
-$$
+
+network address :$$2^{16} = 16,384 bit$$  
+host address :$$2^{24} = 65,536 bit$$
+
 - **Not used more.**
 
 : Classless address
@@ -103,13 +105,15 @@ $$
 - The number of addresses in a block must be a power of 2($2^n$).
 - The first address must be evenly.
 
-##### subneting
+subneting
 : network IP address split
-##### Superneting
+
+Superneting
 : network IP address merge
 
-###Network Layer  
+###Network Layer
 제 3
+
 ####ARP(Address Resolution Protocol)  
 **인터넷 주소 매핑을 위한 프로토콜**
 **아이피 주소를 물리주소에 IP Address -> Physical Address mapping**
@@ -144,14 +148,6 @@ Type4: Source quench
 Type11: Time exceeded
 Type12: Parameter problems
 Type5: Redirection
-
-
-| First Header  | Second Header | Third Header         |
-| :------------ | :-----------: | -------------------: |
-| First row     | Data          | Very long data entry |
-| Second row    | **Cell**      | *Cell*               |
-| Third row     | Cell that spans across two columns  |dd|
-[Table caption, works as a reference][section-mmd-tables-table1]
 
 
 #### 목적지 도달 불가(Destination unreachable)  
@@ -200,7 +196,8 @@ Type5: Redirection
 
 
 ####Traceroute
-**경로 추적을 위해 사용됨**
+	경로 추적을 위해 사용됨
+
 1. Send UDP Packet with TTL = 1
 	- R1의 IP주소와 소요 시간을 IP Header를 통해 알 수 있음.
 2. Send UDP Packet with TTL = 2

@@ -2,7 +2,7 @@
 layout: post
 published: True
 excerpt: Basic concept about Regular Expression using python re module.
-title: 정규표현식(Regular Expression) 정리
+title: 정규표현식(Regular Expression)
 categories: Development,python
 tags: Development
 ---
@@ -39,11 +39,33 @@ test()
 exec()
 findall()
 
+| Method | parameters |   Description   | return Value |
+|:-------|:----|:-----|:----|
+|  compile  |(pattern,[flags])|pattern을 컴파일 |re object|
+|  match  |(pattern, string,[flags])|string의 앞부터 pattern이 존재하는지 검사 | Match Object instance|
+|  search  |(pattern, string,[flags])|string의 전체에 pattern이 존재하는지 검사 | Match Object instance |
+|  split  |(pattern, string,[maxplit=0])|pattern을 구분자로 string을 분리 | List |
+|  findall  |(pattern, string,[flags])|string에서 pattern을 만족하는 문자열을 찾음 | List |
+|  finditer  |(pattern, string,[flags])|string에서 pattern을 만족하는 문자열을 찾음 | Iterator |
+|  sub  |(pattern, repl, string,[count=0])|string에서 pattern과 일치하는 부분을 repl로 교체 | str |
+|  subn  |(pattern, repl, string,[count=0])|string에서 pattern과 일치하는 부분을 repl로 교체 | Tuple  (결과문자열, 매칭횟수)|
+|  escape  |(string)|영문자 숫자가 아닌 문자들을 백슬래쉬 처리해서 리턴.| str |
+
 
 ####example re
 
-```python3
+```
+#include <stdio.h>
+
+void main(void){
+  printf("hello world");
+}
+```
+
+```python
 import re
 m = re.search("(?<=abc)def","abcdef")
-m.group(0)
+.group(0)
+
+
 ```
