@@ -10,10 +10,12 @@ tags:
 ---
 
 ###What is Big data?  
-빅 데이터의 3대 요소(3V)
+
+**빅 데이터의 3대 요소(3V)**
+
 1. 크기 (Volume)
-  - 기존 파일 시스템에 저장하기 어렵고, 데이터 분석을 위해 사용하던 기존의 방법으로는 소화하기 어려울 정도로 데이터의 양이 증가.
-  - 이를 해결하기 위해 확장 가능한 방식으로 데이터를 저장하고 분석하는 분산 컴퓨팅 기법을 적용.
+	- 기존 파일 시스템에 저장하기 어렵고, 데이터 분석을 위해 사용하던 기존의 방법으로는 소화하기 어려울 정도로 데이터의 양이 증가.
+	- 이를 해결하기 위해 확장 가능한 방식으로 데이터를 저장하고 분석하는 분산 컴퓨팅 기법을 적용.
   - 현재 분산 컴퓨팅 솔루션은 Google GFS, Apache Hadoop, 대용량 병렬 처리 데이터 베이스는 EMC GreenPlum, HP Vertica, IBM Netezza, TeraData Kickfre등이 존재.
 2. 속도 (Velocity)
   - 실시간 처리와 장기적인 접근으로 분류가 가능.
@@ -95,7 +97,7 @@ sudo mv hadoop-2.6.0 /usr/local/hadoop
 update-alternatives --config java
 ```
 
-sudo gedit ~/.bashrc
+	sudo gedit ~/.bashrc
 ```bash
           #Hadoop Variables
           export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
@@ -120,7 +122,7 @@ sudo gedit hadoop-env.sh
           #The java implementation to use.
           export JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64"
 ```
-sudo gedit core-site.xml
+	sudo gedit core-site.xml
 ```xml
           <configuration>
                   <property>
@@ -130,21 +132,14 @@ sudo gedit core-site.xml
           </configuration>
 ```
 
-sudo gedit yarn-site.xml
+	sudo gedit yarn-site.xml
+
 ```xml
-          <configuration>
-                  <property>
-                      <name>yarn.nodemanager.aux-services</name>
-                      <value>mapreduce_shuffle</value>
-                  </property>
-                  <property>
-                      <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
-                      <value> org.apache.hadoop.mapred.ShuffleHandler</value>
-                  </property>
-          </configuration>
-```
-sudo cp mapred-site.xml.template mapred-site.xml
-sudo gedit mapred-site.xml
+ㅛ```
+	
+	sudo cp mapred-site.xml.template mapred-site.xml
+	sudo gedit mapred-site.xml
+
 ```xml
           <configuration>
                   <property>
@@ -153,7 +148,9 @@ sudo gedit mapred-site.xml
                   </property>
           </configuration>
 ```
-sudo gedit hdfs-site.xml
+
+	sudo gedit hdfs-site.xml
+
 ```xml
           <configuration>
                   <property>
@@ -171,11 +168,14 @@ sudo gedit hdfs-site.xml
           </configuration>
 ```
 
+a
 ```bash
 cd
 mkdir -p /usr/local/hadoop/hadoop_data/hdfs/namenode
 mkdir -p /usr/local/hadoop/hadoop_data/hdfs/datanode
-sudo chown jace:jace -R /usr/local/hadoop
+sudo chown parallels:parallels -R /usr/local/hadoop
+
+
 hdfs namenode -format
 start-all.sh
 jps
@@ -190,3 +190,9 @@ http://localhost:50075/
 #this install guide from below url.
 http://chaalpritam.blogspot.in/2015/01/hadoop-260-single-node-cluster-setup-on.html
 ```
+
+
+####Error
+>WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+	/usr/local/hadoop/lib/native$ sudo mv * ../../lib/

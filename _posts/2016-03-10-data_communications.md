@@ -287,6 +287,36 @@ Forwarding means that
 
 ### Routing
 
+Link State Routing
+1. 각 노드에 연결된 link의 상태를 링크 상태 패킷에 저장.
+2. LSP를 flooding을 통해 전 노드에 알림.
+3. 각 노드에서 전체 AS의 구조를 알아내서 shortest path tree 형성
+4. Shared path tree를 바탕으로 routing table 형
+
+Creation of LSP
+- node identify, list of links(metric)
+- sequence number, age
+
+> ex) Node A
+> list of links :(B,5), (C,2), (D,3)
+> seq no : 1
+> age: craetion time.
+
+Flooding of LSP
+> LSP를 생성한 후 모든 Interface를 통해 전송
+> LSP를 받은 node는 seq no를 비교하여 오래된 LSP면 버리고 새로운 LSP면
+> 자신의 정보를 update하고, 모든 interface를 내보냄.
+
+Formation of sortest path tree
+- Dijkstra Algorithm
+This algorithm always needs two lists, permanent list, tentative list.
+permanent list is selected as path.
+tentative list is spare set.
+
+#### OSPF
+
+Formation
+1. Store link state
 [^1]: Internet selects datagram to send the packet to destination using path. Thus it uses all defined address.
 [^2]: ddd
 

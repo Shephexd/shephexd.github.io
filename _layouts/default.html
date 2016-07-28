@@ -1,41 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="./flux.xml" />
-    <meta charset="UTF-8">
-    <title>
-    {% if page.title %}
-	{{ page.title | replace:'&nbsp;',' ' | escape }} - {{ site.title }}
-    {% else %}
-	{{ site.title }}
-    {% endif %}
-    </title>
-    
-    {% if page.description %}
-    <meta name="description" content="{{ page.description | escape }}">
-    {% else %}
-    <meta name="description" content="{{ site.description | escape }}">
-    {% endif %}
-    
-    <meta name="author" content="{{ site.author }}">
-    <meta content='initial-scale=1.0' name='viewport'>
-    
-    {% if page.styles %}
-    <style type="text/css" media="screen">{{ page.styles }}</style>
-    {% endif %}
-  </head>
-  
-  <body {% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
+<html>
 
-    {% include tete.html %}
-    
-    {{ content }}
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <!-- content start -->
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    <!-- content end -->
+
+    {% include footer.html %}
+    {% include javascripts.html %}
 
   </body>
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-<script src="/assets/js/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
 
 </html>
