@@ -9,7 +9,7 @@ tags:
 - big data
 ---
 
-###What is Big data?  
+### What is Big data?  
 
 **빅 데이터의 3대 요소(3V)**
 
@@ -28,21 +28,23 @@ tags:
   - 비정형 데이터는 고정된 필드나 스키마가 포함되지 않은 데이터. 유투븨으 동영상, SNS 사진이나 오디오 등 다양한 종류의 비정형 데이터가 존재.
 일반적으로 위의 3대 요소 중 두 가지 이상만 충족된다면 빅데이터로 분류,
 
-###What is Hadoop?
-####Definition
+### What is Hadoop?
+
+#### Definition
 하둡은 **하둡은 대용량 데이터를 분산 처리할 수 있는 자바 기반의 오픈소스 프레임워크** 의미한다.
 
-####Function
+#### Function
 하둡은 분산 파일 시스템은 HDFS(Hadoop Distributed File System)에 데이터를 저장하고, 분산 처리 시스템인 맵리듀스를 이용하여 데이터를 처리.
 
-####History
+#### History
 하둡은 구글이 논문으로 발표한 GFS(Google File System)와 맵리듀스(Map Reduce)를 2005년에 더글 커딩이 구현한 결과물. 처음에는 오픈소스 검색 엔진인 너치(Nutch)에 적용하기 위해 시작하다가 독립적인 프로젝트로 만들어진 후, 2008년에 아파치 최상위 프로젝트로 승격.
 
-####Hadoop Ecosystem
+#### Hadoop Ecosystem
 하둡이 비즈니스에 효율적으로 적용될 수 있도록 다양한 서브 프로젝트가 구성되었고, 이러한 서브 프로젝트가 상용화되면서 하둡 에코시스템(Hadoop  Ecosystem)이 구성
 
-###Hadoop guide
-####실행 모드 결정(Execute mode setting)
+### Hadoop guide
+
+#### 실행 모드 결정(Execute mode setting)
 1. 독립 실행(Standalone) 모드
   - Basic Execute Mode. 하둡 환경설정 파일에 아무런 설정을 하지 않고 실행하면 로컬 장비에서만 실행되기 때문에 로컬(local) 모드라고도 불림. 하둡에서 제공하는 데몬을 구동하지 않기 때문에 분산 환경을 고려한 테스트는 불가능. 단순히 맵리듀스 프로그램을 개발하고, 해당 맵리듀스를 디버깅하는 용도로만 적합한 모드.
 
@@ -52,9 +54,9 @@ tags:
 3. 완전 분산(Fully Distributed) 모드
   - 여러 대의 장비에 하둡이 설치된 경우, 하둡으로 라이브 서비스를 하게 될 경우 이와 같은 방식으로 구성.
 
-###Hadaoop2
+### Hadaoop2
 - YARN
--
+- dd
 
 ### Hadoop 2.6 install guide
 1. Protocol Buffer install
@@ -66,18 +68,6 @@ Download
 
 2. Hadoop2 Download
 `wget "http://mirror.apache-kr.org/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz"`
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 environment:ubuntu 14.04
@@ -97,7 +87,8 @@ sudo mv hadoop-2.6.0 /usr/local/hadoop
 update-alternatives --config java
 ```
 
-	sudo gedit ~/.bashrc
+`sudo gedit ~/.bashrc`
+
 ```bash
           #Hadoop Variables
           export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
@@ -132,13 +123,14 @@ sudo gedit hadoop-env.sh
           </configuration>
 ```
 
-	sudo gedit yarn-site.xml
+`sudo gedit yarn-site.xml`
 
 ```xml
-ㅛ```
 	
 	sudo cp mapred-site.xml.template mapred-site.xml
 	sudo gedit mapred-site.xml
+
+```
 
 ```xml
           <configuration>
@@ -149,7 +141,7 @@ sudo gedit hadoop-env.sh
           </configuration>
 ```
 
-	sudo gedit hdfs-site.xml
+`sudo gedit hdfs-site.xml`
 
 ```xml
           <configuration>
@@ -168,7 +160,6 @@ sudo gedit hadoop-env.sh
           </configuration>
 ```
 
-a
 ```bash
 cd
 mkdir -p /usr/local/hadoop/hadoop_data/hdfs/namenode
@@ -192,7 +183,7 @@ http://chaalpritam.blogspot.in/2015/01/hadoop-260-single-node-cluster-setup-on.h
 ```
 
 
-####Error
+#### Error
 >WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 
 	/usr/local/hadoop/lib/native$ sudo mv * ../../lib/

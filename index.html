@@ -81,7 +81,7 @@ layout: default
         </article>
       {% endfor %}
     </div>
-
+<!--
     <nav class="pagination" role="navigation">
       {% if paginator.next_page %}
         <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
@@ -95,7 +95,29 @@ layout: default
         {% endif %}
       {% endif %}
     </nav>
+-->
 
+    <div class='pagination'>
+        <div id="left-box">
+        {% if paginator.next_page %}
+        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
+        {% endif %}
+        </div>
+
+        <div id="right-box">
+            {% if paginator.previous_page %}
+                {% if paginator.page == 2 %}
+                <a class="older-posts" href="/">Newer posts &rarr;</a>
+                {% else %}
+                <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <div  id="center-box">
+            <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        </div>
+    </div>
 
     <!-- {{!! After all the posts, we have the previous/next pagination links }}
     {{pagination}} -->

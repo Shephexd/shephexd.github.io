@@ -58,8 +58,8 @@ tags:
 	mkdir public_html
 	cd public_html
 	cp /var/www/html/index.html .
-디렉토리 생성할 때는 각 사용자 계정 별로 만들어주는게 좋아요
-######생성권한 문제로 인해..물론 바꿀수있지만 번거로워요
+디렉토리 생성할 때는 각 사용자 계정 별로 만드는 것을 추천
+***생성권한 문제로 인해..물론 바꿀수있지만 번거로움***
 
 	ifconfig | grep "inet addr
 
@@ -68,4 +68,4 @@ tags:
 	http://192.168.23.254/~creator
 	http://127.0.0.1/~creator	#loopback주소
 
-접속하면 apache 초기화면에 접속됩니다
+접속하면 apache 초기화면에 접속된다
