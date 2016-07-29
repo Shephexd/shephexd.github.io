@@ -8,7 +8,8 @@
 .cf
   @include clearfix
 
-$rs: 16px
+$rs: 15px
+$rx: 10px
 
 $font-serif: Linux Libertine
 $font-sans: 'Nanum Gothic', sans-serif
@@ -39,22 +40,23 @@ body
   -o-font-feature-settings: "liga", "dlig"
   font-feature-settings: "liga", "dlig"
 
-.logo-readium
+.logo-radi
+  border-radius: 25px
   position: fixed
   left: 10px
   top: 10px
-  width: $rs*3
-  height: $rs*3
+  width: $rx*3
+  height: $rx*3
   background-color: #000
   overflow: hidden
   z-index: 99
   .logo
     display: block
     position: absolute
-    top: $rs/2
-    left: $rs/2
-    width: $rs*2
-    height: $rs*2
+    top: $rx/2
+    left: $rx/2
+    width: $rx*2
+    height: $rx*2
     background-size: cover
     background-repeat: no-repeat
 
@@ -118,8 +120,8 @@ body
     color: #666
     text-align: center
     font-weight: 400
-  .custom-links
-    margin: 0 0 50px
+  .custom-links .menu-links
+    margin: 0 0 15px
     text-align: center
     color: #ccc
     a
