@@ -10,7 +10,7 @@ tags:
 - python
 ---
 
-#### Regular Expression Abstarct
+# Regular Expression Abstarct
 1. '.':문자
   - 임의의 한 문자를 의미합니다.  
     ex) a.c -> abc,aec,avb,afc ...
@@ -32,7 +32,7 @@ tags:
 8. '\\n':일치하는 n번째 패턴
   - 일치하는 패턴들 중 n번째를 선택.
 
-#### re method
+# re method
 compile()
 match()
 search()
@@ -55,7 +55,7 @@ findall()
 |  escape  |(string)|영문자 숫자가 아닌 문자들을 백슬래쉬 처리해서 리턴.| str |
 
 
-####example re
+# example re
 
 ```
 #include <stdio.h>

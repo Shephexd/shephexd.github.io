@@ -11,6 +11,10 @@ div.jqcloud {
   position: relative;
 }
 
+div#tag_cloud{
+  margin-top: -70px;
+}
+
 div.jqcloud span {
   padding: 0;
 }
