@@ -3,14 +3,15 @@ layout: post
 published: True
 title: ubuntu 서버 구축
 excerpt: Introduction about basic method to install APM(Apache,Php,Mysql)
-categories: Programming
+categories: 
+- Programming
 tags:
 - server
 - ubuntu
 - Development
 ---
 
-##우분투 설치
+# 우분투 설치
 우분투 [공식사이트]에서 iso이미지 설치가 가능하다.
 
 설치방법
@@ -20,7 +21,7 @@ tags:
 	2. *실제 하드디스크에 설치
 	3. *듀얼부팅
 
-##APM 설치
+# APM 설치
 우분투에서 가장 서버구축을 하기 위해, 먼저 apm(apache,php,mysql)을 설치합니다.
 
 	sudo apt-get install phpmyadmin mysql-client mysql-server php5-common apache2 php5-mysql
@@ -32,9 +33,9 @@ tags:
 	*"AddDefaultCharset utf-8"*
 	을 추가하여줍니다. (나중에 수정할때 편하게 주석까지 같이 추가)
 
-##서버 설정
+# 서버 설정
 
-###~로 사용자별 홈페이지에 접속하게 만들기
+## ~로 사용자별 홈페이지에 접속하게 만들기
 >리눅스에 각각의 계정에 맞게 다른 홈페이지에 접속하기 위해서 필요한 설정
 
 예를 들면 sample.co.kr/~creator , sample.co.kr/~admin

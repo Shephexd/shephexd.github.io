@@ -3,7 +3,8 @@ layout: post
 published: True
 title: Data Structure(2)
 excerpt: Introduction Tree and Sotring.
-categories: Programming
+categories: 
+- Programming
 tags: 
 - Development
 - Algorithm

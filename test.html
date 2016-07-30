@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/assets/js/dist/jqcloud.css">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="demo" class="demo">
+
+</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="/assets/js/dist/jqcloud.js"></script>
+
+
+<script>
+    var words = [
+        {text: "Lorem", weight: 13},
+        {text: "Ipsum", weight: 10.5},
+        {text: "Dolor", weight: 9.4},
+        {text: "Sit", weight: 8},
+        {text: "Amet", weight: 6.2},
+        {text: "Consectetur", weight: 5},
+        {text: "Adipiscing", weight: 5},
+        /* ... */
+    ];
+
+    $('#demo').jQCloud(words, {
+        width: 500,
+        height: 350
+    });
+</script>
+
+
+</html>

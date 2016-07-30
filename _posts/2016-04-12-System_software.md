@@ -3,8 +3,10 @@ layout: post
 published: False
 excerpt: Basic concept about Regular Expression using python re module.
 title: System Software
-categories: Development
-tags: Development
+categories: 
+- Development
+tags: 
+- Development
 ---
 
 [TOC]

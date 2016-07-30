@@ -3,7 +3,8 @@ layout: post
 published: True
 title: Data communications
 excerpt: Introduction Data communications.
-categories: Computer Science
+categories: 
+- Computer Science
 tags:
 - protocol
 - network
