@@ -3,8 +3,10 @@ layout: post
 published: True
 excerpt: To learn how to code study.
 title: Python coding
-categories: Security
-tags: Security
+categories: 
+- Development
+tags: 
+- python
 ---
 
 ### Python Better Way 1 - 사용중인 파이썬의 버전을 알자.

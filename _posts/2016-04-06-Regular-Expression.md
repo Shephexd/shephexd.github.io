@@ -3,8 +3,11 @@ layout: post
 published: True
 excerpt: Basic concept about Regular Expression using python re module.
 title: 정규표현식(Regular Expression)
-categories: Development,python
-tags: Development
+categories: 
+- Development
+tags:
+- Development
+- python
 ---
 
 #### Regular Expression Abstarct

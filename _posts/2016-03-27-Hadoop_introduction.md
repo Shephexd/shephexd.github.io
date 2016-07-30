@@ -3,7 +3,8 @@ layout: post
 published: True
 title: Hadoop Introduction - install
 excerpt: Introduction about Hadoop 2.6 and how to install.
-categories: Programming, big data
+categories: 
+- big data
 tags:
 - Development
 - big data

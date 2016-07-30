@@ -1,0 +1,73 @@
+---
+layout: page
+title: Tags
+permalink: /tags/
+---
+
+<link rel="stylesheet" href="/assets/dist/css/jqcloud.css">
+
+<div id="tag_cloud" class="collection" style="min-height: 300px; width: 100%; height: 40%;">
+</div>
+
+<script>
+    var words = [
+    {% for tag in site.tags %}
+    {% assign nposts = tag | last | size %}
+        {text:"{{ tag | first }}", weight: {{ nposts }} * 4 + 7 },
+    {% endfor %}
+    ];
+
+</script>
+
+{% for category in site.categories %}
+{% assign nposts = category | last | size %}
+<div class="collection" data-name="{{ category | first | escape }}">
+    <h3>{{ category | first }}</h1>
+    <h4>{{ nposts }} post{% if nposts != 1 %}s{% endif %}</h2>
+    <ul>
+        {% for posts in category %}
+            {% for post in posts %}
+                {% if post.title %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>
+{% endfor %}
+
+<!--
+<div id='tag_cloud'>
+    {% for tag in site.tags %}
+    <a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+    {% endfor %}
+</div>
+
+<ul id='tag_list'>
+    {% for tag in site.tags %}
+    <li class='tag_item' id='{{ tag[0] }}'>
+        <span class='tag_name'>{{ tag[0] }}</span>
+    <span>
+      <ul>
+      {% for post in tag[1] %}
+        <li class='tag_post'><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </span>
+    </li>
+    {% endfor %}
+</ul>
+
+
+-->
+
+
+<!--To make tag cloud in Tags page-->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="/assets/dist/js/jqcloud.js"></script>
+<script>
+     $('#tag_cloud').jQCloud(words, {
+            autoResize: true,
+
+        });
+</script>

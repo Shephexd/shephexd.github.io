@@ -31,7 +31,7 @@ layout: default
         {% else %}
         <div class="noarticleimage">
           <div class="post-meta">
-            <h1 class="post-title">{{ page.title }}</h1>
+            <h2 class="post-title">{{ page.title }}</h2>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ page.author }}</h4>
@@ -42,10 +42,12 @@ layout: default
           </div>
         </div>
         <br>
-        <br>
-        <br>
         {% endif %}
+
+        <div id="toc"></div>
+
         <section class="post-content">
+
           <div class="post-reading">
             <span class="post-reading-time"></span> read
           </div>
@@ -116,3 +118,16 @@ layout: default
     </div>
     {% include javascripts.html %}
   </body>
+<!-- To make TOC for post -->
+<script type="text/javascript">
+  $(function() {
+    $('.post').toc({
+      showAlways:true,
+      renderIn:'#toc',
+      contentsText:"INDEX",
+      hideText:'Hide',
+      showText:'Show',
+      showCollapsed:false
+    });
+  });
+</script>
