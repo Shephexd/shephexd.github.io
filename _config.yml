@@ -16,7 +16,7 @@ name: 'Taekyung Han'
 author: 'Taekyung Han'
 author_image: "/assets/images/author.jpg"
 
-paginate:	10
+paginate: 8
 
 url: "http://shephexd.github.io/" # the base hostname & protocol for your site
 baseurl: ""

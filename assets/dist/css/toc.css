@@ -23,7 +23,7 @@ div#toc {
     margin-bottom: 1em;
     margin-right: 70%;
     width: 30%;
-    min-width: 20px;
+    min-width: 250px;
     padding: 10px 20px;
     float: left;
 }
