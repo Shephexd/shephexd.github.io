@@ -1,9 +1,7 @@
 ---
 layout: default
 ---
-{% include head.html %}
   <body itemscope itemtype="http://schema.org/Article">
-    {% include header.html %}
     <main class="content" role="main">
       <article class="post">
         {% if page.image %}
@@ -31,7 +29,7 @@ layout: default
         {% else %}
         <div class="noarticleimage">
           <div class="post-meta">
-            <h2 class="post-title">{{ page.title }}</h2>
+            <h1 class="post-title">{{ page.title }}</h1>
             <div class="cf post-meta-text">
               <div class="author-image" style="background-image: url({{ site.author_image }})">Blog Logo</div>
               <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person">{{ page.author }}</h4>
@@ -122,6 +120,8 @@ layout: default
 <script type="text/javascript">
   $(function() {
     $('.post').toc({
+      content:"body",
+      headings: "h2,h3",
       showAlways:true,
       renderIn:'#toc',
       contentsText:"INDEX",

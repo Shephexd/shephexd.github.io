@@ -15,37 +15,41 @@
 
 
 div#toc {
-    background: none repeat scroll 0 0 #f9f9f9;
+    border-radius: 15px;
+    background: none repeat scroll 0 0;
+    background-color: #f9f9f9;
     border: 1px solid #aaa;
     display: table;
-    margin-left: 1em;
     margin-bottom: 1em;
+    margin-right: 70%;
     width: 30%;
-    min-width: 200px;
+    min-width: 20px;
     padding: 10px 20px;
-    float: right;
+    float: left;
 }
 
 
 #toc, .toc, .mw-warning {
     background-color: #F9F9F9;
     border: 1px solid #AAAAAA;
-    font-size: 95%;
+    font-size: 80%;
     margin: auto;
-    padding: 10px 20px;
+    padding: 10px 5px;
 
 }
 #toc h2, .toc h2 {
     border: medium none;
     display: inline;
-    font-size: 100%;
+    font-size: 110%;
     font-weight: bold;
     padding: 0;
 }
 #toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle {
     text-align: center;
 }
-
+#toc li.toclevel-1 > a{
+    font-weight: 700;
+}
 #toc td {
     max-width: 300px;
     min-width: 50px;
@@ -69,6 +73,7 @@ div#toc {
 #toc ul li {
     list-style-type: none;
     padding-left: 0;
+    padding-top: 3px;
 }
 
 #toc a:hover{
@@ -88,5 +93,5 @@ div#toc {
 
 
 .tochidden{
-    width: 50px;
+    width: 20px;
 }

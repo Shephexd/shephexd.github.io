@@ -51,12 +51,12 @@
 
         var tocContainer = $(this);
 
-        tocContainer.find('h1').each(function() {
+        tocContainer.find('h2').each(function() {
             var levelHTML = '';
             var innerSection = 0;
             var h1 = $(this);
 
-            h1.nextUntil('h1').filter('h2').each(function() {
+            h1.nextUntil('h2').filter('h3').each(function() {
                 ++innerSection;
                 var anchorId = config.anchorPrefix + tocLevel + '-' + tocSection + '-' +  + innerSection;
                 $(this).attr('id', anchorId);
@@ -66,6 +66,19 @@
                     itemNumber + '.' + innerSection,
                     $(this).text());
             });
+
+            h1.nextUntil('h3').filter('h4').each(function() {
+                ++innerSection;
+                var anchorId = config.anchorPrefix + tocLevel + '-' + tocSection + '-' +  + innerSection;
+                $(this).attr('id', anchorId);
+                levelHTML += createLevelHTML(anchorId,
+                    tocLevel + 1,
+                    tocSection + innerSection,
+                    itemNumber + '.' + innerSection,
+                    $(this).text());
+            });
+
+
             if (levelHTML) {
                 levelHTML = '<ul>' + levelHTML + '</ul>\n';
             }
