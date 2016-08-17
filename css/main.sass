@@ -747,36 +747,31 @@ pre
   min-width: 40px
   width: 6%
 
+
 table
-  table-layout: fixed
+  padding: 0
   min-width: 200px
-  width: 60%
-  border-collapse: collapse
-  text-align: left
-  line-height: 1.5
-
-table
-  thead
+  tr
+    border-top: 1px solid #cccccc
+    background-color: white
+    margin: 0
+    padding: 0
     th
-      padding: 10px
       font-weight: bold
-      vertical-align: top
-      color: #369
       border-bottom: 3px solid #036
+      margin: 0
+      padding: 6px 13px
 
-table
-  tbody
-    th
-      width: 150px
-      padding: 10px
-      font-weight: bold
-      vertical-align: top
-      border-bottom: 1px solid #ccc
-      background: #f3f6f7
+  tr:nth-child(2n)
+    background-color: #f8f8f8
 
-table
-  td
-    width: 250px
-    padding: 10px
-    vertical-align: top
+  tr td
     border-bottom: 1px solid #ccc
+    text-align: left
+    margin: 0
+    padding: 6px 13px
+
+  tr th :first-child, tr td :first-child
+    margin-top: 0
+  tr th :last-child, tr td :last-child
+    margin-bottom: 0
