@@ -11,6 +11,408 @@
 
 </div>
 
+<div id="content" class="site-content">
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+
+
+
+
+            <article id="post-820" class="post-820 post type-post status-publish format-standard hentry category-language-modeling category-neural-networks category-recurrent-neural-networks category-tensorflow without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2016/08/rnns-in-tensorflow-a-practical-guide-and-undocumented-features/" rel="bookmark">RNNs in Tensorflow, a Practical Guide and Undocumented Features</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2016/08/rnns-in-tensorflow-a-practical-guide-and-undocumented-features/" title="Permalink to RNNs in Tensorflow, a Practical Guide and Undocumented Features" rel="bookmark"><time class="entry-date published" datetime="2016-08-21T11:10:51+00:00">August 21, 2016</time><time class="updated" datetime="2016-08-29T07:44:38+00:00">August 29, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2016/08/rnns-in-tensorflow-a-practical-guide-and-undocumented-features/#comments"><span class="dsq-postid" data-dsqidentifier="820 http://www.wildml.com/?p=820">38 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p>In a <a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/">previous tutorial series</a> I went over some of the theory behind Recurrent Neural Networks (RNNs) and the implementation of a simple RNN from scratch. That’s a useful exercise, but in practice we use libraries like Tensorflow with high-level primitives for dealing with RNNs.</p>
+                        <p>With that using an RNN should be as easy as calling a function, right? Unfortunately that’s not quite the case. In this post I want to go over some of the best practices for working with RNNs in Tensorflow, especially the functionality that isn’t well documented on the official site.</p>
+                        <p>The post comes with a Github repository that contains Jupyter notebooks with minimal examples for:</p>
+                        <ul>
+                            <li><a href="https://github.com/dennybritz/tf-rnn/blob/master/sequence_example.ipynb" onclick="javascript:window.open('https://github.com/dennybritz/tf-rnn/blob/master/sequence_example.ipynb'); return false;">Using tf.SequenceExample</a></li>
+                            <li><a href="https://github.com/dennybritz/tf-rnn/blob/master/batching_padding.ipynb" onclick="javascript:window.open('https://github.com/dennybritz/tf-rnn/blob/master/batching_padding.ipynb'); return false;">Batching and Padding</a></li>
+                            <li><a href="https://github.com/dennybritz/tf-rnn/blob/master/dynamic_rnn.ipynb" onclick="javascript:window.open('https://github.com/dennybritz/tf-rnn/blob/master/dynamic_rnn.ipynb'); return false;">Dynamic RNN</a></li>
+                            <li><a href="https://github.com/dennybritz/tf-rnn/blob/master/bidirectional_rnn.ipynb" onclick="javascript:window.open('https://github.com/dennybritz/tf-rnn/blob/master/bidirectional_rnn.ipynb'); return false;">Bidirectional Dynamic RNN</a></li>
+                            <li><a href="https://github.com/dennybritz/tf-rnn/blob/master/rnn_cell_wrappers.py.ipynb" onclick="javascript:window.open('https://github.com/dennybritz/tf-rnn/blob/master/rnn_cell_wrappers.py.ipynb'); return false;">RNN Cells and Cell Wrappers</a></li>
+                            <li><a href="https://github.com/dennybritz/tf-rnn/blob/master/loss_masking.py.ipynb" onclick="javascript:window.open('https://github.com/dennybritz/tf-rnn/blob/master/loss_masking.py.ipynb'); return false;">Masking the Loss</a></li>
+                        </ul>
+                        <p> <a href="http://www.wildml.com/2016/08/rnns-in-tensorflow-a-practical-guide-and-undocumented-features/#more-820" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+
+            <article id="post-771" class="post-771 post type-post status-publish format-standard hentry category-conversational-agents category-neural-networks category-nlp category-recurrent-neural-networks without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/" rel="bookmark">Deep Learning for Chatbots, Part 2 – Implementing a Retrieval-Based Model in Tensorflow</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/" title="Permalink to Deep Learning for Chatbots, Part 2 – Implementing a Retrieval-Based Model in Tensorflow" rel="bookmark"><time class="entry-date published" datetime="2016-07-04T12:15:42+00:00">July 4, 2016</time><time class="updated" datetime="2016-08-18T07:49:59+00:00">August 18, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/#comments"><span class="dsq-postid" data-dsqidentifier="771 http://www.wildml.com/?p=771">36 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p><strong><a href="https://github.com/dennybritz/chatbot-retrieval/" onclick="javascript:window.open('https://github.com/dennybritz/chatbot-retrieval/'); return false;">The Code and data for this tutorial is on Github.</a></strong></p>
+                        <h4>Retrieval-Based bots</h4>
+                        <p>In this post we’ll implement a retrieval-based bot. Retrieval-based models have a repository of pre-defined responses they can use, which is unlike <em>generative</em> models that can generate responses they’ve never seen before. A bit more formally, the input to a retrieval-based model is a context <img src="http://s0.wp.com/latex.php?zoom=2&amp;latex=c&amp;bg=ffffff&amp;fg=000&amp;s=0" alt="c" title="c" class="latex" width="7" height="7" src-orig="http://s0.wp.com/latex.php?latex=c&amp;bg=ffffff&amp;fg=000&amp;s=0" scale="2"> (the conversation up to this point) and a potential response <img src="http://s0.wp.com/latex.php?zoom=2&amp;latex=r&amp;bg=ffffff&amp;fg=000&amp;s=0" alt="r" title="r" class="latex" width="8" height="7" src-orig="http://s0.wp.com/latex.php?latex=r&amp;bg=ffffff&amp;fg=000&amp;s=0" scale="2">. The model outputs is a score for the response. To find a good response you would calculate the score for multiple responses and choose the one with the highest score.</p>
+                        <p> <a href="http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/#more-771" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+
+            <article id="post-750" class="post-750 post type-post status-publish format-standard hentry category-conversational-agents category-deep-learning category-neural-networks category-nlp category-rnns without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/" rel="bookmark">Deep Learning for Chatbots, Part 1 – Introduction</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/" title="Permalink to Deep Learning for Chatbots, Part 1 – Introduction" rel="bookmark"><time class="entry-date published" datetime="2016-04-06T17:19:46+00:00">April 6, 2016</time><time class="updated" datetime="2016-05-30T17:17:23+00:00">May 30, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/#comments"><span class="dsq-postid" data-dsqidentifier="750 http://www.wildml.com/?p=750">36 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p>Chatbots, also called Conversational Agents or Dialog Systems, are a hot topic. Microsoft is making <a href="http://www.bloomberg.com/features/2016-microsoft-future-ai-chatbots/" onclick="javascript:window.open('http://www.bloomberg.com/features/2016-microsoft-future-ai-chatbots/'); return false;">big bets</a> on chatbots, and so are companies like Facebook (M), Apple (Siri), Google, WeChat, and Slack. There is a new wave of startups trying to change how consumers interact with services by building consumer apps like <a href="https://operator.com/" onclick="javascript:window.open('https://operator.com/'); return false;">Operator</a> or <a href="https://x.ai/" onclick="javascript:window.open('https://x.ai/'); return false;">x.ai</a>, bot platforms like <a href="http://chatfuel.com/" onclick="javascript:window.open('http://chatfuel.com/'); return false;">Chatfuel</a>, and bot libraries like <a href="http://howdy.ai/botkit/" onclick="javascript:window.open('http://howdy.ai/botkit/'); return false;">Howdy’s Botkit</a>. Microsoft recently released their own <a href="https://dev.botframework.com/" onclick="javascript:window.open('https://dev.botframework.com/'); return false;">bot developer framework</a>.</p>
+                        <p>Many companies are hoping to develop bots to have natural conversations indistinguishable from human ones, and many are claiming to be using NLP and Deep Learning techniques to make this possible. But with all the hype around AI it’s sometimes difficult to tell fact from fiction.</p>
+                        <p>In this series I want to go over some of the Deep Learning techniques that are used to build conversational agents, starting off by explaining where we are right now, what’s possible, and what will stay nearly impossible for at least a little while. This post will serve as an introduction, and we’ll get into the implementation details in upcoming posts.</p>
+                        <p> <a href="http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/#more-750" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+
+            <article id="post-548" class="post-548 post type-post status-publish format-standard hentry category-deep-learning category-language-modeling category-memory category-neural-networks category-nlp without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/" rel="bookmark">Attention and Memory in Deep Learning and NLP</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/" title="Permalink to Attention and Memory in Deep Learning and NLP" rel="bookmark"><time class="entry-date published" datetime="2016-01-03T02:07:51+00:00">January 3, 2016</time><time class="updated" datetime="2016-04-27T06:57:39+00:00">April 27, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/#comments"><span class="dsq-postid" data-dsqidentifier="548 http://www.wildml.com/?p=548">24 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p>A recent trend in Deep Learning are Attention Mechanisms. In an <a href="https://re-work.co/blog/deep-learning-ilya-sutskever-google-openai" onclick="javascript:window.open('https://re-work.co/blog/deep-learning-ilya-sutskever-google-openai'); return false;">interview</a>, Ilya Sutskever, now the research director of OpenAI, mentioned that Attention Mechanisms are one of the most exciting advancements, and that they are here to stay. That sounds exciting. But what are Attention Mechanisms?</p>
+                        <p>Attention Mechanisms in Neural Networks are (very) loosely based on the visual attention mechanism found in humans. Human visual attention is well-studied and while there exist different models, all of them essentially come down to being able to focus on a certain region of an image with “high resolution” while perceiving the surrounding image in “low resolution”, and then adjusting the focal point over time.</p>
+                        <p> <a href="http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/#more-548" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+
+            <article id="post-452" class="post-452 post type-post status-publish format-standard hentry category-convolutional-neural-networks category-deep-learning category-neural-networks category-nlp without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/" rel="bookmark">Implementing a CNN for Text Classification in TensorFlow</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/" title="Permalink to Implementing a CNN for Text Classification in TensorFlow" rel="bookmark"><time class="entry-date published" datetime="2015-12-11T07:10:33+00:00">December 11, 2015</time><time class="updated" datetime="2016-02-04T20:56:35+00:00">February 4, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/#comments"><span class="dsq-postid" data-dsqidentifier="452 http://www.wildml.com/?p=452">185 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p><strong><a href="https://github.com/dennybritz/cnn-text-classification-tf" onclick="javascript:window.open('https://github.com/dennybritz/cnn-text-classification-tf'); return false;">The full code is available on Github.</a></strong></p>
+                        <p>In this post we will implement a model similar to Kim Yoon’s <a href="http://arxiv.org/abs/1408.5882" onclick="javascript:window.open('http://arxiv.org/abs/1408.5882'); return false;">Convolutional Neural Networks for Sentence Classification</a>. The model presented in the paper achieves good classification performance across a range of text classification tasks (like Sentiment Analysis) and has since become a standard baseline for new text classification architectures.</p>
+                        <p> <a href="http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/#more-452" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+
+            <article id="post-348" class="post-348 post type-post status-publish format-standard hentry category-convolutional-neural-networks category-deep-learning category-neural-networks without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/" rel="bookmark">Understanding Convolutional Neural Networks for NLP</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/" title="Permalink to Understanding Convolutional Neural Networks for NLP" rel="bookmark"><time class="entry-date published" datetime="2015-11-07T06:56:42+00:00">November 7, 2015</time><time class="updated" datetime="2016-01-10T02:16:34+00:00">January 10, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/#comments"><span class="dsq-postid" data-dsqidentifier="348 http://www.wildml.com/?p=348">47 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p>When we hear about Convolutional Neural Network (CNNs), we typically think of Computer Vision. CNNs were responsible for major breakthroughs in Image&nbsp;Classification and are the core&nbsp;of most Computer Vision systems today, from Facebook’s automated photo tagging to self-driving cars.</p>
+                        <p>More&nbsp;recently we’ve also started to apply CNNs to problems in Natural Language&nbsp;Processing and gotten some interesting results. In this post I’ll try to summarize what CNNs are, and how they’re used in NLP. The intuitions behind CNNs are somewhat easier to understand&nbsp;for the&nbsp;Computer Vision use case, so I’ll start there, and then slowly move towards NLP.</p>
+                        <p> <a href="http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/#more-348" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+
+            <article id="post-341" class="post-341 post type-post status-publish format-standard hentry category-deep-learning category-language-modeling category-neural-networks category-recurrent-neural-networks category-rnns without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano/" rel="bookmark">Recurrent Neural Network Tutorial, Part 4 – Implementing a GRU/LSTM RNN with Python and Theano</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano/" title="Permalink to Recurrent Neural Network Tutorial, Part 4 – Implementing a GRU/LSTM RNN with Python and Theano" rel="bookmark"><time class="entry-date published" datetime="2015-10-27T01:47:27+00:00">October 27, 2015</time><time class="updated" datetime="2016-01-10T02:17:11+00:00">January 10, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano/#comments"><span class="dsq-postid" data-dsqidentifier="341 http://www.wildml.com/?p=341">59 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p><a href="https://github.com/dennybritz/rnn-tutorial-gru-lstm" onclick="javascript:window.open('https://github.com/dennybritz/rnn-tutorial-gru-lstm'); return false;"><strong>The code for this post is on Github.</strong></a> This is&nbsp;part 4, the last part of the&nbsp;Recurrent Neural Network Tutorial. The previous parts&nbsp;are:</p>
+                        <ul>
+                            <li><a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/">Recurrent Neural Networks Tutorial, Part 1 – Introduction to RNNs</a></li>
+                            <li><a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/">Recurrent Neural Networks Tutorial, Part 2 – Implementing a RNN with Python, Numpy and Theano</a></li>
+                            <li><a href="http://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/">Recurrent Neural Networks Tutorial, Part 3 – Backpropagation Through Time and Vanishing Gradients</a></li>
+                        </ul>
+                        <p>In this post we’ll learn about&nbsp;LSTM (Long Short Term Memory) networks and GRUs (Gated Recurrent Units). &nbsp;LSTMs were <a href="http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf" onclick="javascript:window.open('http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf'); return false;">first proposed in 1997&nbsp;by Sepp Hochreiter and Jürgen Schmidhuber</a>, and are among the most widely used models in Deep Learning for NLP today. GRUs, <a href="http://arxiv.org/pdf/1406.1078v3.pdf" onclick="javascript:window.open('http://arxiv.org/pdf/1406.1078v3.pdf'); return false;">first used in &nbsp;2014</a>,&nbsp;are a simpler variant of&nbsp;LSTMs that share many of the same&nbsp;properties. &nbsp;Let’s start by looking at LSTMs, and then we’ll see how GRUs are different.</p>
+                        <p> <a href="http://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano/#more-341" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+
+            <article id="post-308" class="post-308 post type-post status-publish format-standard hentry category-deep-learning category-language-modeling category-recurrent-neural-networks category-rnns without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/" rel="bookmark">Recurrent Neural Networks Tutorial, Part 3 – Backpropagation Through Time and Vanishing Gradients</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/" title="Permalink to Recurrent Neural Networks Tutorial, Part 3 – Backpropagation Through Time and Vanishing Gradients" rel="bookmark"><time class="entry-date published" datetime="2015-10-08T05:00:10+00:00">October 8, 2015</time><time class="updated" datetime="2016-04-01T08:45:46+00:00">April 1, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/#comments"><span class="dsq-postid" data-dsqidentifier="308 http://www.wildml.com/?p=308">64 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p>This the third&nbsp;part of the <a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/">Recurrent Neural Network Tutorial</a>.</p>
+                        <p>In the <a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/">previous&nbsp;part</a> of the tutorial we implemented a RNN from scratch, but didn’t go into detail on how Backpropagation Through Time (BPTT) algorithms calculates the gradients. In this part we’ll give a brief overview of BPTT and explain how it differs from traditional backpropagation. We will then try to understand the <em>vanishing gradient problem</em>, which&nbsp;has led to the development of &nbsp;LSTMs and GRUs, two of the currently most popular and powerful models used in NLP (and other areas). The vanishing gradient problem was <a href="http://people.idsia.ch/~juergen/fundamentaldeeplearningproblem.html" onclick="javascript:window.open('http://people.idsia.ch/~juergen/fundamentaldeeplearningproblem.html'); return false;">originally discovered by&nbsp;Sepp Hochreiter in 1991</a>&nbsp;and has been receiving attention again recently due to the increased application&nbsp;of deep architectures.</p>
+                        <p> <a href="http://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/#more-308" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+
+            <article id="post-249" class="post-249 post type-post status-publish format-standard hentry category-deep-learning category-gpu category-language-modeling category-recurrent-neural-networks without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/" rel="bookmark">Recurrent Neural Networks Tutorial, Part 2 – Implementing a RNN with Python, Numpy and Theano</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/" title="Permalink to Recurrent Neural Networks Tutorial, Part 2 – Implementing a RNN with Python, Numpy and Theano" rel="bookmark"><time class="entry-date published" datetime="2015-09-30T06:19:19+00:00">September 30, 2015</time><time class="updated" datetime="2016-01-10T02:17:27+00:00">January 10, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/#comments"><span class="dsq-postid" data-dsqidentifier="249 http://www.wildml.com/?p=249">194 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p><strong>This the second part of the Recurrent Neural Network Tutorial. <a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/">The first part is here</a>.</strong></p>
+                        <p><strong><a href="https://github.com/dennybritz/rnn-tutorial-rnnlm" onclick="javascript:window.open('https://github.com/dennybritz/rnn-tutorial-rnnlm'); return false;">Code to follow along is on Github.</a></strong></p>
+                        <p>In this part we will implement a full Recurrent Neural Network from scratch using Python and optimize our implementation using <a href="http://deeplearning.net/software/theano/" onclick="javascript:window.open('http://deeplearning.net/software/theano/'); return false;">Theano</a>, a library to perform operations on a GPU. <strong><a href="https://github.com/dennybritz/rnn-tutorial-rnnlm/" onclick="javascript:window.open('https://github.com/dennybritz/rnn-tutorial-rnnlm/'); return false;">The full code is available on Github</a></strong>. I will skip over some boilerplate code that is not essential to understanding Recurrent Neural Networks, but all of that is also on Github.</p>
+                        <p> <a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/#more-249" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+
+            <article id="post-107" class="post-107 post type-post status-publish format-standard hentry category-deep-learning category-neural-networks category-recurrent-neural-networks without-featured-image">
+
+
+                <header class="entry-header ">
+                    <h1 class="entry-title"><a href=" http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/" rel="bookmark">Recurrent Neural Networks Tutorial, Part 1 – Introduction to RNNs</a></h1>			</header><!-- .entry-header -->
+
+                <div class="entry-body">
+
+                    <div class="entry-meta">
+                        <span class="date"><a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/" title="Permalink to Recurrent Neural Networks Tutorial, Part 1 – Introduction to RNNs" rel="bookmark"><time class="entry-date published" datetime="2015-09-17T04:28:23+00:00">September 17, 2015</time><time class="updated" datetime="2016-07-08T08:46:34+00:00">July 8, 2016</time></a></span><span class="comments-link"><a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/#comments"><span class="dsq-postid" data-dsqidentifier="107 http://www.wildml.com/?p=107">54 Comments</span></a></span>		</div><!-- .entry-meta -->
+
+                    <div class="entry-content">
+                        <p>Recurrent Neural Networks (RNNs) are popular models that have shown great promise in many&nbsp;NLP tasks. But despite their recent popularity I’ve only found a limited number of resources that throughly explain how RNNs work, and how to&nbsp;implement them. That’s what this tutorial is about. It’s a multi-part series in which I’m planning to cover the following:</p>
+                        <ol>
+                            <li>Introduction to RNNs (this post)</li>
+                            <li><a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-2-implementing-a-language-model-rnn-with-python-numpy-and-theano/">Implementing a RNN using Python and Theano</a></li>
+                            <li><a href="http://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/">Understanding the Backpropagation Through Time (BPTT) algorithm and the vanishing gradient problem</a></li>
+                            <li><a href="http://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano/">Implementing a GRU/LSTM RNN</a></li>
+                        </ol>
+                        <p>As part of the tutorial we will implement a <a href="http://www.fit.vutbr.cz/research/groups/speech/publi/2010/mikolov_interspeech2010_IS100722.pdf" onclick="javascript:window.open('http://www.fit.vutbr.cz/research/groups/speech/publi/2010/mikolov_interspeech2010_IS100722.pdf'); return false;">recurrent neural network based language model</a>. The applications of&nbsp;language models are two-fold: First, it allows us to score arbitrary sentences based on how likely they are to occur in the real world. This gives us a measure of&nbsp;grammatical and semantic correctness. Such models are typically used as part of Machine Translation systems. Secondly, a language model allows us to generate new text (I think that’s the much cooler application). Training a language model on Shakespeare allows us to generate&nbsp;Shakespeare-like text.&nbsp;<a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/" onclick="javascript:window.open('http://karpathy.github.io/2015/05/21/rnn-effectiveness/'); return false;">This fun post</a>&nbsp;by&nbsp;Andrej Karpathy&nbsp;demonstrates what character-level language models based&nbsp;on RNNs are capable of.</p>
+                        <p> <a href="http://www.wildml.com/2015/09/recurrent-neural-networks-tutorial-part-1-introduction-to-rnns/#more-107" class="more-link">Continue reading <span class="meta-nav">→</span></a></p>
+                    </div><!-- .entry-content -->
+
+                </div><!-- .entry-body -->
+
+            </article><!-- #post-## -->
+
+
+            <nav class="navigation paging-navigation" role="navigation">
+                <h1 class="screen-reader-text">Posts navigation</h1>
+                <div class="nav-links">
+
+                    <div class="nav-previous"><a href="http://www.wildml.com/page/2/"><span class="meta-nav"></span> Older posts</a></div>
+
+
+                </div><!-- .nav-links -->
+            </nav><!-- .navigation -->
+
+
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+    <div id="secondary" class="widget-area sidebar-widget-area" role="complementary">
+        <aside id="a2a_follow_widget-2" class="widget widget_a2a_follow_widget"><h3 class="widget-title">Connect</h3><div class="a2a_kit a2a_kit_size_32 a2a_follow addtoany_list" style="line-height: 32px;"><a class="a2a_button_twitter" href="https://twitter.com/dennybritz" title="Twitter" onclick="javascript:window.open('https://twitter.com/dennybritz'); return false;"><span class="a2a_svg a2a_s__default a2a_s_twitter"></span><span class="a2a_label">Twitter</span></a><a class="a2a_button_linkedin" href="https://www.linkedin.com/in/dennybritz" title="LinkedIn" onclick="javascript:window.open('https://www.linkedin.com/in/dennybritz'); return false;"><span class="a2a_svg a2a_s__default a2a_s_linkedin"></span><span class="a2a_label">LinkedIn</span></a></div></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+        <li>
+            <a href="http://www.wildml.com/2016/08/rnns-in-tensorflow-a-practical-guide-and-undocumented-features/">RNNs in Tensorflow, a Practical Guide and Undocumented Features</a>
+        </li>
+        <li>
+            <a href="http://www.wildml.com/2016/07/deep-learning-for-chatbots-2-retrieval-based-model-tensorflow/">Deep Learning for Chatbots, Part 2 – Implementing a Retrieval-Based Model in Tensorflow</a>
+        </li>
+        <li>
+            <a href="http://www.wildml.com/2016/04/deep-learning-for-chatbots-part-1-introduction/">Deep Learning for Chatbots, Part 1 – Introduction</a>
+        </li>
+        <li>
+            <a href="http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/">Attention and Memory in Deep Learning and NLP</a>
+        </li>
+        <li>
+            <a href="http://www.wildml.com/2015/12/implementing-a-cnn-for-text-classification-in-tensorflow/">Implementing a CNN for Text Classification in TensorFlow</a>
+        </li>
+        <li>
+            <a href="http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/">Understanding Convolutional Neural Networks for NLP</a>
+        </li>
+        <li>
+            <a href="http://www.wildml.com/2015/10/recurrent-neural-network-tutorial-part-4-implementing-a-grulstm-rnn-with-python-and-theano/">Recurrent Neural Network Tutorial, Part 4 – Implementing a GRU/LSTM RNN with Python and Theano</a>
+        </li>
+        <li>
+            <a href="http://www.wildml.com/2015/10/recurrent-neural-networks-tutorial-part-3-backpropagation-through-time-and-vanishing-gradients/">Recurrent Neural Networks Tutorial, Part 3 – Backpropagation Through Time and Vanishing Gradients</a>
+        </li>
+    </ul>
+    </aside>		<aside id="nav_menu-2" class="widget widget_nav_menu"><h3 class="widget-title">Links</h3><div class="menu-links-container"><ul id="menu-links" class="menu"><li id="menu-item-583" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-583"><a href="http://www.wildml.com/">Home</a></li>
+        <li id="menu-item-584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-584"><a href="http://www.wildml.com/about/">About</a></li>
+        <li id="menu-item-585" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-585"><a href="http://www.moji.ai/en/" onclick="javascript:window.open('http://www.moji.ai/en/'); return false;">NLP Consulting</a></li>
+    </ul></div></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+        <li><a href="http://www.wildml.com/2016/08/">August 2016</a></li>
+        <li><a href="http://www.wildml.com/2016/07/">July 2016</a></li>
+        <li><a href="http://www.wildml.com/2016/04/">April 2016</a></li>
+        <li><a href="http://www.wildml.com/2016/01/">January 2016</a></li>
+        <li><a href="http://www.wildml.com/2015/12/">December 2015</a></li>
+        <li><a href="http://www.wildml.com/2015/11/">November 2015</a></li>
+        <li><a href="http://www.wildml.com/2015/10/">October 2015</a></li>
+        <li><a href="http://www.wildml.com/2015/09/">September 2015</a></li>
+    </ul>
+    </aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+        <li class="cat-item cat-item-15"><a href="http://www.wildml.com/category/conversational-agents/">Conversational Agents</a>
+        </li>
+        <li class="cat-item cat-item-8"><a href="http://www.wildml.com/category/neural-networks/convolutional-neural-networks/">Convolutional Neural Networks</a>
+        </li>
+        <li class="cat-item cat-item-3"><a href="http://www.wildml.com/category/deep-learning/">Deep Learning</a>
+        </li>
+        <li class="cat-item cat-item-4"><a href="http://www.wildml.com/category/gpu/">GPU</a>
+        </li>
+        <li class="cat-item cat-item-7"><a href="http://www.wildml.com/category/language-modeling/">Language Modeling</a>
+        </li>
+        <li class="cat-item cat-item-11"><a href="http://www.wildml.com/category/memory/">Memory</a>
+        </li>
+        <li class="cat-item cat-item-2"><a href="http://www.wildml.com/category/neural-networks/">Neural Networks</a>
+        </li>
+        <li class="cat-item cat-item-9"><a href="http://www.wildml.com/category/nlp/">NLP</a>
+        </li>
+        <li class="cat-item cat-item-6"><a href="http://www.wildml.com/category/neural-networks/recurrent-neural-networks/">Recurrent Neural Networks</a>
+        </li>
+        <li class="cat-item cat-item-5"><a href="http://www.wildml.com/category/rnns/">RNNs</a>
+        </li>
+        <li class="cat-item cat-item-16"><a href="http://www.wildml.com/category/tensorflow/">Tensorflow</a>
+        </li>
+    </ul>
+    </aside><aside id="blog_subscription-2" class="widget jetpack_subscription_widget"><h3 class="widget-title">Subscribe to Blog via Email</h3>
+        <form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+            <div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+            </div>					<p id="subscribe-email">
+            <label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-2" style="clip: rect(1px 1px 1px 1px); position: absolute; height: 1px; width: 1px; overflow: hidden;">
+                Email Address						</label>
+            <input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Email Address">
+        </p>
+
+            <p id="subscribe-submit">
+                <input type="hidden" name="action" value="subscribe">
+                <input type="hidden" name="source" value="http://www.wildml.com/">
+                <input type="hidden" name="sub-type" value="widget">
+                <input type="hidden" name="redirect_fragment" value="blog_subscription-2">
+                <input type="submit" value="Subscribe" name="jetpack_subscriptions_widget">
+            </p>
+        </form>
+
+        <script>
+            /*
+             Custom functionality for safari and IE
+             */
+            (function( d ) {
+                // In case the placeholder functionality is available we remove labels
+                if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+                    var label = d.querySelector( 'label[for=subscribe-field-blog_subscription-2]' );
+                    label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+                    label.style.position = 'absolute';
+                    label.style.height   = '1px';
+                    label.style.width    = '1px';
+                    label.style.overflow = 'hidden';
+                }
+
+                // Make sure the email value is filled in before allowing submit
+                var form = d.getElementById('subscribe-blog-blog_subscription-2'),
+                        input = d.getElementById('subscribe-field-blog_subscription-2'),
+                        handler = function( event ) {
+                            if ( '' === input.value ) {
+                                input.focus();
+
+                                if ( event.preventDefault ){
+                                    event.preventDefault();
+                                }
+
+                                return false;
+                            }
+                        };
+
+                if ( window.addEventListener ) {
+                    form.addEventListener( 'submit', handler, false );
+                } else {
+                    form.attachEvent( 'onsubmit', handler );
+                }
+            })( document );
+        </script>
+
+    </aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+        <li><a href="http://www.wildml.com/wp-login.php">Log in</a></li>
+        <li><a href="http://www.wildml.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+        <li><a href="http://www.wildml.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+        <li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform." onclick="javascript:window.open('https://wordpress.org/'); return false;">WordPress.org</a></li>			</ul>
+    </aside>	</div><!-- #secondary -->
+
+</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>

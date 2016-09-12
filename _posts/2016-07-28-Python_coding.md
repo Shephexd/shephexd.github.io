@@ -2,12 +2,17 @@
 layout: post
 published: True
 title: Python coding
-excerpt: To learn how to code study.
 categories: 
 - Programming
 tags: 
 - python
 ---
+
+We will stduy about something important for our.
+
+- dd
+- ddf
+- ff
 
 ## THINK LIKE PYTHON
 **generally It is important to work like python with python.**  
@@ -18,6 +23,7 @@ There are specific methods and statements in python. Python programmers emphasiz
 
 파이썬에서 버전확인을 위해 사용하는 방법은 두 가지가 있다.
 
+<!--more-->
 1. **터미널**
 - 터미널에서 python명령어를 입력하면 파이썬 콘솔이 실행된다. 이때 --version 플래그를 사용하면 버전 확인이 가능하다.
 

@@ -35,14 +35,7 @@ Quantification
 |{min,}	|"min"번 이상만큼 일치시킨다.|
 |{min,max}|	적어도 "min"번만큼 일치시키지만 "max"번을 초과하여 일치시키지는 않는다.|
 
-## Syntax
-
-### POSIC Basic
-
-### POSIC Extend
-
-### String class
-
+## Syntax 
 '.'
 : 임의의 한 문자를 의미  
 `ex) a.c -> abc,aec,avb,afc ...`
@@ -94,20 +87,3 @@ findall()
 |  `escape(string)` |영문자 숫자가 아닌 문자들을 백슬래쉬 처리해서 리턴.| str |
 
 
-### example re
-
-``` python
-#include <stdio.h>
-
-void main(void){
-  printf("hello world");
-}
-```
-
-```python
-import re
-m = re.search("(?<=abc)def","abcdef")
-.group(0)
-
-
-```

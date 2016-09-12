@@ -2,7 +2,6 @@
 layout: post
 published: True
 title: How to use Docker?
-excerpt: Introduction Docker.
 categories: virtual
 tags:
 - Linux

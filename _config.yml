@@ -25,6 +25,7 @@ twitter_handle: '@dirkfabisch'
 
 #fill in disqus shortname to use disqus
 disqus: minorcreator
+excerpt_separator: <!--more-->
 
 # social icons and sharing options
 social:

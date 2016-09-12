@@ -13,85 +13,92 @@
  *   http://www.gnu.org/licenses/gpl.html
  */
 
-
 div#toc {
-    border-radius: 15px;
-    background: none repeat scroll 0 0;
-    background-color: #f9f9f9;
-    border: 1px solid #aaa;
-    display: table;
-    margin-bottom: 1em;
-    margin-right: 70%;
-    width: 30%;
-    min-width: 250px;
-    padding: 10px 20px;
-    float: left;
+    display: none;
 }
 
+@media only screen
+and (min-device-width : 850px){
+    div#toc {
+        background: none repeat scroll 0 0;
+        background-color: #f9f9f9;
+        border: 1px solid #aaa;
+        margin-bottom: 1em;
+        float: right;
+        width: 30%;
+        min-width: 50px;
+        padding: 10px 20px;
+        display: block;
+    }
 
-#toc, .toc, .mw-warning {
-    background-color: #F9F9F9;
-    border: 1px solid #AAAAAA;
-    font-size: 80%;
-    margin: auto;
-    padding: 10px 5px;
+    #toc, .toc, .mw-warning {
+        background-color: #F9F9F9;
+        border: 1px solid #AAAAAA;
+        font-size: 80%;
+        margin: auto;
+        padding: 10px 5px;
 
-}
-#toc h2, .toc h2 {
-    border: medium none;
-    display: inline;
-    font-size: 110%;
-    font-weight: bold;
-    padding: 0;
-}
-#toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle {
-    text-align: center;
-}
-#toc li.toclevel-1 > a{
-    font-weight: 700;
-}
-#toc td {
-    max-width: 300px;
-    min-width: 50px;
-}
+    }
 
-#toc ul, .toc ul {
-    list-style-image: none;
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
-    text-align: left;
-}
+    #toc h2, .toc h2 {
+        border: medium none;
+        display: inline;
+        font-size: 110%;
+        font-weight: bold;
+        padding: 0;
+    }
 
-#toc ul ul, .toc ul ul {
-    margin: 0 0 0 2em;
-}
-#toc .toctoggle, .toc .toctoggle {
-    font-size: 94%;
-}
+    #toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle {
+        text-align: center;
+    }
 
-#toc ul li {
-    list-style-type: none;
-    padding-left: 0;
-    padding-top: 3px;
-}
+    #toc li.toclevel-1 > a {
+        font-weight: 700;
+    }
 
-#toc a:hover{
-    color: #b3b3b1;
-    text-decoration: None;
-}
+    #toc td {
+        max-width: 300px;
+        min-width: 50px;
+    }
 
-#toc a{
-    color: #3399dd;
-    text-decoration: None;
-}
+    #toc ul, .toc ul {
+        list-style-image: none;
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+        text-align: left;
+    }
 
-.toc{
-    min-width: 150px;
-    max-width: 200px;
-}
+    #toc ul ul, .toc ul ul {
+        margin: 0 0 0 2em;
+    }
 
+    #toc .toctoggle, .toc .toctoggle {
+        font-size: 94%;
+    }
 
-.tochidden{
-    width: 20px;
+    #toc ul li {
+        list-style-type: none;
+        padding-left: 0;
+        padding-top: 3px;
+    }
+
+    #toc a:hover {
+        color: #b3b3b1;
+        text-decoration: None;
+    }
+
+    #toc a {
+        color: #3399dd;
+        text-decoration: None;
+    }
+
+    .toc {
+        min-width: 150px;
+        max-width: 200px;
+    }
+
+    .tochidden {
+        display: 20px;
+    }
 }
