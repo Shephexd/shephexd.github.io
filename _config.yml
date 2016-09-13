@@ -2,6 +2,7 @@
 gems:
   - jemoji
   - jekyll-paginate
+  - jekyll-seo-tag
 
 # Site settings
 title: "Shephexd"
