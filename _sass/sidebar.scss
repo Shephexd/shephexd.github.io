@@ -10,8 +10,6 @@ $toggle-time: 0.35s;
   a:hover{
   color: #999988;
 }
-  padding-left: 15px;
-  padding-top: 30px;
   background-color: black;
   width: $sidex;
   position: fixed;
@@ -19,8 +17,13 @@ $toggle-time: 0.35s;
   left: 0;
   bottom: 0;
 
-  -moz-transition: left $toggle-time ease;
-  transition: left $toggle-time ease;
+  -moz-transition: width $toggle-time ease;
+  transition: width $toggle-time ease;
+
+  .side-menu{
+    margin-left: 15px;
+    margin-top: 30px;
+  }
 }
 
 .slide-wrap{
@@ -70,6 +73,7 @@ $toggle-time: 0.35s;
 
   -moz-transition: left $toggle-time ease;
   transition: left $toggle-time ease;
+
 }
 
 input[type=checkbox] {
@@ -90,5 +94,5 @@ input:checked ~ .logo-radi {
 }
 
 input:checked ~ .sidebar {
-  left: 0px;
+  width: 0px;
 }
