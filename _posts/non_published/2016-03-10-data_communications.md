@@ -1,16 +1,13 @@
 ---
 layout: post
-published: True
+published: False
 title: Data communications
-excerpt: Introduction Data communications.
 categories: 
 - Computer Science
 tags:
 - protocol
 - network
 ---
-
-[TOC]
 
 # Computer Network
 Computer network based on TCP/IP
@@ -48,7 +45,7 @@ Computer network based on TCP/IP
 4 (OSI 5,6,7 layers)
 : is called Applications. It used SMTP, FTP, HTTP, DNS, SNMP, TELNET
 
---------
+<!--more-->
 
 # Network Layer
 1. Physical addresses

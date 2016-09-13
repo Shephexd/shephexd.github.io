@@ -1,24 +1,23 @@
 ---
 layout: post
 published: False
-excerpt: Basic concept about Regular Expression using python re module.
 title: System Software
-categories: 
+categories:
 - Development
-tags: 
+tags:
 - Development
 ---
 
-[TOC]
+시스템 소프트웨어에 대한 소개와 개념 정리해보고 작성하였다.
 
-#What is System programming?
+## What is System programming?
 Computer consists of H/W and S/W.
-
 How to match S/W to H/W or H/W to SW.
 
 ```
 Coding:Editor -> Source Program:compiler -> Object Program:Linker -> Load:Module -> Memory
 ```
+
 
 ## Introduction
 
@@ -41,6 +40,8 @@ Coding:Editor -> Source Program:compiler -> Object Program:Linker -> Load:Module
       : 현재 수행중인 명령어를 보관
     3. PSW(Program Status Word)
       : 현재 프로 그램의 상태를 보관, Carry, Overflow, Zero 등의 상태와 interrupt 발생유무를 표시
+
+<!--more-->
 
 ### 어셈블러(Assembler)
 - 어셈블러
@@ -120,7 +121,7 @@ P.S.
 	- interrupt cycle : interrupt가  fetch단계에서 걸려도 interrupt cycle 실행
 
 
-### IBM 360/370 H/W Structure 
+### IBM 360/370 H/W Structure
 1. Memory
 	- **Memory basic size - byte**
 	- byte - 8bits
@@ -161,6 +162,3 @@ A	2,DATA2
 A	3,DATA3
 MEND
 ```
-
-# 걍해라
-

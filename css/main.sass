@@ -5,15 +5,15 @@
 @import 'bourbon/bourbon'
 @import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css)
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css)
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans)
 .cf
   @include clearfix
 
 $rs: 15px
 $rx: 10px
 
-$font-serif: 'Noto Sans KR', sans-serif
-$font-sans: 'Noto Sans KR', 'Nanum Gothic', sans-serif
+$font-serif: 'Noto Sans KR','Open-Sans', sans-serif
+$font-sans: 'Noto Sans KR', 'Nanum Gothic','Open-Sans', sans-serif
 
 
 @mixin respond-to($breakpoint)
@@ -68,25 +68,6 @@ body
   -o-font-feature-settings: "liga", "dlig"
   font-feature-settings: "liga", "dlig"
 
-.logo-radi
-  border-radius: 25px
-  position: fixed
-  left: 10px
-  top: 10px
-  width: $rx*3
-  height: $rx*3
-  background-color: #000
-  overflow: hidden
-  z-index: 99
-  .logo
-    display: block
-    position: absolute
-    top: $rx/2
-    left: $rx/2
-    width: $rx*2
-    height: $rx*2
-    background-size: cover
-    background-repeat: no-repeat
 
 .teaserimage
   height: 450px
@@ -159,13 +140,13 @@ body
         color: #333
 
 .content
-  width: 100%
-  max-width: 820px
+  width: 85%
+  max-width: 850px
   margin: 0 auto
   padding-bottom: 10px
   @include box-sizing(border-box)
   @include respond-to(800)
-    padding: 0 $rs*2
+    padding: 0 3px
   article
     padding: 25px 0
     border-bottom: 1px solid #f2f2f0
@@ -282,8 +263,15 @@ body
     &:hover
       color: #333
 
-.post-excerpt
-.post
+.post-excerpt,
+.post,
+.content
+  a
+    color: #1756a9
+    text-decoration: none
+    &:hover
+      color: #e1122a
+
   strong
     color: #e1122a
   .article-image
@@ -452,7 +440,7 @@ body
       font-weight: 600
       font-style: normal
       font-size: 20px
-      line-height: 0.8
+      line-height: 1.2
       margin: 0
       padding-top: 10px
       font-family: $font-sans
@@ -789,3 +777,9 @@ table
     margin-top: 0
   tr th :last-child, tr td :last-child
     margin-bottom: 0
+
+
+.MathJax_CHTML
+  word-wrap: break-word
+
+@import "../_sass/sidebar"

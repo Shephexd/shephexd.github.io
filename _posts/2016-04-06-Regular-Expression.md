@@ -1,7 +1,6 @@
 ---
 layout: post
 published: True
-excerpt: Basic concept about Regular Expression using python re module.
 title: 정규표현식(Regular Expression)
 categories: 
 - Development
@@ -24,7 +23,7 @@ Grouping
 : 괄호(`()`)를 사용하면 연산자의 범위와 우선권을 정의할 수 있다. 
 이를테면 gray|grey와 gr(a|e)y는 "gray"나 "grey" 집합을 둘 다 기술하는 동일 패턴이다.
 
-Quantification
+### Quantification
 
 | Method |   Description   |
 |:-------|:----|:-----|:----|
@@ -34,6 +33,8 @@ Quantification
 |{n}	|정확히 n 번만큼 일치시킨다.|
 |{min,}	|"min"번 이상만큼 일치시킨다.|
 |{min,max}|	적어도 "min"번만큼 일치시키지만 "max"번을 초과하여 일치시키지는 않는다.|
+
+<!--more-->
 
 ## Syntax 
 '.'

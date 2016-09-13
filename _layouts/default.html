@@ -3,21 +3,24 @@
 
   {% include head.html %}
 
-  <body>
+  <div>
 
-    {% include header.html %}
+  <div class="main-wrap">
+  {% include sidebar.html %}
+
 
     <!-- content start -->
-
+  <div class="portfolio">
     <div class="page-content">
+      {% include header.html %}
       <div class="wrapper">
         {{ content }}
       </div>
-    </div>
-
     <!-- content end -->
-
     {% include footer.html %}
+      </div>
+    </div>
+  </div>
     {% include javascripts.html %}
 
   </body>

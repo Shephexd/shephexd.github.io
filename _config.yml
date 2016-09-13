@@ -30,11 +30,16 @@ excerpt_separator: <!--more-->
 # social icons and sharing options
 social:
   - icon:	twitter
-    url:	https://twitter.com/dirkfabisch
+    url:	https://twitter.com/furorluna
     desc: Follow me on twitter
     share_url: http://twitter.com/share
     share_title: ?text=
     share_link: "&amp;url="
+
+  - icon:   linkedin
+    url:	https://www.linkedin.com/nhome/?trk=
+    desc: Information in Linkedin
+
 
 #  - icon:	facebook
 #    url:	https://facebook.com/???

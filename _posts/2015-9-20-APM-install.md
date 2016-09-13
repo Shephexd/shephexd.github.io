@@ -1,10 +1,9 @@
 ---
 layout: post
 published: True
-title: ubuntu 서버 구축
-excerpt: Introduction about basic method to install APM(Apache,Php,Mysql)
-categories: 
-- Programming
+title: Linux(Ubuntu) 서버 구축
+categories:
+- server
 tags:
 - server
 - ubuntu
@@ -27,6 +26,8 @@ tags:
 ```bash
 sudo apt-get install phpmyadmin mysql-client mysql-server php5-common apache2 php5-mysql
 ```
+
+<!--more-->
 
 1. 서버는 apache로 선택
 2. mysql관리자 비밀번호 설정 후,

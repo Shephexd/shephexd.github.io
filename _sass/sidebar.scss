@@ -1,0 +1,94 @@
+$sidex: 160px;
+$toggle-time: 0.35s;
+
+.sidebar {
+  a{
+    text-decoration: none;
+    color: white;
+
+  }
+  a:hover{
+  color: #999988;
+}
+  padding-left: 15px;
+  padding-top: 30px;
+  background-color: black;
+  width: $sidex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  -moz-transition: left $toggle-time ease;
+  transition: left $toggle-time ease;
+}
+
+.slide-wrap{
+  margin-left: 10px;
+}
+
+
+.logo-radi {
+  border-radius: 25px;
+  position: fixed;
+  top: 10px;
+  width: $rx*3;
+  height: $rx*3;
+  background-color: #000;
+  overflow: hidden;
+  z-index: 99;
+
+  -moz-transition: left $toggle-time ease;
+  transition: left $toggle-time ease;
+
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  top: $rx/2;
+  left: $rx/2;
+  width: $rx*2;
+  height: $rx*2;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sidebar h1 {
+  color: white;
+}
+
+.page-content{
+  background-color: white;
+}
+.portfolio {
+  position: absolute;
+  top: 0;
+  left: $sidex;
+  right: 0;
+  bottom: 0;
+
+  -moz-transition: left $toggle-time ease;
+  transition: left $toggle-time ease;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input:checked ~ .portfolio {
+  left: 0;
+  background-color: white;
+}
+
+input:checked ~ label {
+  left: 10px;
+}
+
+input:checked ~ .logo-radi {
+  left: 10px;
+}
+
+input:checked ~ .sidebar {
+  left: 0px;
+}
