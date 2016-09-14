@@ -1,5 +1,5 @@
 $sidex: 160px;
-$toggle-time: 0.35s;
+$toggle-time: 0.15s;
 
 .sidebar {
   a{
@@ -19,10 +19,15 @@ $toggle-time: 0.35s;
 
   -moz-transition: width $toggle-time ease;
   transition: width $toggle-time ease;
+  z-index: 100;
 
   .side-menu{
     margin-left: 15px;
     margin-top: 30px;
+
+    -moz-transition: display $toggle-time ease;
+    transition: display $toggle-time ease;
+
   }
 }
 
@@ -35,6 +40,7 @@ $toggle-time: 0.35s;
   border-radius: 25px;
   position: fixed;
   top: 10px;
+  left: 10 + $sidex;
   width: $rx*3;
   height: $rx*3;
   background-color: #000;
@@ -67,7 +73,7 @@ $toggle-time: 0.35s;
 .portfolio {
   position: absolute;
   top: 0;
-  left: $sidex;
+  left: 0;
   right: 0;
   bottom: 0;
 
@@ -83,16 +89,19 @@ input[type=checkbox] {
 input:checked ~ .portfolio {
   left: 0;
   background-color: white;
-}
 
-input:checked ~ label {
+  .logo-radi
+{
   left: 10px;
 }
 
-input:checked ~ .logo-radi {
-  left: 10px;
 }
 
 input:checked ~ .sidebar {
   width: 0px;
+
+  .side-menu{
+    display: none;
+  }
+
 }
