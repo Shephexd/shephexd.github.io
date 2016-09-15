@@ -2,10 +2,10 @@
 layout: post
 published: True
 title: Python coding
-categories: 
-- Programming
-tags: 
-- python
+categories:
+- Development
+tags:
+- Python
 ---
 
 ## THINK LIKE PYTHON
@@ -45,7 +45,7 @@ print(sys.version)
 
 
 ### Follow PEP 8 guide
-PEP[^PEP] #8 
+PEP[^PEP] #8
 
 ### Differences Byte, str, unicode
 
@@ -71,4 +71,4 @@ PEP[^PEP] #8
 
 ## FUNCTION
 
-[^PEP]: Python Enhancement Proposal. It is style guide about how to construct python code. 
+[^PEP]: Python Enhancement Proposal. It is style guide about how to construct python code.

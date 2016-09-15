@@ -2,44 +2,40 @@
 layout: post
 published: True
 title: Hadoop Introduction - install
-categories: 
-- server
+categories:
+- Server
 tags:
 - Development
-- big data
+- Big data
 ---
 
 ## What is Hadoop?
-하둡은 **하둡은 대용량 데이터를 분산 처리할 수 있는 자바 기반의 오픈소스 프레임워크** 의미한다.
+하둡은 **대용량 데이터를 분산 처리할 수 있는 자바 기반의 오픈소스 프레임워크** 의미한다.
 
 #### Function
-하둡은 분산 파일 시스템은 HDFS(Hadoop Distributed File System)에 데이터를 저장하고, 분산 처리 시스템인 맵리듀스를 이용하여 데이터를 처리.
+하둡은 분산 파일 시스템은 HDFS(Hadoop Distributed File System)에 데이터를 저장하고, 분산 처리 시스템인 맵리듀스를 이용하여 데이터를 처리한다.
 
 #### History
-하둡은 구글이 논문으로 발표한 GFS(Google File System)와 맵리듀스(Map Reduce)를 2005년에 더글 커딩이 구현한 결과물. 처음에는 오픈소스 검색 엔진인 너치(Nutch)에 적용하기 위해 시작하다가 독립적인 프로젝트로 만들어진 후, 2008년에 아파치 최상위 프로젝트로 승격.
+하둡은 구글이 논문으로 발표한 GFS(Google File System)와 맵리듀스(Map Reduce)를 2005년에 더글 커딩이 구현한 것이다. 처음에는 오픈소스 검색 엔진인 너치(Nutch)에 적용하기 위해 시작하다가 독립적인 프로젝트로 만들어진 후, 2008년에 아파치 최상위 프로젝트로 승격되었다.
 
 #### Hadoop Ecosystem
-하둡이 비즈니스에 효율적으로 적용될 수 있도록 다양한 서브 프로젝트가 구성되었고, 이러한 서브 프로젝트가 상용화되면서 하둡 에코시스템(Hadoop  Ecosystem)이 구성
+하둡이 비즈니스에 효율적으로 적용될 수 있도록 다양한 서브 프로젝트가 구성되었고, 이러한 서브 프로젝트가 상용화되면서 하둡 에코시스템(Hadoop  Ecosystem)으로 점차 발전되엇다.
 
-### Hadoop guide
+### 실행 모드 결정(Execute mode setting)
+하둡은 **독립 실행 모드, 가상 분산 모드, 완전 분산 모드** 3가지로 실행환경을 나눌 수 있다.
 
-#### 실행 모드 결정(Execute mode setting)
-1. 독립 실행(Standalone) 모드
-  - Basic Execute Mode. 하둡 환경설정 파일에 아무런 설정을 하지 않고 실행하면 로컬 장비에서만 실행되기 때문에 로컬(local) 모드라고도 불림. 하둡에서 제공하는 데몬을 구동하지 않기 때문에 분산 환경을 고려한 테스트는 불가능. 단순히 맵리듀스 프로그램을 개발하고, 해당 맵리듀스를 디버깅하는 용도로만 적합한 모드.
+#### 1. 독립 실행(Standalone) 모드
+Basic Execute Mode. 하둡 환경설정 파일에 아무런 설정을 하지 않고 실행하면 로컬 장비에서만 실행되기 때문에 로컬(local) 모드라고도 불림. 하둡에서 제공하는 데몬을 구동하지 않기 때문에 분산 환경을 고려한 테스트는 불가능. 단순히 맵리듀스 프로그램을 개발하고, 해당 맵리듀스를 디버깅하는 용도로만 적합한 모드.
 
-2. 가상 분산(Pseudo-distributed) 모드
-  - 하나의 장비에 모든 하둡 환경설정을 하고, 하둡 서비스도 이 장비에서만 제공하는 방식을 말함. HDFS와 맵리듀스와 관련된 데몬을 하나의 장비에서만 실행하기 때문에 입문자들이 테스트 환경을 구성할 때 사용.
+#### 2. 가상 분산(Pseudo-distributed) 모드
+하나의 장비에 모든 하둡 환경설정을 하고, 하둡 서비스도 이 장비에서만 제공하는 방식을 말함. HDFS와 맵리듀스와 관련된 데몬을 하나의 장비에서만 실행하기 때문에 입문자들이 테스트 환경을 구성할 때 사용.
 
-3. 완전 분산(Fully Distributed) 모드
-  - 여러 대의 장비에 하둡이 설치된 경우, 하둡으로 라이브 서비스를 하게 될 경우 이와 같은 방식으로 구성.
+#### 3. 완전 분산(Fully Distributed) 모드
+여러 대의 장비에 하둡이 설치된 경우, 하둡으로 라이브 서비스를 하게 될 경우 이와 같은 방식으로 구성.
 
 <!--more-->
 
-### Hadaoop2
-- YARN
-- dd
-
-### Hadoop 2.6 install guide
+## Hadoop 2.6 install guide
 1. Protocol Buffer install
 - 프로토콜 버퍼는 구글에서 공개한 직렬화 라이브러리.
 - 바이너리 데이터를 통해 이기종간 통신하기 위해 구글에서 오픈소스로 공개.
@@ -107,7 +103,7 @@ sudo gedit hadoop-env.sh
 `sudo gedit yarn-site.xml`
 
 ```xml
-	
+
 	sudo cp mapred-site.xml.template mapred-site.xml
 	sudo gedit mapred-site.xml
 

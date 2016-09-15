@@ -3,11 +3,11 @@ layout: post
 published: True
 title: Linux(Ubuntu) 서버 구축
 categories:
-- server
+- Server
 tags:
-- server
-- ubuntu
+- Server
 - Development
+- Environment
 ---
 
 ## 우분투 설치
@@ -20,7 +20,6 @@ tags:
 
 ## APM 설치
 우분투에서 가상 서버구축을 하기 위해, 먼저 APM(apache,php,mysql)을 설치
-
 
 ### 설치 절차
 ```bash

@@ -2,9 +2,9 @@
 layout: post
 published: True
 title: Data Structure
-categories: 
-- Programming
-tags: 
+categories:
+- Algorithm
+tags:
 - Development
 - Algorithm
 ---
@@ -74,7 +74,7 @@ int factorial(int n)
 ```
 
 ### 순환 알고리즘의 구조
-순환 알고리즘은 자기 자신을 순환적으로 호출하므로, **순환을 멈추는 부분**, **순환을 호출하는 부분**이 존재한다.
+순환 알고리즘은 자기 자신을 순환적으로 호출하므로, **순환을 멈추는 부분**, **순환을 호출하는 부분** 이 존재한다.
 
 #### 꼬리순환(tail recursion)
 순환 호출이 순환 함수의 맨 끝에서 이루어지는 형태의 순환.
@@ -108,7 +108,7 @@ void hanoi_tower(int n, char from, char tmp, char to){
 
 
 #### 용어 정리
-정점(Vertex) 
+정점(Vertex)
 : 위치 개념
 
 간선(Edge)
@@ -117,22 +117,22 @@ void hanoi_tower(int n, char from, char tmp, char to){
 오일러 경로(Eulerian tour)
 : 모든 경로를 한번만 통과하여 처음 정점으로 되돌아오는 경로.
 
-무방향 그래프(Undirected graph) 
+무방향 그래프(Undirected graph)
 : 간선에 방향성이 없는 그래프.
 
-방향 그래프(Directed graph) 
+방향 그래프(Directed graph)
 : 간선에 방향성이 있는 그래프.
 
-가중치 그래프(Weighted graph) 
+가중치 그래프(Weighted graph)
 : 간선에 비용아니 가중치가 할당된 그래프.
 
-차수(Degree) 
+차수(Degree)
 : 무방향그래 하나의 정점에 인접한 정점의 수
 
-진입 차수(In-degree) 
+진입 차수(In-degree)
 : 밖에서 한 정점으로 들어오는 간선의 수
 
-진출 차수(Out-degree) 
+진출 차수(Out-degree)
 : 한 정점에서 나가는 모든 간선의 수
 
 

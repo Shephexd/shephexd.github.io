@@ -1,14 +1,14 @@
 ---
 layout: post
-published: True
 title: Jupyter Remote setting with anaconda
 categories:
-- Development
+- Server
 published: False
-categories: server
+categories: Server
 tags:
-- python
-- server
+- Python
+- Server
+- Development
 ---
 
 

@@ -2,39 +2,41 @@
 layout: post
 published: True
 title: How to use Docker?
-categories: server
+categories: Server
 tags:
 - Linux
-- sandbox
-- system
+- Environment
 ---
 
-## Docker is the world’s leading software containerization platform
+## What is docker?  
+Docker is the world’s leading software containerization platform
 
-### What is docker?  
 - 복잡한 리눅스 어플리케이션을 컨테이너로 묶어서 실행 가능.
 - 개발 테스트, 서비스 환경을 하나로 통일하여 효율적으로 관리 가능.
 - 컨테이너(이미지)를 전 세계 사람들과 공유
 - 리눅스 커널에서 제공하는 컨테이너 기술을 이용
 - Github와 비슷한 방식으로 Docker Hub 제공
 
-**Container**
+Container
 : 가상화보다 좀 더 가벼운 기능 제공
 
-**가상화**
-: PC내에서 가상의 PC를 만드는 것을 의미. 가상 머신에 각종 서버 프로그램, DB등을 설치하여 애플리케이션이나 웹사이트를 실행. ex) VMware, Virtual Box
+가상화
+: PC내에서 가상의 PC를 만드는 것을 의미.
+  가상 머신에 각종 서버 프로그램, DB등을 설치하여 애플리케이션이나 웹사이트를 실행. ex) VMware, Virtual Box
 
-**클라우드 서비스**
-: 미리 구축한 가상 머신 이미지를 여러 서버에 복사하여 실행하면, 이미지 하나로 서버를 계속 생산 가능. 이러한 가상화 기술을 이용하여 서버를 임대해주는 서비스.
+클라우드 서비스
+: 미리 구축한 가상 머신 이미지를 여러 서버에 복사하여 실행하면, 이미지 하나로 서버를 계속 생산 가능.
+  이러한 가상화 기술을 이용하여 서버를 임대해주는 서비스.
 
-**반가상화**
+반가상화
 : 호스트와 커널을 공유하는 기술.
+
 
 ### Why do we use docker?
 가상 머신의 성능 문제가 있다 보니, 리눅스 컨테이너가 탄생하였다
 컨테이너 안에 가상 공간을 만들지만, 실행 파일을 호스트에서 직접 실행된다.**(가상 머신에서의 성능 저하 문제를 해결)**
 
-리눅스 커널의 cgroups와 namespaces가 제공하는 기술을 이용하여 구현되었다. 
+리눅스 커널의 cgroups와 namespaces가 제공하는 기술을 이용하여 구현되었다.
 
 <!--more-->
 

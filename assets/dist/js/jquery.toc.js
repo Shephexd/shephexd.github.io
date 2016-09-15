@@ -67,16 +67,6 @@
                     $(this).text());
             });
 
-            h1.nextUntil('h3').filter('h4').each(function() {
-                ++innerSection;
-                var anchorId = config.anchorPrefix + tocLevel + '-' + tocSection + '-' +  + innerSection;
-                $(this).attr('id', anchorId);
-                levelHTML += createLevelHTML(anchorId,
-                    tocLevel + 1,
-                    tocSection + innerSection,
-                    itemNumber + '.' + innerSection,
-                    $(this).text());
-            });
 
 
             if (levelHTML) {

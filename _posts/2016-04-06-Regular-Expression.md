@@ -2,11 +2,11 @@
 layout: post
 published: True
 title: 정규표현식(Regular Expression)
-categories: 
+categories:
 - Development
 tags:
 - Development
-- python
+- Python
 ---
 
 ## Regular Expresssion
@@ -16,11 +16,11 @@ tags:
 **주로 패턴(pattern)으로 부르는 정규 표현식은 특정 목적을 위해 필요한 문자열 집합을 지정하기 위해 쓰이는 식이다.**
 
 Boolean "OR"
-: 수직선(`|`)은 여러 항목 중 선택을 하기 위해 구분한다. 
+: 수직선(`|`)은 여러 항목 중 선택을 하기 위해 구분한다.
 이를테면 `gray|grey`는 "gray" 또는 "grey"와 일치한다.
 
 Grouping
-: 괄호(`()`)를 사용하면 연산자의 범위와 우선권을 정의할 수 있다. 
+: 괄호(`()`)를 사용하면 연산자의 범위와 우선권을 정의할 수 있다.
 이를테면 gray|grey와 gr(a|e)y는 "gray"나 "grey" 집합을 둘 다 기술하는 동일 패턴이다.
 
 ### Quantification
@@ -36,7 +36,7 @@ Grouping
 
 <!--more-->
 
-## Syntax 
+## Syntax
 '.'
 : 임의의 한 문자를 의미  
 `ex) a.c -> abc,aec,avb,afc ...`
@@ -86,5 +86,3 @@ findall()
 |  `sub(pattern, repl, string,[count=0])` |string에서 pattern과 일치하는 부분을 repl로 교체 | str |
 |  `subn(pattern, repl, string,[count=0])` |string에서 pattern과 일치하는 부분을 repl로 교체 | Tuple  (결과문자열, 매칭횟수)|
 |  `escape(string)` |영문자 숫자가 아닌 문자들을 백슬래쉬 처리해서 리턴.| str |
-
-

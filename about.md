@@ -4,29 +4,25 @@ title: About
 permalink: /about/
 ---
 
-# Introduction
-I've studied computer programming since entering university. 
-There are many kind of jobs and projects using computer. 
+## Introduction
+I've studied computer programming since admission of university.
+
+There are many kind of jobs and projects using computers.
 I tried to study all of categories.
 
-- Algorithm
-- Hacking
-- Development
+I want to share experiences i've studied and i'am going to study.
 
-I want to share experience i've studied or i'am going to study.
-
-# This site is for
-I'm interested in Business Intelligence. I'm going to write my articles and projects.
-In this blog will be for students who is studying about
+## This site is for
+Now, I'm interested in the Business Intelligence. I'm going to write my articles and projects. In this blog will be posted for students who is studying about
 
 - Computer science
 - Data mining
 - Data analysis
 - Machine learning
 
-# Contact
+## Contact
 I hope it can be helpful for you.
 And if you have any questions and requests, please send [mail](shephexd@gmail.com) to me.
 
-# I customized using the theme,meditator.
-[https://github.com/dirkfabisch/mediator](https://github.com/dirkfabisch/mediator) 
+#### I customized using the theme,meditator.
+[https://github.com/dirkfabisch/mediator](https://github.com/dirkfabisch/mediator)

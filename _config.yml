@@ -5,7 +5,7 @@ gems:
   - jekyll-seo-tag
 
 # Site settings
-title: "Shephexd"
+title: "SHEPHEXD"
 
 email: furorluna@gmail.com
 #blog logo
@@ -22,7 +22,7 @@ paginate: 8
 url: "http://shephexd.github.io/" # the base hostname & protocol for your site
 baseurl: ""
 #used to display twitter cards
-twitter_handle: '@dirkfabisch'
+#twitter_handle: '@dirkfabisch'
 
 #fill in disqus shortname to use disqus
 disqus: minorcreator
@@ -72,7 +72,7 @@ social:
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 description: > # this means to ignore newlines until "baseurl:"
-  Unexpected people can make unbelievable things.
+  CAN MACHINES THINK LIKE HUMANS?
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://shephexd.github.io" # the base hostname & protocol for your site

@@ -1,6 +1,7 @@
 $sidex: 160px;
 $toggle-time: 0.15s;
 
+
 .sidebar {
   a{
     text-decoration: none;
@@ -99,7 +100,6 @@ input:checked ~ .portfolio {
 
 input:checked ~ .sidebar {
   width: 0px;
-
   .side-menu{
     display: none;
   }
