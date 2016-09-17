@@ -2,7 +2,8 @@
 layout: post
 title: Machine Learning Introduction
 published: True
-categories: Machine learning
+categories:
+- Machine learning
 tags:
 - Data analysis
 - Algorithms

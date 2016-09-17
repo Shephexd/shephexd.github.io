@@ -96,5 +96,3 @@ Container
   - 운영체제와 서비스 환경을 분리하여 가볍고(Lightweight) 어디서든 실행가능한(Portable) 환경 제공
 
 ## Docker Installation
-
-![docker install](/assets/post_image/docker_install.png)
