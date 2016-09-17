@@ -8,8 +8,12 @@ tags:
 - Environment
 ---
 
+Virtual Container로 유명한 도커의 특징과 실제로 환경 구축한 내용을 정리해보았다.
+설치 환경은 OS X이지만, 설치 이후 도커 제어에 관한 명령어는 환경과 상관없이 유사하다.
+
 ## What is docker?  
-Docker is the world’s leading software containerization platform
+
+#### Docker is the world’s leading software containerization platform
 
 - 복잡한 리눅스 어플리케이션을 컨테이너로 묶어서 실행 가능.
 - 개발 테스트, 서비스 환경을 하나로 통일하여 효율적으로 관리 가능.
@@ -90,3 +94,7 @@ Container
   - 테스트가 간편
 4. 가벼움
   - 운영체제와 서비스 환경을 분리하여 가볍고(Lightweight) 어디서든 실행가능한(Portable) 환경 제공
+
+## Docker Installation
+
+![docker install](/assets/post_image/docker_install.png)
