@@ -13,20 +13,20 @@ tags:
 There are specific methods and statements in python. Python programmers emphasize simple and legibility using that. This pattern will be helpful for your work.
 
 ### Check your python version
-**파이썬은 버전에 따라 차이점이 존재하기 떄문에 현재 사용중인 파이썬의 버전을 확인하는 것이 중요하다.**
+파이썬은 버전에 따라 차이점이 존재하기 떄문에 현재 사용중인 파이썬의 버전을 확인하는 것이 중요하다.
 
 파이썬에서 버전확인을 위해 사용하는 방법은 두 가지가 있다.
 
-1. **터미널**
-- 터미널에서 python명령어를 입력하면 파이썬 콘솔이 실행된다. 이때 --version 플래그를 사용하면 버전 확인이 가능하다.
+1. 터미널
+터미널에서 python명령어를 입력하면 파이썬 콘솔이 실행된다. 이때 --version 플래그를 사용하면 버전 확인이 가능하다.
 
 ```bash
 python --version
 ```
-**`python 2.7.8` 혹은 `python 3.4.3` 와 같은 결과가 나온다.**
+`python 2.7.8` 혹은 `python 3.4.3` 와 같은 결과가 나온다.
 
-**2. sys 모듈 사용**
-- 파이썬의 내장된 sys 모듈 안의 값을 조사하여 런타임에 사용 중인 파이썬의 버전 확인이 가능하다.
+2. sys 모듈 사용
+파이썬의 내장된 sys 모듈 안의 값을 조사하여 런타임에 사용 중인 파이썬의 버전 확인이 가능하다.
 
 ```python
 import sys

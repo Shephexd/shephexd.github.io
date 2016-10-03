@@ -10,10 +10,11 @@ tags:
 ---
 
 ## Regular Expresssion
-**특정한 규칙을 가진 문자열의 집합을 표현하는 데 사용하는 형식 언어이다.** - [Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
+특정한 규칙을 가진 문자열의 집합을 표현하는 데 사용하는 형식 언어이다.
+a regular expression (sometimes called a rational expression) is a sequence of characters that define a search pattern, mainly for use in pattern matching with strings, or string matching. - [Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
 
 ### Basic concept
-**주로 패턴(pattern)으로 부르는 정규 표현식은 특정 목적을 위해 필요한 문자열 집합을 지정하기 위해 쓰이는 식이다.**
+주로 패턴(pattern)으로 부르는 정규 표현식은 **특정 목적을 위해 필요한 문자열 집합을 지정**하기 위해 쓰이는 식이다.
 
 Boolean "OR"
 : 수직선(`|`)은 여러 항목 중 선택을 하기 위해 구분한다.
