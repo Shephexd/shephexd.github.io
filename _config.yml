@@ -9,13 +9,13 @@ title: "SHEPHEXD"
 
 email: furorluna@gmail.com
 #blog logo
-logo: "/assets/images/sheep_logo_black.jpg"
 # blog cover
 cover: "/assets/images/blue-night-full-moon-scenery-wide.jpg"
 
 name: 'Taekyung Han'
 author: 'Taekyung Han'
 author_image: "/assets/images/author.jpg"
+logo_image: "/assets/images/sheep_logo_black.jpg"
 
 paginate: 8
 
