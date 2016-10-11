@@ -61,12 +61,12 @@ training data
 : the data using to find out predictive relationships and to learn model(objective function).
 
 test data
-: the data using to test the learned model from traing data to assess the relationship.
+: the data using to test the learned model from training data to assess the relationship.
 
 
 decision boundary
-: Decision boundary is one of boundary between classes. When values are on the graph, The classfier will seperate one side of the decison boundary as some values in one class and other side as other values in other class.
-Sometime, the values near Decision boundaries are ambigious to seperate to one class.
+: Decision boundary is one of boundary between classes. When values are on the graph, The classifier will separate one side of the decision boundary as some values in one class and other side as other values in other class.
+Sometime, the values near Decision boundaries are ambiguous to separate to one class.
 
 Separability
 : features very different for objects in different classes (cf. inter-class variation).

@@ -1,10 +1,12 @@
 ---
+layout: post
 title: Tensorflow MNIST
+published: True
 categories:
-- Machine Learning
-
+- Machine learning
 Tags:
 - Tensorflow
+
 - Development
 ---
 

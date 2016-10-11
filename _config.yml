@@ -18,6 +18,10 @@ author_image: "/assets/images/author.jpg"
 logo_image: "/assets/images/sheep_logo_black.jpg"
 
 paginate: 8
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
 
 url: "http://shephexd.github.io/" # the base hostname & protocol for your site
 baseurl: ""
