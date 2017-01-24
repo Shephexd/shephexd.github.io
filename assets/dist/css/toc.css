@@ -18,7 +18,7 @@ div#toc {
 }
 
 @media only screen
-and (min-device-width : 850px){
+and (min-device-width : 900px){
     div#toc {
         background: none repeat scroll 0 0;
         background-color: #f9f9f9;
