@@ -6,10 +6,7 @@ permalink: /about/
 
 ## Introduction
 I've studied computer programming since admission of university.
-
-There are many kind of jobs and projects using computers.
-I tried to study all of categories.
-
+I am interested in the Machine learning especially about the Neural Netowrks.
 I want to share experiences i've studied and i'am going to study.
 
 ## This site is for
@@ -21,8 +18,5 @@ Now, I'm interested in the Business Intelligence. I'm going to write my articles
 - Machine learning
 
 ## Contact
-I hope it can be helpful for you.
-And if you have any questions and requests, please send [mail](shephexd@gmail.com) to me.
-
-#### I customized using the theme,meditator.
-[https://github.com/dirkfabisch/mediator](https://github.com/dirkfabisch/mediator)
+If you are interesting about my project or works, Feel free to contact to me it should be helpful for both of us.
+Also if you have any questions and requests, please send [mail](shephexd@gmail.com) to me.

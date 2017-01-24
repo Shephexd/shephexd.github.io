@@ -1,6 +1,6 @@
 ---
 layout: post
-published: True
+published: False
 title: 정규표현식(Regular Expression)
 categories:
 - Development
@@ -9,7 +9,6 @@ tags:
 - Python
 ---
 
-## Regular Expresssion
 특정한 규칙을 가진 문자열의 집합을 표현하는 데 사용하는 형식 언어이다.
 a regular expression (sometimes called a rational expression) is a sequence of characters that define a search pattern, mainly for use in pattern matching with strings, or string matching. - [Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-published: True
+published: False
 title: Hadoop Introduction - install
 categories:
 - Server
@@ -9,7 +9,6 @@ tags:
 - Big data
 ---
 
-## What is Hadoop?
 하둡은 **대용량 데이터를 분산 처리할 수 있는 자바 기반의 오픈소스 프레임워크** 의미한다.
 
 #### Function

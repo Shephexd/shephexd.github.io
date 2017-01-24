@@ -1,6 +1,6 @@
 ---
 layout: post
-published: True
+published: False
 title: Big Data Introduction
 categories:
 - Big data
