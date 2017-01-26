@@ -42,7 +42,7 @@ layout: default
         <br>
         {% endif %}
 
-        <div id="toc"></div>
+        <div id="toc" class="tochidden"></div>
 
         <section class="post-content">
 
@@ -122,11 +122,8 @@ layout: default
     $('.post').toc({
       content:"body",
       headings: "h2,h3",
-      showAlways:true,
+      showAlways:false,
       renderIn:'#toc',
-      contentsText:"INDEX",
-      hideText:'Hide',
-      showText:'Show',
       showCollapsed:false
     });
   });
