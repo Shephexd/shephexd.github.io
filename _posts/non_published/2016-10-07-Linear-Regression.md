@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Linear Regression
-published: True
+published: False
 Categories:
 - Machine learning
 Tags:

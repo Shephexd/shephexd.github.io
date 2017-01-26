@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Logistic Regression
-published: True
+published: False
 Categories:
 - Machine learning
 Tags:
@@ -14,6 +14,9 @@ Tags:
 In statistics, logistic regression(logit regression, or logit model) is a regression model where the dependent variable (DV) is categorical. - [Wikipedia][1]
 
 > > Linear regression is good for predicting to other values. But, when we use the linear as a classifier, It will have some problems. Also, the result is not between 0 and 1.
+
+<!--more-->
+
 
 ## What is logistic regression?
 
@@ -38,7 +41,6 @@ h_\theta(x) = \text{estimated probability that y=1 on input x}\\
 h_\theta(x) = P(y=1|x;\theta)
 $$
 
-<!--more-->
 
 ## Decision boundary
 

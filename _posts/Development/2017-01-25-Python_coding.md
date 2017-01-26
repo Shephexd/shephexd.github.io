@@ -8,11 +8,18 @@ tags:
 - Python
 ---
 
+파이썬을 주언어로 즐겨 사용해왔지만 내장함수나 파이썬만의 표현 방식에 대해서는 잘 알지 못했었다.  
+특히 종종 다른 사람의 코드를 리뷰하던 중에 이해가 안되는 문법이나 표현을 접하는 경우가 있어 이번 기회에 새로 학습하기로 했다.  
+**"Think like python"**[^book] 에서는 파이썬만의 확장된 기능과 문법 등을 통해 파이썬을 좀더 파이썬답게 쓰는 방법에 대해서 설명하였다.
+
+
+
 ## THINK LIKE PYTHON
 
-**generally It is important to work like python with python.**  
+generally It is important to work with **python like python**.  
 There are specific methods and statements in python. Python programmers emphasize simple and legibility using that. This pattern will be helpful for your work and projects.
 
+<!--more-->
 
 
 ### Check your python version
@@ -37,9 +44,11 @@ print(sys.version)
 '3.5.1 |Anaconda 4.0.0 (x86_64)| (default, Dec  7 2015, 11:24:55) \n[GCC 4.2.1 (Apple Inc. build 5577)]'
 ```
 
-<!--more-->
-
 ### Follow PEP 8 guide
+
+PEP[^PEP] is guide for the developer to keep in mind to improve productivity and cooperation with others.
+
+
 
 1. Whitespace
 
@@ -215,7 +224,7 @@ print(even_squares)
 
 ### Don't use list comprehension more than two
 
-aviod the case of using more than two comprehension in one list. Consider to make helper or loop.
+avoid the case of using more than two comprehension in one list. Consider to make helper or loop.
 
 ```python
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
@@ -436,8 +445,176 @@ def divide_json(path):
 
 
 
+[^PEP]: Python Enhancement Proposal. It is style guide about how to construct python code.
+[^book]: "Effective python 59: specific ways to write better python" in English, 파이썬 코딩의 기술
+
+
+
 ## FUNCTION
 
+Function is first basic tool for python developers. To improve readability and make more easily understandable code, it is useful for reuse and refactoring.
 
 
-[^PEP]: Python Enhancement Proposal. It is style guide about how to construct python code.
+
+### Raise exception instead of returning None
+
+```python
+#worst case
+def divide(a, b):
+    try:
+        return a /b
+    except ZeroDivisonError:
+        return None
+
+result = divide(x, y) #resut will be 0 when y is 0. It might make a error.
+if result is None:
+    print('Invalid inputs')
+```
+
+```python
+#Best case, use exception
+def divide(a, b):
+    try:
+        return a /b
+    except ZeroDivisonError as e:
+        raise ValueEror('Invalid inputs') from e
+
+x,y = 5, 2
+try:
+	result = divide(x, y)
+except ValueError:
+    print('Invalid inputs')
+else:
+    print('Result is %.1f' % result)
+```
+
+
+
+### How to work close in the variable scope
+
+In the python, function is first class.
+
+```python
+def sort_priority(values, group):
+	def helper(x): #closer means the function to handle the variable in other function
+        if x in group:
+            return (0, x)
+        return (1, x)
+    values.sort(key=helper) #Tuple check the first element in the tulple for sorting
+    
+    
+numbers = [8, 3, 1, 2, 5, 4, 7, 6]
+group = {2, 3, 5, 7}
+sort_priority(numbers, group)
+print(numbers)
+
+
+'''
+>>[2, 3, 5, 7, 1, 4, 6, 8]
+'''
+```
+
+```python
+#1. Use nonlocal to avoid scoping bug
+def sort_priority(numbers, group):
+    found = False
+	def helper(x): #closer means the function to handle the variable in other function
+        nonlocal found #To escape from scoping bug
+        if x in group:
+            found = True
+            return (0, x)
+        return (1, x)
+    values.sort(key=helper) #Tuple check the first element in the tulple for sorting
+	return found
+
+#2. make class
+class Sorter(object):
+    def __init__(self, group):
+		self.group = group
+        self.found = False
+    
+    def __call__(self, x):
+		if x in self.group:
+            self.found = True
+            return (0, x)
+        return(1, x)
+
+sorter = Sorter(group)
+numbers.sort(key=sorter)
+assert sorter.found is True
+```
+
+
+
+### Use generator instead of returning list
+
+A generator can save your memory comparing a list when the size is too big.
+
+```python
+#There are two problem.
+#1. Code is not simple and clear
+#2. By using the list, the code lines are increased
+def index_word(text):
+    result = []
+    if text:
+		result.append(0)
+	for index, letter in enumerate(text):
+        if letter == ' ':
+            result.append(index + 1)
+	return result
+
+address = 'Four score and seven years ago...'
+result = index_words(address)
+print(result[:3])
+
+'''
+>>>[0, 5, 11]
+'''
+```
+
+```python
+#Use the generator. Keep your mind about the generator only can use one time(no reusable)
+def index_words_iter(text):
+    if text:
+		yield 0
+    for index, letter in enumerate(text):
+        if letter == ' ':
+            yield index + 1
+
+
+def index_file(handle):
+    offest = 0
+    for line in handle:
+        if line:
+            yield offset
+		for letter in line:
+            offset += 1
+            if letter == ' ':
+                yield offset
+```
+
+
+
+### Defensive iteration
+
+When you use the iterative loop for a iterator, It might be a problem.
+
+```python
+
+```
+
+
+
+### To make clear, use variable position argument
+
+
+
+### Offer optional action by using keyword argument
+
+
+
+### Use None and docstring for dynamic basic argument
+
+
+
+### Emphasize the clearness of argument for keyword.

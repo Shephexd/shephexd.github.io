@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Least square method
+published: False
 categories:
 - Machine learning
 tags:

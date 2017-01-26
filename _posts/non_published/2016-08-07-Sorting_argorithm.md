@@ -1,6 +1,6 @@
 ---
 layout: post
-published: True
+published: False
 title: Sorting Algorithm
 categories: Algorithm
 tags:

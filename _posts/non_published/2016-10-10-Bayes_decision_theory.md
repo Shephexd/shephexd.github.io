@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Bayesian probability
-published: 
-- true
+published: False
 categories: 
 - Machine learning
 tags:
@@ -20,6 +19,7 @@ Bayesian is one of the important method to classify the values using probability
 Features are random variables $$x ∈ R^D$$ , the so called feature space.
 Classification in the most probable class $$ω\_i$$ thus minimizes error probability.
 
+<!--more-->
 
 
 #### The Bayesian classification rule
@@ -44,7 +44,6 @@ A posteriori probability P($$w\_i|x$$)
 > > The uppercase P(•) denotes probability, whereas lowercase p(•) denotes probability density.
 
 
-<!--more-->
 
 ## Bayesian probability
 There are two kind of method to calculate a probability.

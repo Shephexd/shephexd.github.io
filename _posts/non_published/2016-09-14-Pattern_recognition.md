@@ -1,6 +1,6 @@
 ---
 layout: post
-published: True
+published: False
 title: Pattern Recognition
 categories:
 - Machine learning
