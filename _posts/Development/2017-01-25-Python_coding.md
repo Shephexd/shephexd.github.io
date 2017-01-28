@@ -12,12 +12,18 @@ tags:
 특히 종종 다른 사람의 코드를 리뷰하던 중에 이해가 안되는 문법이나 표현을 접하는 경우가 있어 이번 기회에 새로 학습하기로 했다.  
 **"Think like python"**[^book] 에서는 파이썬만의 확장된 기능과 문법 등을 통해 파이썬을 좀더 파이썬답게 쓰는 방법에 대해서 설명하였다.
 
+
+
+<!--more-->
+
+
+
 ## THINK LIKE PYTHON
 
 generally It is important to work with **python like python**.  
 There are specific methods and statements in python. Python programmers emphasize simple and legibility using that. This pattern will be helpful for your work and projects.
 
-<!--more-->
+
 ### Check your python version
 
 1. Terminal
@@ -174,10 +180,11 @@ In the python, function is first class.
 
 <script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=15_variable_scope.py"></script>
 
-
 ### Use generator instead of returning list
 
 A generator can save your memory comparing a list when the size is too big.
+
+<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=16_return_generator.py"></script>
 
 
 
