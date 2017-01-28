@@ -66,3 +66,44 @@ The problem is solved with python3. You can download from github and implement c
 ### Problem10 - Summation of primes
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem10.py"></script>
+
+### Problem11 - Largest product in a grid
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem11.py"></script>
+
+### Problem12 - Highly divisible triangular number
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem12.py"></script>
+
+### Problem13 - Large sum
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem13.py"></script>
+
+### Problem14 - Longest collatz sequence
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem14.py"></script>
+
+### Problem15 - Lattice paths
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem15.py"></script>
+
+### Problem16 - Power digit sum
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem16.py"></script>
+
+### Problem17 - Number letter counts
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem17.py"></script>
+
+### Problem18 - Maximum path sum I
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem18.py"></script>
+
+### Problem19 - Counting sundays
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem19.py"></script>
+
+### Problem20 - Factorial digit sum
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem20.py"></script>
+
