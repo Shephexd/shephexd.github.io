@@ -7,7 +7,7 @@ categories:
 tags:
 - Python
 - Algorithm
-- Mathmatical
+- Mathematic
 ---
 
 Solution for the [project Euler](https://projecteuler.net/) about programming problmes.
@@ -99,7 +99,7 @@ The problem is solved with python3. You can download from github and implement c
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem18.py"></script>
 
-### Problem19 - Counting sundays
+### Problem19 - Counting Sundays
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem19.py"></script>
 
