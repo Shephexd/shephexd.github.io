@@ -10,7 +10,9 @@ tags:
 - Mathematic
 ---
 
-Solution for the [project Euler](https://projecteuler.net/) about programming problmes.
+Project Euler는 수학적인 문제들을 컴퓨터 프로그래밍으로 풀어가는 사이트로, 파이썬 연습과 알고리즘 문제 풀이 겸 이 사이트의 문제를 조금씩 풀어보려고 합니다.
+
+Solution for the [project Euler](https://projecteuler.net/) about programming problems.
 
 It is not general solution, just a idea made by myself.
 
@@ -23,15 +25,15 @@ Project Euler is a series of challenging mathematical/computer programming probl
 *"Project Euler exists to encourage, challenge, and develop the skills and enjoyment of anyone with an interest in the fascinating world of mathematics."*
 
 
-## Soltuion
+## Solution
 
 The problem is solved with python3. You can download from github and implement code on your own environment.
 
-### Problem1 - Mutiplies 3 and 5
+### Problem1 - Multiples 3 and 5
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem01.py"></script>
 
-### Problem2 - Fibnonacci
+### Problem2 - Even Fibonacci numbers
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem02.py"></script>
 
@@ -79,7 +81,7 @@ The problem is solved with python3. You can download from github and implement c
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem13.py"></script>
 
-### Problem14 - Longest collatz sequence
+### Problem14 - Longest Collatz sequence
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem14.py"></script>
 
@@ -106,4 +108,46 @@ The problem is solved with python3. You can download from github and implement c
 ### Problem20 - Factorial digit sum
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem20.py"></script>
+
+### Problem21 - Amicable numbers
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem21.py"></script>
+
+### Problem22 - Names scores
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=p22_data.txt"></script>
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem22.py"></script>
+
+### Problem23 - Non-abundant sums
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem23.py"></script>
+
+### Problem24 - Lexicographic permutations
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem24.py"></script>
+
+### Problem25 - 1000-digit Fibonacci number
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem25.py"></script>
+
+### Problem26 - Reciprocal cycles
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem26.py"></script>
+
+### Problem27 - Quadratic primes
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem27.py"></script>
+
+### Problem28 - Number spiral diagonals
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem28.py"></script>
+
+### Problem29 - Distinct powers
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem29.py"></script>
+
+### Problem30 - Digit fifth powers
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem30.py"></script>
 
