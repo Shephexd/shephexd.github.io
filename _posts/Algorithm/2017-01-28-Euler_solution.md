@@ -151,3 +151,63 @@ The problem is solved with python3. You can download from github and implement c
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem30.py"></script>
 
+
+
+### Problem 31 - Coin sums
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem31.py"></script>
+
+
+
+### Problem 32 - Paindigital products
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem32.py"></script>
+
+
+
+### Problem 33 - Digit cancelling fractions
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem33.py"></script>
+
+
+
+### Problem 34 - Digit factorials
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem34.py"></script>
+
+
+
+### Problem 35 - Circular primes
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem35.py"></script>
+
+
+
+### Problem 36 - Double-base palindromes
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem36.py"></script>
+
+
+
+### Problem 37 - Truncatable primes
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem37.py"></script>
+
+
+
+### Problem 38 - Pandigital multiples(not solved)
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem38.py"></script>
+
+
+
+### Problem 39 - Integer right triangles
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem39.py"></script>
+
+
+
+### Problem 40 - Champernowne's constant
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem40.py"></script>
+
