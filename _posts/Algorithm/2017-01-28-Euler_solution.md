@@ -29,6 +29,8 @@ Project Euler is a series of challenging mathematical/computer programming probl
 
 The problem is solved with python3. You can download from github and implement code on your own environment.
 
+
+
 ### Problem1 - Multiples 3 and 5
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem01.py"></script>
@@ -195,7 +197,7 @@ The problem is solved with python3. You can download from github and implement c
 
 
 
-### Problem 38 - Pandigital multiples(not solved)
+### Problem 38 - Pandigital multiples
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem38.py"></script>
 
