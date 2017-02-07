@@ -1,7 +1,7 @@
 ---
 layout: post
 published: True
-title: Project Euler
+title: Project Euler - problem1~50
 categories:
 - Development
 tags:
