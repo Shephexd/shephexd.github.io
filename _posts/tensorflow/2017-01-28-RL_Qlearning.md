@@ -201,7 +201,9 @@ For each $s,a$ *initialize* table entry $\hat Q(s,a) \leftarrow 0$
 
 ## Example - Frozen lake
 
-Simple game for going from start to goal.
+Simple game for going from start to goal with avoiding hole.
+
+
 
 |  S   |  F   |  F   |  F   |
 | :--: | :--: | :--: | :--: |
@@ -215,7 +217,7 @@ Simple game for going from start to goal.
 
 
 
-#### First environment
+### First environment
 
 | S(A) |  0   |  0   |  0   |
 | :--: | :--: | :--: | :--: |
@@ -225,7 +227,7 @@ Simple game for going from start to goal.
 
 
 
-#### Final environment (Example)
+### Final environment (Example)
 
 | S(A) |  R   |  D   |  L   |
 | :--: | :--: | :--: | :--: |
@@ -239,19 +241,19 @@ Simple game for going from start to goal.
 
 
 
-
-
 ### Dummy Q-learning (Python)
 
 <script src="https://gist.github.com/Shephexd/9aa0a0c00970f2ff73be060a23bdbdca.js?file=dummy_qlearning.py"></script>
 
 
 
-### What is the problem in dummy Q-learning?
+
+
+## What is the problem in dummy Q-learning?
 
 
 
-#### Exploit vs Exploration
+### Exploit vs Exploration
 
 Exploit: Visit to somewhere have never been to before
 
@@ -263,7 +265,7 @@ How to solve the problem?
 
 
 
-#### E-greeedy
+### E-greeedy
 
 ```python
 e = 0.1
@@ -277,7 +279,7 @@ But after many step, we don't need to exploit many times.
 
 
 
-#### decaying E-greedy
+### decaying E-greedy
 
 ```python
 for i in range(1000):
@@ -290,7 +292,7 @@ for i in range(1000):
 
 
 
-#### Add random noise
+### Add random noise
 
 ```python
 a = argmax((Qs,a) + random_values)
@@ -337,12 +339,12 @@ $\hat Q$ converges to $Q$.
 
 
 
-#### Q-learning with noisy
+### Q-learning with noisy
 
 <script src="https://gist.github.com/Shephexd/9aa0a0c00970f2ff73be060a23bdbdca.js?file=qlearning_noisy.py"></script>
 
 
 
-#### Q-learning with e-greedy
+### Q-learning with e-greedy
 
-<script src="https://gist.github.com/Shephexd/9aa0a0c00970f2ff73be060a23bdbdca.js?file=dummy_egreedy.py"></script>
+<script src="https://gist.github.com/Shephexd/9aa0a0c00970f2ff73be060a23bdbdca.js?file=qlearning_egreedy.py.py"></script>
