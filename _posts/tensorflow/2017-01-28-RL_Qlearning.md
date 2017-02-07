@@ -13,6 +13,8 @@ tags:
 
 
 
+
+
 인공 지능에 한 분야로 컴퓨터가 스스로 현재 상태를 인지하고, 선택가능한 행동들 중 보상이 가장 크게 예측되는 행동을 하게 된다.
 
 
@@ -197,7 +199,7 @@ For each $s,a$ *initialize* table entry $\hat Q(s,a) \leftarrow 0$
 
 
 
-### Example - Frozen lake
+## Example - Frozen lake
 
 Simple game for going from start to goal.
 
@@ -330,7 +332,8 @@ $\hat Q$ converges to $Q$.
 
 
 
-### Q-learning code (python)
+
+## Q-learning code (python)
 
 
 
