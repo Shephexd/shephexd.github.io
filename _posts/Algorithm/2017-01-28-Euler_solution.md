@@ -33,183 +33,183 @@ The problem is solved with python3. You can download from github and implement c
 
 ### Problem1 - Multiples 3 and 5
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem01.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem001.py"></script>
 
 ### Problem2 - Even Fibonacci numbers
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem02.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem002.py"></script>
 
 ### Problem3 - Largest prime
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem03.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem003.py"></script>
 
 ### Problem4 - Largest palindrome product
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem04.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem004.py"></script>
 
 ### Problem5 - Smallest multiple
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem05.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem005.py"></script>
 
 ### Problem6 - Sum square difference
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem06.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem006.py"></script>
 
 ### Problem7 - 10001st prime
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem07.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem007.py"></script>
 
 ### Problem8 - largest product in a series
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem08.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem008.py"></script>
 
 ### Problem9 - Special pythagorean triplet
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem09.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem009.py"></script>
 
 ### Problem10 - Summation of primes
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem10.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem010.py"></script>
 
 ### Problem11 - Largest product in a grid
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem11.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem011.py"></script>
 
 ### Problem12 - Highly divisible triangular number
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem12.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem012.py"></script>
 
 ### Problem13 - Large sum
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem13.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem013.py"></script>
 
 ### Problem14 - Longest Collatz sequence
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem14.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem014.py"></script>
 
 ### Problem15 - Lattice paths
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem15.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem015.py"></script>
 
 ### Problem16 - Power digit sum
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem16.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem016.py"></script>
 
 ### Problem17 - Number letter counts
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem17.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem017.py"></script>
 
 ### Problem18 - Maximum path sum I
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem18.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem018.py"></script>
 
 ### Problem19 - Counting Sundays
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem19.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem019.py"></script>
 
 ### Problem20 - Factorial digit sum
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem20.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem020.py"></script>
 
 ### Problem21 - Amicable numbers
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem21.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem021.py"></script>
 
 ### Problem22 - Names scores
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=p22_data.txt"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=p022_data.txt"></script>
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem22.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem022.py"></script>
 
 ### Problem23 - Non-abundant sums
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem23.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem023.py"></script>
 
 ### Problem24 - Lexicographic permutations
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem24.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem024.py"></script>
 
 ### Problem25 - 1000-digit Fibonacci number
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem25.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem025.py"></script>
 
 ### Problem26 - Reciprocal cycles
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem26.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem026.py"></script>
 
 ### Problem27 - Quadratic primes
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem27.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem027.py"></script>
 
 ### Problem28 - Number spiral diagonals
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem28.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem028.py"></script>
 
 ### Problem29 - Distinct powers
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem29.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem029.py"></script>
 
 ### Problem30 - Digit fifth powers
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem30.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem030.py"></script>
 
 
 
 ### Problem 31 - Coin sums
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem31.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem031.py"></script>
 
 
 
 ### Problem 32 - Paindigital products
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem32.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem032.py"></script>
 
 
 
 ### Problem 33 - Digit cancelling fractions
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem33.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem033.py"></script>
 
 
 
 ### Problem 34 - Digit factorials
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem34.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem034.py"></script>
 
 
 
 ### Problem 35 - Circular primes
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem35.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem035.py"></script>
 
 
 
 ### Problem 36 - Double-base palindromes
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem36.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem036.py"></script>
 
 
 
 ### Problem 37 - Truncatable primes
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem37.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem037.py"></script>
 
 
 
 ### Problem 38 - Pandigital multiples
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem38.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem038.py"></script>
 
 
 
 ### Problem 39 - Integer right triangles
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem39.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem039.py"></script>
 
 
 
 ### Problem 40 - Champernowne's constant
 
-<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem40.py"></script>
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem040.py"></script>
 
