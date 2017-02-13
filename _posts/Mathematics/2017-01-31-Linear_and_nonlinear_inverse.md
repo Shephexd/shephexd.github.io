@@ -57,7 +57,7 @@ I'm studying from the book [^book]
 
 ## Linear and nonlinear inverse problem
 
-11
+
 
 ### Norm
 
@@ -107,7 +107,7 @@ $\phi_i$ are called `Spanning functions`
 
 ### Inner product
 
-We define the `Inner product`, $<\cdot,\cdot>:V\times V \to R$ a mapping.
+We define the `Inner product`, $\langle \cdot,\cdot \rangle :V\times V \to R$ a mapping.
 
 `Inner product` has properties.
 
@@ -205,5 +205,5 @@ $$
 
 #### Orthonormal basis
 
-We say we have `orthogonal basis` for the space $V$ if $V = span\ \{ \phi_1,\dots,\phi_n\} \ where\ \Vert \phi_i \Vert = 1$ and $\Vert \phi_i, \phi_j \Vert = \begin{cases}1  & \text{if $i=j$} \\0 & \text{if $i\neq j$}\end{cases} \forall i,j=1,\dots,n$ 
+We say we have `orthogonal basis` for the space $V$ if $V = span\ \{ \phi_1,\dots,\phi_n\} \ where\ \Vert \phi_i \Vert = 1$ and $\Vert \phi_i, \phi_j \Vert = \begin{cases}1  & \text{if $i=j$} \\ 0 & \text{if $i\neq j$}\end{cases} \forall i,j=1,\dots,n$ 
 
