@@ -196,21 +196,30 @@ When you use the iterative loop for a iterator, It might be a problem.
 
 ```
 
+<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=17_defensive_iteration.py
+"></script>
 
 
 ### To make clear, use variable position argument
+
+<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=18_variable_position_arguemnt.py"></script>
 
 
 
 ### Offer optional action by using keyword argument
 
+<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=19_keyword_paramters.py"></script>
 
 
 ### Use None and docstring for dynamic basic argument
 
+<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=20_dynamic_default_param.py"></script>
 
 
 ### Emphasize the clearness of argument for keyword.
+
+<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=21_param_for_keywords.py.py"></script>
+
 
 [^PEP]: Python Enhancement Proposal. It is style guide about how to construct python code.
 [^book]: "Effective python 59: specific ways to write better python" in English, 파이썬 코딩의 기술
