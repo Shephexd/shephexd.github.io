@@ -23,7 +23,7 @@ It is for  contents in my course called "Pattern Recognition" in Lappeenranta Un
 
 Pattern recognition is a branch of machine learning that focuses on the **recognition of patterns** and **regularities in data**, although it is in some cases considered to be nearly synonymous with machine learning. - [Wikipedia]
 
->> Related fields Machine learning, Data mining, Application areas
+>Related fields Machine learning, Data mining, Application areas
 
 ### Pattern recognition system
 Generally, The pattern recognition system gets data from a sensor. 

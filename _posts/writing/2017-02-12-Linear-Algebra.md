@@ -262,7 +262,157 @@ A basis for a subspace $H$ of $R^n$ is a linearly independent set in $H$ that sp
 
 ## Determinant
 
-## Matrices
+
+
+## Terms of Matrices
+
+### Matrix and vector
+
+$$
+A = 
+\begin{bmatrix}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}\\
+\end{bmatrix}
+
+X = \begin{bmatrix}
+x_1\\
+\vdots\\
+x_n
+\end{bmatrix}
+$$
+
+
+
+### square matrix
+
+$$
+A = 
+\begin{bmatrix}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{n1} & \cdots & a_{nn}\\
+\end{bmatrix}
+$$
+
+### identity matrix
+
+$$
+A = 
+\begin{bmatrix}
+1 & 0 & \cdots & 0\\
+0 & 1 & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & 1\\
+\end{bmatrix}
+$$
+
+### transpose of a matrix or a vector
+
+1. $(A^T)^T = A $
+2. $(A+B)^T = A^T + B^T$
+3. For any scalar r,  $(ra)^T = ra^T$
+4. $(AB)^T = B^TA^T$
+
+$$
+A = 
+\begin{bmatrix}
+a_{11} & \cdots & a_{1n}\\
+\vdots & \ddots & \vdots\\
+a_{m1} & \cdots & a_{mn}\\
+\end{bmatrix}
+\ 
+A^T = 
+\begin{bmatrix}
+a_{11} & \cdots & a_{m1}\\
+\vdots & \ddots & \vdots\\
+a_{1n} & \cdots & a_{nm}\\
+\end{bmatrix}
+$$
+
+$$
+X = \begin{bmatrix}
+x_1\\
+\vdots\\
+x_n
+\end{bmatrix}
+\ 
+X^T = \begin{bmatrix}
+x_1 \cdots 
+x_n
+\end{bmatrix}
+$$
+
+
+
+### determinant
+
+### trace
+
+### diagonal matrix
+
+$$
+A = diag(a_1,a_2,\cdots,a_n) = 
+\begin{bmatrix}
+a_1 & 0 & \cdots & 0\\
+0 & a_2 & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & a_n\\
+\end{bmatrix}
+$$
+
+### eigenvalue, eigenvector
+
+### eigen decomposition
+
+### characteristic equation
+
+### Cayley-Hamilton theorem
+
+### matrices with specific condition
+
+#### Orthogonal matrix
+
+$$
+AA^T=A^TA=E
+$$
+
+#### Symmetric matrix
+
+$$
+A^T=A
+$$
+
+#### Unitary matrix
+
+#### Hermitian matrix
+
+### SVD(Singular value decomposition)
+
+$$
+A = U\Sigma V^T\\
+A^TA = V(\Sigma^T\Sigma)V^T\\
+AA^T = U(\Sigma \Sigma^T)U^T
+$$
+
+$$
+\Sigma= \begin{bmatrix}
+\sigma & 0 & \cdots & 0\\
+0 & \sigma & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \sigma\\
+0 & 0 & \cdots & 0\\
+\end{bmatrix} \ or \
+\begin{bmatrix}
+\sigma & 0 & \cdots & 0&0\\
+0 & \sigma & \cdots & 0&0\\
+\vdots & \vdots & \ddots & \vdots&0\\
+0 & 0 & \cdots & \sigma & 0\\
+\end{bmatrix}
+$$
+
+
 
 [1]: https://en.wikipedia.org/wiki/Linear_algebra
 
