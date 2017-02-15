@@ -21,7 +21,6 @@ Classification in the most probable class $ω_i$ thus minimizes error probabilit
 
 <!--more-->
 
-
 #### The Bayesian classification rule
 
 $$
@@ -29,7 +28,9 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 \\ where\ A\ and\ B\ are\ events\ and\ P(B)\ ≠\ 0.
 $$
 
-- Conditional Probability $P(A|B)$
+
+
+- Conditional Probability $P(A \vert B)$
 
   : the probability of event A when B is known (to occur)
 
@@ -39,13 +40,16 @@ $$
   : the probability(proportion) of class $w\_i$ without knowing any measurement.
 
 
-- Class conditional probability $p(x|w_i)$
+- Class conditional probability $p(x \vert w_i)$
 
   : the probability of getting measurement value x when the class is $w_i$
 
 
-- A posteriori probability P($w_i|x$)
-- : the probability of class $w_i$ when the measured value is x
+- A posteriori probability P($w_i \vert x$)
+
+  : the probability of class $w_i$ when the measured value is x
+
+  ​
 
 > The uppercase P(•) denotes probability, whereas lowercase p(•) denotes probability density.
 
