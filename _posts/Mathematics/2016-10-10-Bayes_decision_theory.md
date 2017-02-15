@@ -3,9 +3,9 @@ layout: post
 title: Bayesian probability
 published: True
 categories: 
-- Machine learning
+- Mathematics
 tags:
-- Machine learning
+- Mathematics
 - Probability
 - Bayesian
 ---
@@ -209,9 +209,11 @@ $$
 
 ## Normal distribution
 
-### Univariate and multivariate normal distribution
+## Univariate and multivariate normal distribution
 
-### Bayesian classfier
+## Bayesian classfier
+
+
 
 [^1]: [dark's blog][1], 베이지언 확률(Bayesian Probability)
 [^2]: lecture material for Pattern recognition class in the Lappeenranta university of technology.
