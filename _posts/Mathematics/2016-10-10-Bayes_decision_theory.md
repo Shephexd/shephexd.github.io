@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bayesian probability
-published: False
+published: True
 categories: 
 - Machine learning
 tags:
@@ -16,8 +16,8 @@ This post is based on blog[^1] and lecture material in LUT[^2]
 
 Bayesian is one of the important method to classify the values using probability. This theory is based on **conditional probability** and **posteriori probability**.
 
-Features are random variables $$x ∈ R^D$$ , the so called feature space.
-Classification in the most probable class $$ω\_i$$ thus minimizes error probability.
+Features are random variables $x ∈ R^D$ , the so called feature space.
+Classification in the most probable class $ω_i$ thus minimizes error probability.
 
 <!--more-->
 
@@ -29,23 +29,30 @@ P(A|B) = \frac{P(B|A)P(A)}{P(B)}
 \\ where\ A\ and\ B\ are\ events\ and\ P(B)\ ≠\ 0.
 $$
 
-Conditional Probability P(A|B)
-: the probability of event A when B is known (to occur)
+- Conditional Probability $P(A|B)$
 
-A priori probability P($$w\_i$$)
-: the probability(proportion) of class $$w\_i$$ without knowing any measurement.
+  : the probability of event A when B is known (to occur)
 
-Class conditional probability p($$x|w\_i$$)
-: the probability of getting measurement value x when the class is $$w\_i$$
 
-A posteriori probability P($$w\_i|x$$)
-: the probability of class $$w\_i$$ when the measured value is x
+- A priori probability $P(w_i)$
 
-> > The uppercase P(•) denotes probability, whereas lowercase p(•) denotes probability density.
+  : the probability(proportion) of class $w\_i$ without knowing any measurement.
+
+
+- Class conditional probability $p(x|w_i)$
+
+  : the probability of getting measurement value x when the class is $w_i$
+
+
+- A posteriori probability P($w_i|x$)
+- : the probability of class $w_i$ when the measured value is x
+
+> The uppercase P(•) denotes probability, whereas lowercase p(•) denotes probability density.
 
 
 
 ## Bayesian probability
+
 There are two kind of method to calculate a probability.
 
 $$
@@ -60,7 +67,7 @@ $$
 
 ### MAP(Maximum A Posteriori)
 
-$$P(w\_i)$$ is fixed constant value, thus you don't need to care it when you select the maximum value using MAP method.
+$P(w_i)$ is fixed constant value, thus you don't need to care it when you select the maximum value using $MAP$ method.
 
 $$
 (w_i|A) = {P(A|w_i)P(w_i)}
@@ -150,7 +157,7 @@ The classfication rule divides the feature space into decision $$R\_i$$.
 
 **Different(incorrect and correct) decision may have different consequences.**
 
-Loss function $$l\_i$$ for decision $$i$$ describes how much expected loss is associated with that decision.
+Loss function $l_i$ for decision $i$ describes how much expected loss is associated with that decision.
 
 $$
 l\_i = \sum_{k=1}^{M}{\lambda_{ki}p(w_k|x)}
@@ -178,7 +185,7 @@ $$
 (\lambda_{21}-\lambda_{22})p(x|w\_2)P(w\_2) \lt (\lambda_{12}-\lambda_{11})p(x|w\_1)P(w\_1)
 $$
 
-- Usually both $$(\lambda_{21}-\lambda_{22})$$ and $$(\lambda_{12}-\lambda_{11})$$ are positive, so the decision rule becomes.
+- Usually both $(\lambda_{21}-\lambda_{22})$ and $(\lambda_{12}-\lambda_{11})$ are positive, so the decision rule becomes.
 
   ​
 $$
@@ -193,6 +200,8 @@ $$
 $$
 Decide\ ω_i\text{ if  }\ g_i(x) \> g_j(x) ∀j ≠ i
 $$
+
+
 
 ## Normal distribution
 
