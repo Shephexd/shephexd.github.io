@@ -37,9 +37,7 @@ python --version
 
 <script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=01_version_check.py"></script>
 
-```sys.version_info(major=3, minor=5, micro=1, releaselevel=&#39;final&#39;, serial=0)
-'3.5.1 |Anaconda 4.0.0 (x86_64)| (default, Dec  7 2015, 11:24:55) \n[GCC 4.2.1 (Apple Inc. build 5577)]'
-```
+
 
 ### Follow PEP 8 guide
 
