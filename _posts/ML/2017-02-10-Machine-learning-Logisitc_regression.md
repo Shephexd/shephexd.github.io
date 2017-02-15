@@ -22,6 +22,10 @@ In the case the output is discrete like example, Linear regression cannot predic
 
 
 
+<!--more-->
+
+
+
 ## Logistic regression
 
 
@@ -31,7 +35,8 @@ $$
 \text{want }0\le h_\theta(x)\le1\\
 h_\theta(x) = g(\theta^T x)\\
 g(z)= \frac{1}{1+e^{-z}}(\text{ Sigmoid function})\\
-h_\theta(x) = \text{estimated probability that y=1 on input }x
+h_\theta(x) = \text{estimated probability that y=1 on input }x\\
+= P(y=1|x;\theta)
 $$
 
 

@@ -2,7 +2,7 @@
 layout: post
 title: Machine learning(1) - Linear regression
 published: True
-categories: 
+categories:
 - Machine learning
 Tags:
 - Machine learning
@@ -12,7 +12,7 @@ Tags:
 
 
 
-How can the computer think by self? Normally, they can't think like human, they will use their way to learn and think. 
+How can the computer think by self? Normally, they can't think like human, they will use their way to learn and think.
 
 This post is based on the Stanford video lecture,"Machine learning", by Andrew Ng.
 
@@ -90,7 +90,7 @@ $$
 
 The `cost function` is a function to get the value that the estimated value is how far from the real value.
 
-To minimize the cost function we should choose proper $\theta_0,\theta_1$ so that $h_0(x)$ is close to y for our training. 
+To minimize the cost function we should choose proper $\theta_0,\theta_1$ so that $h_0(x)$ is close to y for our training.
 
 
 
@@ -198,7 +198,7 @@ $M$ training examples, $n$ features Gradient descent
 - Need to choose $\alpha$.
 - Needs many iterations.
 - Work well even when n is large.
-- $O(kn^2)$ 
+- $O(kn^2)$
 
 
 
