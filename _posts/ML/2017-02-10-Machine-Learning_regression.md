@@ -12,11 +12,9 @@ Tags:
 
 
 
-How can the computer think by self? Normally, they can't think like human, they will use their way to learn and think. Machine learning 
+How can the computer think by self? Normally, they can't think like human, they will use their way to learn and think. 
 
-
-
-This post is based on the Stanford video lecture by Andrew Ng.
+This post is based on the Stanford video lecture,"Machine learning", by Andrew Ng.
 
 <!--more-->
 
