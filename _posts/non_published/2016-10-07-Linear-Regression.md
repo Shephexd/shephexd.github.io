@@ -91,12 +91,6 @@ Choose sufficiently small $$\alpha$$
 
 ### Normal equation
 
-$$
-\theta \< R^{n+1}\\
-J(\theta\_0,\theta\_1,...,\theta\_m) = \frac{1}{2m}\sum_{i=1}^m(h_\theta(x^{(i)} - y^{(i)})^2\\
-J(\theta) = a\theta^2+b\theta+c\\
-\frac{d}{d\theta}J(\theta)= ... 0 (for\ every\ j)
-$$
 
 $$
 \theta = (X^TX)^{-1}X^Ty\\

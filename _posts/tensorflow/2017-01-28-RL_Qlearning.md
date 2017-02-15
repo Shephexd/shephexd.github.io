@@ -247,8 +247,6 @@ Simple game for going from start to goal with avoiding hole.
 
 
 
-
-
 ## What is the problem in dummy Q-learning?
 
 
@@ -287,7 +285,6 @@ for i in range(1000):
   if random < e:
       a = random
   elif:
-
 ```
 
 
@@ -347,4 +344,4 @@ $\hat Q$ converges to $Q$.
 
 ### Q-learning with e-greedy
 
-<script src="https://gist.github.com/Shephexd/9aa0a0c00970f2ff73be060a23bdbdca.js?file=qlearning_egreedy.py.py"></script>
+<script src="https://gist.github.com/Shephexd/9aa0a0c00970f2ff73be060a23bdbdca.js?file=qlearning_egreedy. py"></script>

@@ -10,8 +10,6 @@ Tags:
 - Data mining
 ---
 
-[TOC]
-
 
 
 How can the computer think by self? Normally, they can't think like human, they will use their way to learn and think. Machine learning 
@@ -78,8 +76,6 @@ l_0 = y + \beta(noise) \\
 (US)(V^Tl) = y+\beta \\
 T_\alpha l_\alpha ≈ y \\
 $$
-
-
 
 
 
@@ -151,30 +147,11 @@ In the case the function is not `convex function` that don't have local optimize
 
 
 
-#### Simple example using numpy
+#### LR example using numpy
 
-```python
-import numpy as np
+<script src="https://gist.github.com/Shephexd/e4d259394d557968a5bc8b6d8684f9b1.js?file=LR.py"></script>
 
-X = np.array([[1,2,4,6,7,8,11],[1,1,1,1,1,1,1]])
-Y = np.array([2,4,7,9,11,13,15])
-
-# y = Wx <- y = a_1x + a_2
-
-a = 0.1; #learning rate
-W = np.random.rand(2)
-print(W.size)
-LEN = W.size
-for i in range(1,100):
-    grad = (sum(W.dot(X) - Y))/LEN
-    print(sum(W.dot(X) - Y))
-    print(W)
-    W = W - a*grad
-```
-
-
-
-
+<script src="https://gist.github.com/Shephexd/e4d259394d557968a5bc8b6d8684f9b1.js?file=LR.png"></script>
 
 ### feature scaling
 
@@ -190,16 +167,10 @@ Another reason why feature scaling is applied is that `gradient descent` converg
 
 
 
-
-
 ### Normal equation
 
-$$
-\theta \lt R^{n+1}\\
-J(\theta_0,\theta_1,...,\theta\_m) = \frac{1}{2m}\sum_{i=1}^m(h_\theta(x^{(i)} - y^{(i)})^2\\
-J(\theta) = a\theta^2+b\theta+c\\
-\frac{d}{d\theta}J(\theta)= ... 0 (\text{for every } j)
-$$
+
+
 
 $$
 \theta = (X^TX)^{-1}X^Ty\\
@@ -214,6 +185,12 @@ $M$ training examples, $n$ features Gradient descent
 
 
 
+#### NE example using numpy
+
+<script src="https://gist.github.com/Shephexd/e4d259394d557968a5bc8b6d8684f9b1.js?file=NE.py"></script>
+
+
+
 ### Difference between Gradient descent and Normal equation
 
 
@@ -223,6 +200,7 @@ $M$ training examples, $n$ features Gradient descent
 - Need to choose $\alpha$.
 - Needs many iterations.
 - Work well even when n is large.
+- $O(kn^2)$ 
 
 
 
@@ -231,25 +209,7 @@ $M$ training examples, $n$ features Gradient descent
 - No need to choose $\alpha$.
 - Don't need to iterate.
 - Slow if $n$ is very large.
-
-
-
-> $O(n^3)$ to calculate $X_n^{-1}$
-
-
-
-## Consideration for Linear regression
-
-### Model of complexity
-
-- Dimension
-- Number of $X$ variables
-
-### Cross validation
-
-### Log transformation
-
-### overfitting
+- $O(n^3)$ to calculate $(X^TX)^{-1}$
 
 
 
@@ -265,7 +225,11 @@ $$
 
 
 
-## Polynomial regression
+
+
+#### MLR example using numpy
+
+<script src="https://gist.github.com/Shephexd/e4d259394d557968a5bc8b6d8684f9b1.js?file=MLR.py"></script>
 
 
 
