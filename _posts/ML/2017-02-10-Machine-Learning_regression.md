@@ -35,11 +35,11 @@ Computer can learn from  **a given data** set that we already **know** our outpu
 
 - Regression
 
-  To predict result within a `continuous` output.
+  : To predict result within a `continuous` output.
 
 - Classification
 
-  To predict result in a `discrete` output.
+  : To predict result in a `discrete` output.
 
 
 
@@ -49,7 +49,7 @@ Computer can solve the problem with **little or no idea** what our results are.
 
 - Clustering
 
-  Make clusters having similar characters.
+  : Make clusters having similar characters.
 
   ​
 
