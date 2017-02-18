@@ -199,23 +199,96 @@ Just think like there are three kinds of classification like
 
 
 
-## Regularization
+
+### Softmax
+
+In the two class case, we use the below equation to predict $\hat{y}$.
+
+
+$$
+H_L(x)=Wx\\
+z=H_L(x),g(z)\\
+g(z)=\frac{1}{1+e^{-2}}\\
+H_R(x)=g(H_L(x))
+$$
+We can denote this equation to matrix expression.
+$$
+\begin{bmatrix}
+w_1&w_2&w_3
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+w_1x_1+w_2x_2+w_3x_3
+\end{bmatrix}
+$$
 
 
 
-### Underfitting
 
-`Underfitting` or `High bias`
-
-It means that this algorithm doesn't fit the data well.
+Then make many $H_R(x)$ to predict multinomial values.
 
 
+$$
+\begin{bmatrix}
+w_{A1}&w_{A2}&w_{A3}\\
+w_{B1}&w_{B2}&w_{B3}\\
+w_{C1}&w_{C2}&w_{C3}
+\end{bmatrix}
+\begin{bmatrix}
+x_1\\
+x_2\\
+x_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+w_{A1}x_1+w_{A2}x_2+w_{A3}x_3\\
+w_{B1}x_1+w_{B2}x_2+w_{B3}x_3\\
+w_{C1}x_1+w_{C2}x_2+w_{C3}x_3
+\end{bmatrix}
+\\
+=
+\begin{bmatrix}
+\hat{Y_A}\\
+\hat{Y_B}\\
+\hat{Y_C}
+\end{bmatrix}
+$$
 
-### Overfitting
 
-`Overfitting` or `High variance`
+The prediction value $\hat{Y}$ can be changed by softmax function into the range 0~1.
 
-It means that this algorithm too fit the data to use other data set.
+
+$$
+S(y_i) = \frac{e^{y_i}}{\sum_je^{y_j}}
+$$
+
+
+### Cost function - Cross entropy
+
+
+
+When the prediction is right, there is small or no penalty. In other hand, there is big penalty by the cost function.
+
+
+$$
+Y=L(label)\\
+D(S,L)=-\sum_iL_i log(S_i)
+$$
+It is same to the equation using in the logistic regression.
+$$
+D(S,L)=-\sum_iL_i log(S_i) \\
+= ylog(H(x))-(1-y)log(1-H(x))
+$$
+
+
+
+### Gradient descent
+
 
 
 
