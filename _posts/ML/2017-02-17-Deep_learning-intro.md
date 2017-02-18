@@ -22,7 +22,7 @@ People use the brain to think something. If computer can imitate the human's bra
 
 
 
-This post is based on the [video lecture](https://www.inflearn.com/course/기본적인-머신러닝-딥러닝-강좌/)
+This post is based on the [video lecture](https://www.inflearn.com/course/기본적인-머신러닝-딥러닝-강좌/) and [wildml post](http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/)
 
 
 
@@ -89,7 +89,7 @@ But the first problem is occurred by XOR problems.
 |   1   |   0   |  1   |
 |   1   |   1   |  0   |
 
-
+ 
 
 How to computer can solve the `non-linear problem` by Neural network?
 
@@ -122,19 +122,139 @@ If we use the MLP, we can solve the XOR problem. but, no one can calculate the e
 
 
 
-## Backpropagation
+## Back propagation
 
-It is the solution to solve the XOR problem.
+Using the multi layer perception, we can calculate the hypothesis for the XOR problem.
+
+But how can the machine learn the weight and bias from the multilayer?
+
+Here is a solution called `back propagation`.
 
 
 
-The input data affect the result by passing the weights. And the error change the weights by passing from the last to beginning.
+
+
+The input data affect the result by passing the weights. 
+
+Then, using chain rule, the error change the weights by passing from the last layer to first layer.
 
 
 
-### The problem in the backpropagation
+### Partial derivative
 
-In the case the neural network is deep, the `backpropagation` can't affect the first weights.
+`Chain rule` is $\frac{df(g(x))}{dx}=\frac{df}{dx} = \frac{df}{dg}\cdot\frac{dg}{dx}$
+
+
+
+It is basic equation for the partial derivative.
+
+The chain rule is an essential idea for back-propagation.
+
+
+
+### Back propagation process
+
+
+
+1. forward calculation
+
+   ​
+   $$
+   x
+   \overset{\mathtt{W_1x+b_1}}{\longrightarrow}
+   z_1
+   \overset{\mathtt{tanh(z_1)}}{\longrightarrow}
+   a_1
+   \overset{\mathtt{W_2a_1+b_2}}{\longrightarrow} 
+   z_2
+   \overset{\mathtt{softmax(z_2)}}{\longrightarrow}
+
+   a_2=\hat{y}
+   $$
+   ​
+
+2. backward calculation
+
+   ​
+   $$
+   x
+   \overset{\mathtt{ \frac{dz_1}{dW_1} + \frac{dz_1}{db_1} }}{\longleftarrow}
+   z_1
+   \overset{\mathtt{ \frac{da_1}{dz_1} }}{\longleftarrow}
+   a_1
+   \overset{\mathtt{  \frac{dz_2}{dW_2} + \frac{dz_2}{db_2} }}{\longleftarrow} 
+   z_2
+   \overset{\mathtt{ \frac{d\hat{y}}{dz_2} }}{\longleftarrow}
+
+   a_2=\hat{y}
+   $$
+
+
+
+
+#### cost function(loss function)
+
+$$
+L(y,\hat{y}) = -\frac{1}{N}\sum_{n \in N}\sum_{i \in N} y_{n,i}log\hat{y}_{n,i}
+$$
+
+
+
+To update our `weights` on the networks, we need to calculate $\frac{dL}{dw}$ how much the value affect the function. Using chain rule of partial derivative, We can derivative $L(y,\hat{y})$ by our weights $W$.
+
+
+$$
+\sigma_3 = y - \hat{y}\\
+\sigma_2 = (1 - tanh^2z_1) \cdot \sigma_3W^T_2\\
+\frac{dL}{dW_2}=a_1^T\sigma_3\\
+\frac{dL}{db_2}=\sigma_3\\
+\frac{dL}{dW_1}=x_1^T\sigma_2\\
+\frac{dL}{db_1}=\sigma_2\\
+
+$$
+
+
+
+$$
+x\overset{\mathtt{W_1x_1+b_1}}{\longrightarrow} \fbox{Input} 
+\overset{\mathtt{tanh}}{\longrightarrow} \fbox{Hidden 1} 
+\overset{\mathtt{W_2a_2+b_2}}{\longrightarrow} \fbox{Hidden 2} 
+\overset{\mathtt{softmax}}{\longrightarrow} \fbox{Output} 
+$$
+
+
+
+
+Let me show the expression using matrix for back propagation.
+
+In the single case we can get the value easily.
+
+
+
+$$
+y = Wx \\
+y=
+\begin{bmatrix}
+w_{1} \cdots w_{n}
+\end{bmatrix}
+\begin{bmatrix}
+x_{1} \\
+\vdots \\
+x_{n}\\
+\end{bmatrix}\\
+z = \frac{1}{1+e^{-y}}\\
+$$
+
+$$
+\frac{df}{dw_n}=\frac{dy}{dw_n} \cdot \frac{dz}{dy}\\
+\frac{dz}{dy} = \frac{e^x}{(e^x+1)^2}
+$$
+
+
+
+### The problem in the back propagation
+
+In the case the neural network is deep, the `back propagation` can't affect the first weights.
 
 
 
@@ -154,6 +274,8 @@ It make rebrand the name to `Deep learning`
 - Our computers were millions of times too slow.
 - We initialized the weights in a stupid way.
 - We used the wrong type of non-linearity.
+
+
 
 
 
@@ -184,3 +306,6 @@ Computer can explain the image with categories like human being.
 ###  Chat bot
 
 Computer can communicate with human by understanding sentences and 
+
+
+

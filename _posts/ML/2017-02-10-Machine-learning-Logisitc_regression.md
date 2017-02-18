@@ -156,7 +156,7 @@ Cost function$J(\theta)$. Want $\min_\theta J(\theta)$.
 Given $\theta$, we have code that can compute.
 
 - $J(\theta)$
-- $\frac{d}{d\theta_j}J(\theta)$
+- $\frac{dJ(\theta)}{d\theta_j}$
 
 
 
@@ -166,7 +166,6 @@ There are some algorithms for optimization.
 - Conjugate gradient
 - BFGS
 - L-BFGS
-
 
 
 ##### Advantages
