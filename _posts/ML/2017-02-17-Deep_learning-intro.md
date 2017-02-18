@@ -156,38 +156,50 @@ The chain rule is an essential idea for back-propagation.
 
 
 
-1. forward calculation
+Here is a example about a neural network.
 
-   ​
-   $$
-   x
-   \overset{\mathtt{W_1x+b_1}}{\longrightarrow}
-   z_1
-   \overset{\mathtt{tanh(z_1)}}{\longrightarrow}
-   a_1
-   \overset{\mathtt{W_2a_1+b_2}}{\longrightarrow} 
-   z_2
-   \overset{\mathtt{softmax(z_2)}}{\longrightarrow}
 
-   a_2=\hat{y}
-   $$
-   ​
+$$
+x\overset{\mathtt{}}{ \longrightarrow } 
+\overset{\mathtt{W_1x_1+b_1}}{ \fbox{Input} } 
+\overset{\mathtt{tanh}}{\longrightarrow}
+\overset{\mathtt{W_2a_2+b_2}}{\fbox{Hidden 1} } 
+\overset{\mathtt{softmax}}{\longrightarrow} 
+{\fbox{Output}}
+$$
 
-2. backward calculation
 
-   ​
-   $$
-   x
-   \overset{\mathtt{ \frac{dz_1}{dW_1} + \frac{dz_1}{db_1} }}{\longleftarrow}
-   z_1
-   \overset{\mathtt{ \frac{da_1}{dz_1} }}{\longleftarrow}
-   a_1
-   \overset{\mathtt{  \frac{dz_2}{dW_2} + \frac{dz_2}{db_2} }}{\longleftarrow} 
-   z_2
-   \overset{\mathtt{ \frac{d\hat{y}}{dz_2} }}{\longleftarrow}
+#### forward calculation
 
-   a_2=\hat{y}
-   $$
+$$
+x
+\overset{\mathtt{W1x+b1}}{\longrightarrow}
+z_1
+\overset{\mathtt{tanh(z_1)}}{\longrightarrow}
+a_1
+\overset{\mathtt{W2a1+b_2}}{\longrightarrow} 
+z_2
+\overset{\mathtt{softmax(z_2)}}{\longrightarrow}
+a_2=\hat{y}
+$$
+
+
+
+#### backward calculation
+
+$$
+x
+\overset{\mathtt{ \frac{dz_1}{dW_1} + \frac{dz_1}{db_1} }}{\longleftarrow}
+z_1
+\overset{\mathtt{ \frac{da_1}{dz_1} }}{\longleftarrow}
+a_1
+\overset{\mathtt{  \frac{dz_2}{dW_2} + \frac{dz_2}{db_2} }}{\longleftarrow} 
+z_2
+\overset{\mathtt{ \frac{d\hat{y}}{dz_2} }}{\longleftarrow}
+
+a_2=\hat{y}
+$$
+
 
 
 
@@ -210,44 +222,6 @@ $$
 \frac{dL}{db_2}=\sigma_3\\
 \frac{dL}{dW_1}=x_1^T\sigma_2\\
 \frac{dL}{db_1}=\sigma_2\\
-
-$$
-
-
-
-$$
-x\overset{\mathtt{W_1x_1+b_1}}{\longrightarrow} \fbox{Input} 
-\overset{\mathtt{tanh}}{\longrightarrow} \fbox{Hidden 1} 
-\overset{\mathtt{W_2a_2+b_2}}{\longrightarrow} \fbox{Hidden 2} 
-\overset{\mathtt{softmax}}{\longrightarrow} \fbox{Output} 
-$$
-
-
-
-
-Let me show the expression using matrix for back propagation.
-
-In the single case we can get the value easily.
-
-
-
-$$
-y = Wx \\
-y=
-\begin{bmatrix}
-w_{1} \cdots w_{n}
-\end{bmatrix}
-\begin{bmatrix}
-x_{1} \\
-\vdots \\
-x_{n}\\
-\end{bmatrix}\\
-z = \frac{1}{1+e^{-y}}\\
-$$
-
-$$
-\frac{df}{dw_n}=\frac{dy}{dw_n} \cdot \frac{dz}{dy}\\
-\frac{dz}{dy} = \frac{e^x}{(e^x+1)^2}
 $$
 
 
@@ -259,8 +233,6 @@ In the case the neural network is deep, the `back propagation` can't affect the 
 
 
 #### Solution for this problem
-
-
 
 >  Neural networks with many layers really could be trained well, If the weights are initialized in a clever way.
 
@@ -278,8 +250,9 @@ It make rebrand the name to `Deep learning`
 
 
 
+## Neural networks
 
-## Convolutional Neural networks
+### CNN
 
 A researcher research the cat's brain to analysis the  brain's reaction when the cat watch the image.
 
@@ -287,7 +260,15 @@ The result is that the partition of neural is activated not total neural to reco
 
 
 
-## Examples
+#### RNN(LSTM)
+
+This network is useful to learn the language model having sequences data. It is widely used in the language, chat bot and machine translation.
+
+
+
+
+
+## Applications
 
 
 
