@@ -1,0 +1,26 @@
+---
+layout: page
+title: Categories
+permalink: /categories/
+---
+
+
+<div class="page-content">
+  {% for category in site.categories %}
+  {% assign nposts = category | last | size %}
+  <div class="collection" data-name="{{ category | first | escape }}">
+      <h2>{{ category | first }}</h2>
+      <h5>{{ nposts }} post{% if nposts != 1 %}s{% endif %}</h5>
+      <ul>
+          {% for posts in category %}
+              {% for post in posts %}
+                  {% if post.title %}
+                      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                  {% endif %}
+              {% endfor %}
+          {% endfor %}
+      </ul>
+  </div>
+
+  {% endfor %}
+</div>
