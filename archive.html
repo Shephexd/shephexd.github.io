@@ -6,7 +6,7 @@ permalink: /archive/
 
 
 <div class="page-content">
-
+  <div class="collection" data-name="{{ category | first | escape }}">
     <ul class="posts">
     {% for post in site.posts %}
       <li>
@@ -15,4 +15,5 @@ permalink: /archive/
       </li>
     {% endfor %}
     </ul>
+  </div>
 </div>
