@@ -1,0 +1,128 @@
+$sidex: 50px;
+$sidex-mob: 50px;
+$toggle-time: 0.15s;
+
+
+.sidebar {
+  a{
+    text-decoration: none;
+    color: #1756a9;
+  }
+  a:hover{
+  color: #999988;
+}
+
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  -moz-transition: width $toggle-time ease;
+  transition: width $toggle-time ease;
+  z-index: 100;
+
+  .side-menu{
+    font-size: 35px;
+    margin-top: 30px;
+
+    -moz-transition: display $toggle-time ease;
+    transition: display $toggle-time ease;
+    ul{
+      padding-left: 10px;
+      text-align: center;
+    }
+    span{
+      display: none;
+    }
+
+  }
+}
+
+.slide-wrap{
+  margin-left: 10px;
+}
+
+
+.logo-radi {
+  border-radius: 25px;
+  position: fixed;
+  top: 15px;
+//  left: 10 + $sidex;
+  left: 15px;
+
+  width: $rx*3;
+  height: $rx*3;
+  background-color: #000;
+  overflow: hidden;
+  z-index: 99;
+
+  -moz-transition: left $toggle-time ease;
+  transition: left $toggle-time ease;
+
+}
+
+.logo {
+  display: block;
+  position: absolute;
+  top: $rx/2;
+  left: $rx/2;
+  width: $rx*2;
+  height: $rx*2;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sidebar h1 {
+  color: white;
+}
+
+.page-content{
+  background-color: white;
+}
+.portfolio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  -moz-transition: left $toggle-time ease;
+  transition: left $toggle-time ease;
+
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input:checked ~ .portfolio {
+  left: 0;
+  opacity: 1;
+
+
+}
+
+input:checked ~ .sidebar {
+  width: 0px;
+  .side-menu{
+    display: none;
+  }
+
+}
+@media only screen and (max-width: 768px) {
+  .logo-radi{
+    top: 3px;
+    left: 3px;
+  }
+  .sidebar{
+    .side-menu{
+      font-size: 20px;
+      margin-top: 30px;
+      ul{
+        padding-left: 5px;
+      }
+
+    }
+  }
+}
