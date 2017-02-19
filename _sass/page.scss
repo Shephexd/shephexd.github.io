@@ -10,6 +10,9 @@
 .archive .archive-title .archive-year { margin-left: 1em; }
 .archive .archive-title .archive-year:before { content: " "; position: absolute; left: 0; top: 70%; margin-left: -4px; margin-top: -4px; width: 8px; height: 8px; background: #bbb; border-radius: 50%; }
 
+.page-content .colletion-count {font-size: 2px;}
 
 .page-content .collection {padding-top: none;}
-.categories .category-name {margin-bottom: 0;}
+.page-content .category-name {margin-bottom: 0;}
+
+.page-content .tag-name {margin-bottom: 0;}

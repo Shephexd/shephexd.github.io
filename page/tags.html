@@ -23,8 +23,8 @@ permalink: /tags/
   {% for tag in site.tags %}
   {% assign nposts = tag | last | size %}
   <div class="collection" data-name="{{ tag | first | escape }}">
-      <h2 id="{{ tag | first }}">{{ tag | first }}</h2>
-      <h5>{{ nposts }} post{% if nposts != 1 %}s{% endif %}</h5>
+      <h4 class="tag-name" id="{{ tag | first }}">{{ tag | first }}</h2>
+      <h5 class="collection-count">{{ nposts }} post{% if nposts != 1 %}s{% endif %}</h5>
       <ul>
           {% for posts in tag %}
               {% for post in posts %}

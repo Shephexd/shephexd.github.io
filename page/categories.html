@@ -10,8 +10,8 @@ permalink: /categories/
   {% for category in site.categories %}
   {% assign nposts = category | last | size %}
   <div class="collection" data-name="{{ category | first | escape }}">
-      <h2 class="category-name">{{ category | first }}</h2>
-      <h5>{{ nposts }} post{% if nposts != 1 %}s{% endif %}</h5>
+      <h4 class="category-name">{{ category | first }}</h2>
+      <h5 class="collection-count">{{ nposts }} post{% if nposts != 1 %}s{% endif %}</h5>
       <ul>
           {% for posts in category %}
               {% for post in posts %}
