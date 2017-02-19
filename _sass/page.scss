@@ -1,6 +1,6 @@
-.page-content {font-size: 14px;}
-.page-content ul { list-style: none; }
-.page-content ul li { margin: 0.7em auto; }
+.collection {font-size: 14px;}
+.collection ul { list-style: none; }
+.collection ul li { margin: 0.7em auto; }
 
 .archive h4 {margin: 0.625rem 0 0.5rem 0;}
 .archive #timeline { position: relative; }
@@ -10,9 +10,6 @@
 .archive .archive-title .archive-year { margin-left: 1em; }
 .archive .archive-title .archive-year:before { content: " "; position: absolute; left: 0; top: 70%; margin-left: -4px; margin-top: -4px; width: 8px; height: 8px; background: #bbb; border-radius: 50%; }
 
-.page-content .colletion-count {font-size: 2px;}
-
-.page-content .collection {padding-top: none;}
-.page-content .category-name {margin-bottom: 0;}
-
-.page-content .tag-name {margin-bottom: 0;}
+.collection {padding-top: none;}
+.category-name {margin-bottom: 0;}
+.tag-name {margin-bottom: 0;}
