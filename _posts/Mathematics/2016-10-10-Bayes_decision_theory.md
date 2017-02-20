@@ -7,7 +7,6 @@ categories:
 tags:
 - Mathematics
 - Probability
-- Bayesian
 ---
 
 

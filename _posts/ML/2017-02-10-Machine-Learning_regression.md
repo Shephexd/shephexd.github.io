@@ -6,8 +6,8 @@ categories:
 - Machine learning
 tags:
 - Machine learning
-- Regression
-- Data mining
+- Tensorflow
+- Python
 ---
 
 

@@ -7,7 +7,7 @@ categories:
 tags:
 - Python
 - Algorithm
-- Mathematic
+- Mathematics
 ---
 
 Project Euler는 수학적인 문제들을 컴퓨터 프로그래밍으로 풀어가는 사이트로, 파이썬 연습과 알고리즘 문제 풀이 겸 이 사이트의 문제를 조금씩 풀어보려고 합니다.
