@@ -4,7 +4,7 @@ title: Machine learning(1) - Linear regression
 published: True
 categories:
 - Machine learning
-Tags:
+tags:
 - Machine learning
 - Regression
 - Data mining

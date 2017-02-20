@@ -41,7 +41,11 @@ layout: default
               <p>{{ post.excerpt | markdownify | truncatewords: 600 }}</p>
             </section>
             <div class="post-meta">
-                <div class="readmore"><a href="{{ post.url }}" itemprop="url">Read more</a></div>
+                <div class="tags">
+                    {% for tag in post.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
             </div>
           </div>
       {% endfor %}

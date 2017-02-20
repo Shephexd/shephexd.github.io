@@ -4,7 +4,7 @@ title: Machine learning(2) - Logistic regression
 published: True
 categories: 
 - Machine learning
-Tags:
+tags:
 - Machine learning
 - Classification
 - Data mining
