@@ -32,11 +32,11 @@ This post is based on the [video lecture](https://www.inflearn.com/course/기본
 
 Neural have many `synapses`. Synapses can be activated by the `signal` being enough to activate the synapse.
 
-for thinking computer a computer has the `equation` if the input value is enough big to activate the `activate function`
+for thinking computer a computer has the `equation` if the input value is enough big to activate the `activation function`
 
 
 
-synapse = activate function
+synapse = activation function
 
 signals = input values
 
@@ -156,7 +156,7 @@ The chain rule is an essential idea for back-propagation.
 
 
 
-Here is a example about a neural network.
+Here is an example about a neural network.
 
 
 $$
@@ -250,6 +250,184 @@ It make rebrand the name to `Deep learning`
 
 
 
+## Setting for the Neural network
+
+
+
+### Activation function
+
+In the neural networks, the output from previous nodes is used as input for current node. And the output values from previous nodes can be activated by `activation function`.
+
+The `activation functions` have some different equation.
+
+
+
+#### Sigmoid
+
+`Sigmoid` is not working well for deep learning. Because it is `non-linearity` function it occur  `vanishing gradient`. It means the effect from last nodes to first nodes is too small.
+
+The `Sigmoid` is used only for the output value for last nodes on neural network.
+
+
+$$
+f(x) = \frac{1}{(1+e^{-x})}
+$$
+
+#### ReLU(Rectified Linear Unit)
+
+For solving `vanishing gradient`, ReLU is used for deep learning.
+
+
+$$
+f(x) = \begin{cases}
+x & \text{if }x \gt 0 \\
+0 & \text{if } x \le 0
+\end{cases}
+$$
+
+
+```python
+def relu(x):
+    return x*(x>0)
+
+def deriv_relu(x):
+    return 1*x(>0)
+```
+
+
+
+#### Leaky ReLU
+
+
+$$
+f(x) = \begin{cases}
+x & \text{if }x \gt 0 \\
+0.1x & \text{if } x \le 0
+\end{cases}
+$$
+
+
+
+#### Max out
+
+$$
+\max(w_1^Tx + b1, w_2^Tx + b_2)
+$$
+
+
+
+#### ELU
+
+$$
+f(x) = \begin{cases}
+x & \text{if }x \gt 0 \\
+\alpha (exp(x) - 1) & \text{if } x \le 0
+\end{cases}
+$$
+
+
+
+#### tanh
+
+$$
+tanh(x)
+$$
+
+
+
+### Initialize weight values wisely
+
+
+
+#### Restricted Boltmann machine(RBM)
+
+It is not used anymore. But the concept is interesting.
+
+For initializing the weight values, Find the minimum weights between input weights and updated weights after forwarding and backwarding.
+
+It is also called as `Encoder` and `Decoder`.
+
+
+
+##### Fine tuning
+
+The RBM machine can pre-train the neural networks each nodes iteratively. First and second nodes, Second and Third nodes, and $\cdots$.
+
+
+
+#### Other ways
+
+But there are more easy way for weight initialization. Simple methods are OK.
+
+- Xavier initialization
+
+  `np.random.randn(fan_in, fan_out)/np.sqrt(fan_in)`
+
+- He's initialization 
+
+  `np.random.randn(fan_in,fan_out)/sp.sqrt(fan_in/2)`
+
+
+
+### Overfitting
+
+Overfitting can be checked by test data.
+
+- **Very high accuracy** on the training dataset
+- **Poor accuracy** on the test data set
+
+
+
+####  Solution for overfitting
+
+- More training data
+- Reduce the number of features(*Not for deep learning*)
+- Regularization
+
+
+
+#### Regularization
+
+Let's not have too big numbers in the weight
+$$
+cost = cost + \lambda \sum w^2
+$$
+
+
+#### Drop out
+
+"*Randomly set some neurons to zero in the forward pass*"
+
+`Drop out` is a way to avoid overfitting in neural network. It is simple idea that just kill some nodes randomly.
+
+
+
+For training, we can use the dropout, but not for the evaluation.
+
+```python
+dropout_rate = tf.placeholder("float")
+_L1 = tf.nn.relu(tf.add(tf.matmul(X,X1), B1))
+L1 = tf.nn.dropout(_L1, dropout_rate)
+
+# Train
+sess.run(optimizer, feed_dict={X: batch_xs, Y: batch_ys, dropout_rate: 0.7})
+
+# Evaluation
+print ("Accuracy:", accuracy.eval({X: mnist.test.images, Y: mnist.test.labels, dropout_rate: 1}))
+```
+
+
+
+
+
+#### Model ensemble
+
+
+
+
+
+
+
 ## Neural networks
 
 ### CNN
@@ -268,25 +446,22 @@ This network is useful to learn the language model having sequences data. It is 
 
 
 
-## Applications
+### Applications
 
 
 
-### Image recognition
+#### Image recognition
 
 The image net is a competition for the computer vision to recognize image's categories.
 
 
 
-### Image caption
+#### Image caption
 
 Computer can explain the image with categories like human being.
 
 
 
-###  Chat bot
+####  Chat bot
 
 Computer can communicate with human by understanding sentences and 
-
-
-

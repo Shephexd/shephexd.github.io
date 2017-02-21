@@ -216,7 +216,9 @@ When you use the iterative loop for a iterator, It might be a problem.
 
 ### Emphasize the clearness of argument for keyword.
 
-<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=21_param_for_keywords.py.py"></script>
+<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=21_param_for_keywords.py"></script>
+
+
 
 
 [^PEP]: Python Enhancement Proposal. It is style guide about how to construct python code.
