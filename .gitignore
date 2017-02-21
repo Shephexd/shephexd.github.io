@@ -9,7 +9,8 @@
 .ruby-gemset
 .ruby-version
 .sass-cache
-_posts/non_published/*
+_posts/non_published/
+non_published/
 /test/source/file_name.txt
 Gemfile.lock
 _site/
