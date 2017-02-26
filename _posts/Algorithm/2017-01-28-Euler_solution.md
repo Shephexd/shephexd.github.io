@@ -207,9 +207,56 @@ The problem is solved with python3. You can download from github and implement c
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem039.py"></script>
 
-
-
-### Problem 40 - Champernowne's constant
+### Problem 40 - Integer right triangles
 
 <script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem040.py"></script>
+
+### Problem 41 - Pandigital prime
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem041.py"></script>
+
+### Problem 42 - Coded triangle numbers
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem042.py"></script>
+
+### Problem 43 - Sub-string divisibility
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem043.py"></script>
+
+
+
+### Problem 44 - Pentagon numbers
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem044.py"></script>
+
+
+### Problem 45 - Triangular, pentagonal, and hexagonal
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem045.py"></script>
+
+
+### Problem 46 - Goldbach's other conjecture
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem046.py"></script>
+
+
+### Problem 47 - Distinct primes factors
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem047.py"></script>
+
+
+### Problem 48 - Self powers
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem048.py"></script>
+
+
+### Problem 49 - Prime permutations
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem049.py"></script>
+
+
+### Problem 50 - Consecutive prime sum
+
+<script src="https://gist.github.com/Shephexd/180a99f7e698d6a33931fff909c372df.js?file=problem050.py"></script>
+
 

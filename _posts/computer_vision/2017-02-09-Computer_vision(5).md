@@ -11,11 +11,7 @@ tags:
 
 
 
-
-
 To recognize image on the computer, the feature is one of the important part for it. And there are some algorithms to detect features like edge and corner.
-
-
 
 
 
