@@ -412,4 +412,16 @@ $k(A) = \Vert A \Vert \Vert A^{-1} \Vert  $
 
 
 
+$Ax=b$
+
+if $n>m$, the system $Ax=b$ is called *overdetermined*  
+and use Least square(LSQ)   
+$$
+\min_x \Vert Ax-b \vert_2 = \min_x \sum_i((Ax)_i - b_i)^2
+$$
+if $n < m, the system Ax = b is called *underdetermined*  
+and use SVD  to get a solution
+
+
+
 ### Pseudoinverse
