@@ -83,7 +83,7 @@ There are many fields using and adopting `graph theory`
 
 
 1. Salesman problem
-2.   
+2. ​
 3. KNAPSACK problem
 
 
@@ -102,4 +102,19 @@ $\min f = \sum^n_{j=1}c_jx_j$
 subject to constrain
 $\sum_{i=1}^n w_ix_i \le M $  		$x_i = \begin{cases} 1 & & \text{if item $i$ selected} \\ 0 & & \text{if not} \end{cases}$
 
- 
+1. 2 
+2.  3
+3. 3
+4. 4
+5. 4
+6. 4
+7. 4
+8. 4
+9. 4
+10. 4 
+11. ​
+12. Minimum weight edge cover
+13.   
+14. Vertext coloring, chromatic number  
+    Color the vertices of a graph with a minimum number of colors such that adjacent vertices have different colors.
+15. ​

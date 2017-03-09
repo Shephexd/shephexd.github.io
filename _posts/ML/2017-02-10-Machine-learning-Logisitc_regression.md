@@ -51,7 +51,9 @@ $$
 
 $g(z)= \frac{1}{1+e^{-z}}(\text{ Sigmoid function})$
 $h_\theta(x) = \text{estimated probability that y=1 on input }x$
-$= P(y=1|x;\theta)$
+$= P(y=1\vert x;\theta)$
+
+$P(y=0\vert x; \theta) = 1 - P(y=1\vert x;\theta)$
 
 
 
