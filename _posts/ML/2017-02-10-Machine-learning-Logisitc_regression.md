@@ -8,6 +8,7 @@ tags:
 - Machine learning
 - Python
 - Tensorflow
+- Matlab
 ---
 
 
@@ -77,16 +78,16 @@ $h_\theta(x) = g(\theta^T x) \ge 0.5$ whenever $\theta^Tx \ge 0$
 ### Linear boundary
 
 $$
-h\theta(x) = g(\theta0 + \theta1x1 +\theta2x2)\\
+h\theta(x) = g(\theta_0 + \theta_1x_1 +\theta_2x_2)\\
 g(z) = \frac{1}{1+e^{-z}}
 $$
 
 
 
+Predict "$y=1$" if $\theta_0 + \theta_1x_1 +\theta_2x_2 = \theta^Tx \ge 0$
 
-$$
-if\ h_\theta(x) ≥ 0.5,\ y=1 \\otherwise,\ y=0
-$$
+$\theta^Tx=0$ is Decision boundary
+
 
 
 ### Non-linear boundary
@@ -101,16 +102,58 @@ $$
 h_\theta(x) = g(\theta_0 + \theta_1x_1 + \theta_2x_2 + \theta_3x_1^2 + \theta_1x_2^2)
 $$
 
+$$
+\theta = 
+\begin{bmatrix}
+-1\\0\\0\\1\\1\\
+\end{bmatrix}
+$$
+
+Predict "$y=1$" if $-1 + x_1^2+x_2^2= \theta^Tx \ge 0$
+
+$\theta^Tx=0$ is Decision boundary
+
+
 
 ## Cost function
 
+`Training set`: {$(x^{(1)},y^{(1)}), (x^{(2)},y^{(2)}), \cdots, (x^{(n)},y^{(n)})$}
+
+​`m examples`: $x \in \begin{bmatrix}x_0 \\ x_1\\ \vdots \\x_n  \end{bmatrix}$ $x_0=1, y = \in \{ 0,1 \}$
+
+$h_\theta(x) = \frac{1}{1+e^{-\theta^Tx}}$
+
+
+$$
+Cost(h_\theta(x),y) =
+\begin{cases}
+-log(h_\theta(x)) &\text{if } y = 1\\
+-log(1-h_\theta(x)) &\text{if } y = 0\\
+\end{cases}
+$$
+
+
+It turns out to below equation.
+
+$Cost(h_\theta(x),y) = -ylog(h_\theta(x)) - (1-y)log(1-h_\theta(x))​$
+
+
+
 The cost is the value when the answers are wrong.
 
-
 $$
-J(\theta) = cost(h_\theta(x^{(i)},y) = \frac{1}{m}\sum_{i=1}^{m}Cost(H_\theta(x^{(i)},y^{(i)}))
+J(\theta) = cost(h_\theta(x^{(i)},y) = \frac{1}{m}\sum_{i=1}^{m}Cost(h_\theta(x^{(i)}),y^{(i)})\\
 $$
 
+
+
+if Cost($h_\theta(x),y$) = $\frac{1}{2}(h_\theta(x) - y)^2$
+
+But, for logistic regression is non-linear function it can be `non-convex function`  having many local optimal.
+
+
+
+To remove the local optimal, log function can be used.
 $$
 Cost(h_\theta(x),y) = \begin{cases}
 -log(h_\theta (x)) &  if\ y=1\\
@@ -135,21 +178,25 @@ To fit parameters $\theta$:
 
 $$
 h_\theta(x) = \frac{1}{1+e^{-\theta^TX}}\\
+\frac{dJ(\theta)}{d\theta} = (h_\theta(x^i)-y^i)x_j^i
 $$
-
-
-$\frac{dJ(\theta)}{d\theta} = (h_\theta(x^i)-y^i)x_j^i$
 
 To make a prediction given new $x$:
 output $h_\theta(x)$
 
 $$
 \min_\theta J(\theta):\\
+\begin{align}
 Repeat\ \{
 \\
-\theta_j := \theta_j - \alpha\sum_{i=1}^m(h_\theta(x^i)-y^i)x_j^i\\
+&\theta_j := \theta_j - \alpha\sum_{i=1}^m(h_\theta(x^i)-y^i)\cdot x_j^i\\
 \}
+\end{align}
 $$
+
+
+
+
 
 ## Advanced optimization
 
@@ -183,6 +230,8 @@ There are some algorithms for optimization.
 
 
 
+
+
 ## Multiclass classification
 
 In the case the problem is not binary. How can we deal with logistic regression?
@@ -199,6 +248,15 @@ Just think like there are three kinds of classification like
 - Email( Work or not/Friend or not /Family or not)
 
 
+
+$$
+y \in \{0,1,\dots,n\}\\
+h_\theta^{(0)}=P(y=0\vert x;\theta)\\
+h_\theta^{(1)}=P(y=1\vert x;\theta)\\
+\vdots\\
+h_\theta^{(n)}=P(y=n\vert x;\theta)\\
+\hat{y} = \max_i(h_\theta^{(i)}(x))
+$$
 
 
 ### Softmax
@@ -254,9 +312,9 @@ w_{C1}x_1+w_{C2}x_2+w_{C3}x_3
 \\
 =
 \begin{bmatrix}
-\hat{Y_A}\\
-\hat{Y_B}\\
-\hat{Y_C}
+\hat{Y}_A\\
+\hat{Y}_B\\
+\hat{Y}_C
 \end{bmatrix}
 $$
 
@@ -267,6 +325,7 @@ The prediction value $\hat{Y}$ can be changed by softmax function into the range
 $$
 S(y_i) = \frac{e^{y_i}}{\sum_je^{y_j}}
 $$
+
 
 
 ### Cost function - Cross entropy
@@ -285,10 +344,6 @@ $$
 D(S,L)=-\sum_iL_i log(S_i) \\
 = ylog(H(x))-(1-y)log(1-H(x))
 $$
-
-
-
-### Gradient descent
 
 
 
