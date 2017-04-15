@@ -56,7 +56,39 @@ There are related fields with computer vision.
 
 
 
-## Computer vision
+### Basic of robotics
+
+
+
+#### Pose
+
+Basic of robotics is pose (description of position and orientation).  
+Coordinate system(frame) attatched to eacth object.  
+Transforms between coordinate systems necessary.  
+
+
+
+#### kinematics
+
+It is about science of motion without regard to causing forces, Position, velocity, accerlation
+
+
+
+#### Links and joint types
+
+
+
+### Velocities and singularities
+
+#### Trajectory
+
+#### Control
+
+
+
+
+
+## Coordinate System
 
 
 
@@ -93,11 +125,50 @@ You can think ${^A\xi_B}$ as a motion it move $A$ to $B$.
 - *object*, $B$
 
 
+
+
+### Rotation matrix
+
+Rotation matrix $^VR_B$ describes how point are transformed from frame $\{B\}$ to Fram $\{V\}$ when the frame is rotated.
+$$
+\begin{pmatrix} \frac{V_y} {V_y}\end{pmatrix} = \begin{pmatrix} cos \theta & -sin \theta\\ -sin \theta & cos \theta\end{pmatrix} \begin{pmatrix} B_x\\ B_y\end{pmatrix}
+$$
+
+
+Rotation matrix has some features.
+
+1. Orthogonal
+2. Has orthogonal columns
+3. Columns are unit vectors
+4. Inverse = transpose
+
+
+$$
+\begin{pmatrix} A_x\\ A_y\end{pmatrix} =
+  \begin{pmatrix} V_x\\ V_y\end{pmatrix} +  \begin{pmatrix} x\\ y\end{pmatrix} =
+\begin{pmatrix} cos \theta & -sin \theta\\ -sin \theta & cos \theta\end{pmatrix}
+\begin{pmatrix} B_x\\ B_y\end{pmatrix} +  \begin{pmatrix} x\\ y\end{pmatrix} =
+\begin{pmatrix} cos \theta & -sin \theta & x\\ -sin \theta & cos \theta & y\end{pmatrix}
+\begin{pmatrix} B_x\\ B_y \\1\end{pmatrix}
+$$
+
+$$
+\begin{pmatrix} A_x\\ A_y \\1\end{pmatrix} 
+=\begin{pmatrix} ^AR_B & t \\ 0_{1\times2} & 1 \end{pmatrix}
+\begin{pmatrix} B_x\\ B_y \\1\end{pmatrix}\\
+{t=\text{transformation and} ^AR_B =\text{orientation} }
+$$
+
+
 ### Frame-to-Frame mapping
+
+pose = position + orientation
+
+$\{B\}=\{^AR_B,\ ^AP_{BORG}\}$
 
 ![](/assets/post_images/cv/coordinate_mapping.jpg)
 
-$^AP=^AR_{B}{^BP} + ^AP_{BORG}$
+$^AP=\ ^AR_{B}{^BP} +\ ^AP_{BORG}$
 
 
 
@@ -156,6 +227,25 @@ The $3 \times 3$  *transformation matrix* matrix can all these (**translation**,
 The transform matrix is obtained by matrix multiplication of the **part transforms**  
 $translation * rotation * scaling $
 
+
+$$
+\begin{pmatrix} ^AV\\ 0\end{pmatrix} 
+=\begin{pmatrix} ^AR_B &\ ^AP_{BORG} \\ 0\ 0\ 0 & 1 \end{pmatrix}
+\begin{pmatrix} ^BV\\ 0\end{pmatrix}\\
+\Leftarrow\Rightarrow 
+^AV=\ ^A
+\Leftarrow\Rightarrow
+$$
+
+
+
+
+### Forward Kinematics
+
+The kinematic chains is formed by a sequence of homogeneous transfomr, each describing one link.
+$$
+^0T_N =\ ^0T_1\ ^1T_2 \cdots \ ^{N-1}T_{N}
+$$
 
 
 ### Coordination transformation
