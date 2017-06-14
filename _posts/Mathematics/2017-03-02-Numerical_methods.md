@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Numerical methods
-categories: 
-- Mathmatics
+categories:
+- Mathematics
 tags:
-- Mathmatics
+- Mathematics
 - Linear algebra
 ---
 
@@ -74,7 +74,7 @@ where $f ′′(ξ) ≤ M = max \vert f ′′(ν) \vert$, and thus the **trunca
 
 
 
-For example, the real result is $0.12344493424$ and our approximation value is $0.1234491250$. Then, the error is the difference between real and approximation, $0.12344493424 - 0.1234491250= -4.190760000008509e^{-06}$ 
+For example, the real result is $0.12344493424$ and our approximation value is $0.1234491250$. Then, the error is the difference between real and approximation, $0.12344493424 - 0.1234491250= -4.190760000008509e^{-06}$
 
 
 
@@ -360,7 +360,7 @@ $Ax = (y_1,y_2) = (ax_1,bx_2)^T$, so the image is the ellipses $\frac{y_1^2}{a^2
 
 ### SVD decomposition
 
-$A$ is a matrix, and it can be 
+$A$ is a matrix, and it can be
 $$
 A = USV^T
 $$
@@ -376,7 +376,7 @@ a complex square matirx $U$ is `unitary` if its conjugate transpose $(U^*)$ is a
 
 
 
-$U$ is a unitray matrix. 
+$U$ is a unitray matrix.
 $$
 U^*U = UU^* = I
 $$

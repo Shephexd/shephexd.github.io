@@ -1,6 +1,6 @@
 ---
 layout: post
-published: False
+published: True
 title: Pattern Recognition
 categories:
 - Machine learning
@@ -10,7 +10,6 @@ tags:
 ---
 
 Pattern recognition is a basic concept of machine learning. It w
-
 
 
 It is for  contents in my course called "Pattern Recognition" in Lappeenranta University technology. It starts from the definition of Pattern Recognition to Making a model. I hope it can be useful for students and engineers.
@@ -26,7 +25,7 @@ Pattern recognition is a branch of machine learning that focuses on the **recogn
 >Related fields Machine learning, Data mining, Application areas
 
 ### Pattern recognition system
-Generally, The pattern recognition system gets data from a sensor. 
+Generally, The pattern recognition system gets data from a sensor.
 Using this data, the system extract features and classify to decide a decision.
 
 $$
@@ -83,7 +82,7 @@ Unsupervised learning doesn't need training data. Input data is latent values. A
 - clustering, grouping with customers who have similar characters.
 
 ### Reinforcement learning
-Reinforcement learning is an area of machine learning inspired by behaviorist psychology, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. [Wikipedia](https://en.wikipedia.org/wiki/Reinforcement_learning) 
+Reinforcement learning is an area of machine learning inspired by behaviorist psychology, concerned with how software agents ought to take actions in an environment so as to maximize some notion of cumulative reward. [Wikipedia](https://en.wikipedia.org/wiki/Reinforcement_learning)
 
 **classes are not known before training**
 
@@ -99,7 +98,7 @@ Feature space is divided into parts where each part represents a class.
 
 ### Statistical
 Features are random variables with statistical properties.
-One of example is the bayesian probability. 
+One of example is the bayesian probability.
 
 ### Neural-networks
 It is based on "Black-Box"methods for constructing a transform/mapping from features to classes.

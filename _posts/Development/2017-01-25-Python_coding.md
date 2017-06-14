@@ -31,7 +31,7 @@ There are specific methods and statements in python. Python programmers emphasiz
 ```bash
 python --version
 ```
-`python 2.7.8` or `python 3.4.3` 
+`python 2.7.8` or `python 3.4.3`
 
 2. Using sys module
 
@@ -53,20 +53,20 @@ PEP[^PEP] is guide for the developer to keep in mind to improve productivity and
    - If the expression is too long, use the indent (4 space).
    - In file, separate function and class using two blank lines.
    - In class, method has one blank line for separation.
-   - List index, call fund, allocating keyword don't have any space. 
+   - List index, call fund, allocating keyword don't have any space.
    - Allocating variable have space before and after it. `a = 1`
 
 2. naming
 
    - **Functions, variables, attributes** follow `lowercase_underscore`
    - **Protected instance attributes** follow `_leading_underscore`
-   - **Private instance attributes** follow `__double_leading_underscore` 
+   - **Private instance attributes** follow `__double_leading_underscore`
    - **Classes and exceptions** follow `CapitalizedWord`
    - **Module level constants** follow `ALL_CAPS`
    - **In class and instance method,** first parameter(for instance itself) denote `self`
    - **In class method,** first parameter(for class itself) denote `cls`
 
-3. Expression and sentences use 
+3. Expression and sentences use
 
    - **Use inline positive** `if a is not b` instead of negative of positive expression `if not a is b`
 
@@ -218,7 +218,12 @@ When you use the iterative loop for a iterator, It might be a problem.
 
 <script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=21_param_for_keywords.py"></script>
 
+### Use helper class
 
+<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=21_param_for_keywords.py"></script>
+
+### Use function instead of class for argument
+<script src="https://gist.github.com/Shephexd/397b032ef16f41fc9f736a0c7a95d617.js?file=21_param_for_keywords.py"></script>
 
 
 [^PEP]: Python Enhancement Proposal. It is style guide about how to construct python code.

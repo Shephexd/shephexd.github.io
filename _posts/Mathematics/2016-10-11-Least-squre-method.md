@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Least square method
-published: False
+published: True
 categories:
 - Machine learning
 tags:
@@ -118,8 +118,8 @@ If your data set has a outlier or more, you'd better change the method to estima
 
 ## Notes
 
-It is based on the blog[^dark_blog], my class and the official site of matlab[^matlab].
+It is based on the blog[^dark_blog], my class and the official site of Matlab[^Matlab].
 
 
-[^dark_blog]: [dark_blog](http://darkpgmr.tistory.com/56), Korean blog about mathmatics and machine vision.
-[^matlab]: [Matlab officail introduction](https://se.mathworks.com/help/curvefit/least-squares-fitting.html) about LSM
+[^dark_blog]: [dark_blog](http://darkpgmr.tistory.com/56), Korean blog about mathematics and machine vision.
+[^Matlab]: [Matlab official introduction](https://se.mathworks.com/help/curvefit/least-squares-fitting.html) about LSM

@@ -3,7 +3,7 @@ layout: post
 title: Deep learning(1) - Basic Neural network concepts
 published: True
 categories:
-- Machine learning
+- Deep learning
 tags:
 - Machine learning
 - Neural network
@@ -28,21 +28,30 @@ This post is based on the [video lecture](https://www.inflearn.com/course/기본
 
 <!--more-->
 
-## Neural network
+## Perceptron
 
-Neural have many `synapses`. Synapses can be activated by the `signal` being enough to activate the synapse.
-
-for thinking computer a computer has the `equation` if the input value is enough big to activate the `activation function`
+This algorithm is designed by Frank Rsenblatt in 1957. 
 
 
 
-synapse = activation function
+In the perceptron, The output$(1,0)$ is one signal after calculating with weights and inputs. 
 
-signals = input values
+When the input signal is enough big, then the output signal will be 1, otherwise 0.
+
+
+$$
+y = 
+\begin{cases}
+0 & (w_1x_1+w_2x_2 \le \theta)
+\\
+1& (w_1x_1+w_2x_2 \gt \theta)
+\end{cases}
+$$
+$x$ is input signal and y is output signal. If the out value that calculated by the weighs and input singal is bigger than $\theta$, it will be 1, otherwise 0. 
 
 
 
-Using this `Neural network`, Computer can solve the AND/OR problems!
+### Application for perceptron
 
 
 
@@ -68,57 +77,211 @@ Using this `Neural network`, Computer can solve the AND/OR problems!
 
 
 
-
-
-### The first problem for NN
-
-But the first problem is occurred by XOR problems.
-
-`One logistic regression` unit cannot separate XOR!
-
-
-
-
-
-#### XOR
+#### NAND logic
 
 | $x_1$ | $x_2$ | $Y$  |
 | :---: | :---: | :--: |
-|   0   |   0   |  0   |
+|   0   |   0   |  1   |
 |   0   |   1   |  1   |
 |   1   |   0   |  1   |
 |   1   |   1   |  0   |
 
- 
-
-How to computer can solve the `non-linear problem` by Neural network?
 
 
 
-Use the `multi layers`!
 
-#### Solution
+### Limitation of perceptron
 
-If we use the MLP, we can solve the XOR problem. but, no one can calculate the each `bias` and `weight`
+Perceptron is the way to solve linear problem. It means that it can't solve non-linear problem correctly. Then, how can we solve non linear problem correctly by using some ways?
 
-
-
-> No one on earth had found a viable way to train - Marvin Minsky
+The solution is using two combined linear systems.
 
 
 
-#### Logic for solution
+For example,
+$$
+s1=NAND(x_1,x_2)\\
+s2 = OR(x_1,x_2)\\
+y=AND(s_1,s_2)
+$$
 
-| $x_1$ | $x_2$ | $y_1$ | $y_2$ | $Y$  |
+
+#### XOR logic
+
+| $x_1$ | $x_2$ | $s_1$ | $s_2$ | $Y$  |
 | :---: | :---: | :---: | :---: | :--: |
-|   0   |   0   |   0   |   1   |  0   |
-|   0   |   1   |   0   |   0   |  1   |
-|   1   |   0   |   0   |   0   |  1   |
-|   1   |   1   |   1   |   0   |  0   |
+|   0   |   0   |   1   |   0   |  0   |
+|   0   |   1   |   1   |   1   |  1   |
+|   1   |   0   |   1   |   1   |  1   |
+|   1   |   1   |   0   |   1   |  0   |
+
+
+
+It is called as "Multi Layer Perceptron(MLP)". It is a basic copcept of neural networks. But the problem is the weights because we set the parameters manually not automatically.
 
 
 
 
+
+## Neural network
+
+As i said before, the MLP can solve coplex problem like non-linear problem. however, we don't know the way to set the parameters(weights) automatically not manually. So, there is neural network to solve and make it set the parameters automactially.
+
+
+
+
+
+### Concepts
+
+Neural have many `synapses`. Synapses can be activated by the `signal` being enough to activate the synapse.
+
+for thinking computer a computer has the `equation` if the input value is enough big to activate the `activation function`
+
+
+
+![neural-network](neural-network.png)
+
+
+
+> synapse = activation function  
+>
+> signals = input values
+
+
+
+### Activation function
+
+Activation function is activated by the big enough input. When the proper input comes into activation function, activation function returns output depending on its function.
+
+
+
+There are three kind of widely used function for activation.
+
+
+
+#### Step function
+
+$$
+y = \begin{cases}
+1 & \text{if }x\gt0\\
+0 & \text{if }x\le1
+\end{cases}
+$$
+
+
+
+![step_function](/Users/shephexd/github/pages/_posts/DeepLearning/step_function.png)
+
+```python
+def step_function(x):
+    return np.array(x > 0, dtype=np.int)
+
+# Step function
+x = np.arange(-5.0, 5.0, 0.1)
+y = step_function2(x)
+plt.plot(x,y)
+plt.ylim(-0.1, 1.1)
+plt.show()
+```
+
+
+
+
+
+#### Sigmoid
+
+$$
+h(x) = \frac{1}{1+e^{-x}}
+$$
+
+
+
+![sigmoid](/Users/shephexd/github/pages/_posts/DeepLearning/sigmoid.png)
+
+```python
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+# Sigmoid function
+x = np.arange(-5.0, 5.0, 0.1)
+y = sigmoid(x)
+plt.plot(x, y)
+plt.ylim(-0.1, 1.1)
+plt.show()
+```
+
+
+
+#### ReLU(Rectified Linear Unit)
+
+$$
+y = \begin{cases}
+x & \text{if }x\gt0\\
+0 & \text{if }x\le1
+\end{cases}
+$$
+
+
+
+![relu](/Users/shephexd/github/pages/_posts/DeepLearning/relu.png)
+
+
+
+```python
+def relu(x):
+    return np.maximum(0, x)
+
+# Relu function
+x = np.arange(-5.0, 5.0, 0.1)
+y = relu(x)
+plt.plot(x, y)
+plt.ylim(-0.1, 5.1)
+plt.show()
+```
+
+
+
+
+
+This kind of activation functions are called "`Non-linear function`". Because it can be expressed by using one line. Then, Why do we need to use non-linear function instead of linear function like $f(x)=ax+b$? 
+
+Because of the depth of networks. If we use the linear function as an activation function in the networks, The networks can't be learned enough.
+
+Assuming that we use linear function $h(x) = cx $ as an activation function. 
+
+
+$$
+h(x) = cx\\
+y(x) = h(h(h(x)))\\
+y(x) = c*c*c*x = c^3x
+$$
+In this case, We will loss the benefit to use multi-layer networks.
+
+
+
+### Output layer
+
+
+
+#### Softmax function
+
+$$
+y_k = \frac{\exp({a_k})}{\sum^n_{i=1}\exp({a_i})}
+$$
+
+
+
+
+
+The solution by machine learning has learning and inference. In learning process, Model learn the data, In inference process, model infer the feasible result based on learning data.
+
+
+
+## Learning Neural Network
+
+
+
+### 
 
 
 

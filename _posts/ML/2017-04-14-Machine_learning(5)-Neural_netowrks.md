@@ -1,3 +1,11 @@
+---
+title: Machine learning(5) - Neural network
+layout: post
+categories:
+- Machine learning
+tags:
+- Machine learning
+---
 
 
 
@@ -63,6 +71,3 @@ $ -\epsilon \le \Theta_{ij}^{(l)} \le \epsilon$
 4. Implement backprop to compute partial derivatives $\frac{\partial}{\partial \Theta_{jk}^{(l)}}J(\Theta)$
 5. Use gradient checking to compare $\frac{\partial}{\partial \Theta_{jk}^{(l)}}J(\Theta)$ computed using backpropagation vs using numerical estimate of gradient of $J(\Theta)$
 6. Use gradient descent or advanced optimization method with backpropagation to try to minimize $J(\Theta)$ as. function of parameters $\Theta$
-
-
-
