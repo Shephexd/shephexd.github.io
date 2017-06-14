@@ -139,7 +139,7 @@ for thinking computer a computer has the `equation` if the input value is enough
 
 
 
-![neural-network](neural-network.png)
+![neural-network](/assets/post_images/DeepLearning/neural-network.png)
 
 
 
@@ -170,7 +170,7 @@ $$
 
 
 
-![step_function](/Users/shephexd/github/pages/_posts/DeepLearning/step_function.png)
+![step_function](/assets/post_images/DeepLearning/step_function.png)
 
 ```python
 def step_function(x):
@@ -196,7 +196,7 @@ $$
 
 
 
-![sigmoid](/Users/shephexd/github/pages/_posts/DeepLearning/sigmoid.png)
+![sigmoid](/assets/post_images/DeepLearning/sigmoid.png)
 
 ```python
 def sigmoid(x):
@@ -223,7 +223,7 @@ $$
 
 
 
-![relu](/Users/shephexd/github/pages/_posts/DeepLearning/relu.png)
+![relu](/assets/post_images/DeepLearning/relu.png)
 
 
 

@@ -7,7 +7,7 @@ gems:
 # Site settings
 title: "SHEPHEXD"
 
-email: furorluna@gmail.com
+email: shephexd@gmail.com
 #blog logo
 # blog cover
 cover: "/assets/images/blog_cover.jpg"
@@ -26,7 +26,6 @@ collections:
 url: "http://shephexd.github.io/" # the base hostname & protocol for your site
 baseurl: ""
 #used to display twitter cards
-#twitter_handle: '@dirkfabisch'
 
 #fill in disqus shortname to use disqus
 disqus: shephexd-blog
@@ -34,12 +33,12 @@ excerpt_separator: <!--more-->
 
 # social icons and sharing options
 social:
-  - icon:	twitter
-    url:	https://twitter.com/furorluna
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
+#  - icon:	twitter
+#    url:	https://twitter.com/furorluna
+#    desc: Follow me on twitter
+#    share_url: http://twitter.com/share
+#    share_title: ?text=
+#    share_link: "&amp;url="
 
   - icon:   linkedin
     url:	https://www.linkedin.com/nhome/?trk=
