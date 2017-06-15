@@ -282,6 +282,8 @@ $$
 y_k = \frac{\exp({a_k})}{\sum^n_{i=1}\exp({a_i})}
 $$
 But, we have to change for Implementing code to avoid overflow problem in softmax function.
+
+
 $$
 \begin{align}
 y_k &= \frac{\exp(a_k)}{\sum_{i=1}^n\exp(a_i)}\\
