@@ -278,10 +278,13 @@ If you already know the logistic function, it is perfectly same with using `soft
 Each node of output layer will have the value between 0 to 1. And the sum of all node is 1. It can be considered as the probability of likelihood for prediction.
 
 
+
+
 $$
-y_k = \frac{\exp({a_k})}{\sum^n_{i=1}\exp({a_i})}
+y_k = \frac{\exp({a_k})}{\sum^n_{i=1}\exp({a_i})}\\
+\text{But, we have to change for Implementing code to avoid overflow problem in softmax function.}
 $$
-But, we have to change for Implementing code to avoid overflow problem in softmax function.
+
 
 
 $$
