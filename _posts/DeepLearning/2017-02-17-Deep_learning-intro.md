@@ -47,7 +47,7 @@ y =
 1& (w_1x_1+w_2x_2 \gt \theta)
 \end{cases}
 $$
-$x$ is input signal and y is output signal. If the out value that calculated by the weighs and input singal is bigger than $\theta$, it will be 1, otherwise 0. 
+$x$ is input signal and y is output signal. If the out value that calculated by the weighs and input signal is bigger than $\theta$, it will be 1, otherwise 0. 
 
 
 
@@ -117,7 +117,7 @@ $$
 
 
 
-It is called as "Multi Layer Perceptron(MLP)". It is a basic copcept of neural networks. But the problem is the weights because we set the parameters manually not automatically.
+It is called as "Multi Layer Perceptron(MLP)". It is a basic concept of neural networks. But the problem is the weights because we set the parameters manually not automatically.
 
 
 
@@ -125,7 +125,7 @@ It is called as "Multi Layer Perceptron(MLP)". It is a basic copcept of neural n
 
 ## Neural network
 
-As i said before, the MLP can solve coplex problem like non-linear problem. however, we don't know the way to set the parameters(weights) automatically not manually. So, there is neural network to solve and make it set the parameters automactially.
+As i said before, the MLP can solve complex problem like non-linear problem. however, we don't know the way to set the parameters(weights) automatically not manually. So, there is neural network to solve and make it set the parameters automatically.
 
 
 
@@ -256,6 +256,52 @@ y(x) = h(h(h(x)))\\
 y(x) = c*c*c*x = c^3x
 $$
 In this case, We will loss the benefit to use multi-layer networks.
+
+
+
+There are other activation functions we can use as an option.
+
+
+
+#### Leaky ReLU
+
+$$
+f(x) = \begin{cases}
+x & \text{if }x \gt 0 \\
+0.1x & \text{if } x \le 0
+\end{cases}
+$$
+
+
+
+#### Max out
+
+$$
+\max(w_1^Tx + b1, w_2^Tx + b_2)
+$$
+
+
+
+#### ELU
+
+$$
+
+f(x) = \begin{cases}
+x & \text{if }x \gt 0 \\
+\alpha (exp(x) - 1) & \text{if } x \le 0
+\end{cases}
+
+$$
+
+
+
+#### tanh
+
+$$
+tanh(x)
+$$
+
+
 
 
 

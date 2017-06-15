@@ -26,9 +26,44 @@ In learning process, we will compute the `cost function`.
 
 ## Learning Neural Network
 
+There are three ways to develop the algorithms.
+
+1. Algorithm by human
+2. Extracting feature by human's algorithm, use Machine Learning alogorithm.
+3. Use Deep Learning
 
 
-### Cost function
+
+
+
+### Loss function
+
+`Loss function` is one of index to show the performance of model. The reason why we use loss function instead of using accuracy, `loss function` is used for fitting the parameter in `Back propagation process`.
+
+
+
+#### Mean squared error(MSE)
+
+
+$$
+E=\frac{1}{2}\sum_k(y_k - t_k)^2
+$$
+
+
+#### Cross entropy error(CEE)
+
+$$
+E = -\sum_k t_k\log y_k
+$$
+
+
+$$
+\begin{align}
+&\text{If data size is N,}\\  
+&E = -\frac{1}{N}\sum_n\sum_k t_k\log y_k 
+\end{align}
+$$
+
 
 
 
@@ -191,44 +226,6 @@ def relu(x):
 def deriv_relu(x):
     return 1*x(>0)
 ```
-
-
-
-#### Leaky ReLU
-
-$$
-f(x) = \begin{cases}
-x & \text{if }x \gt 0 \\
-0.1x & \text{if } x \le 0
-\end{cases}
-$$
-
-
-
-#### Max out
-
-$$
-\max(w_1^Tx + b1, w_2^Tx + b_2)
-$$
-
-
-
-#### ELU
-
-$$
-f(x) = \begin{cases}
-x & \text{if }x \gt 0 \\
-\alpha (exp(x) - 1) & \text{if } x \le 0
-\end{cases}
-$$
-
-
-
-#### tanh
-
-$$
-tanh(x)
-$$
 
 
 
