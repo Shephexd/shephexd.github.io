@@ -261,370 +261,152 @@ In this case, We will loss the benefit to use multi-layer networks.
 
 ### Output layer
 
+In the classification problem, to solve the problem we need to set up proper the number of output neurons. If we want to classify digit number of 0 to 9, we need to set up 10 of neurons as the output layer.  
+
+
+
+The solution by machine learning has learning and inference. In learning process, Model learn the data, In inference process, model infer the feasible result based on learning data.  
+
+
+
+If you already know the logistic function, it is perfectly same with using `softmax function`.
+
 
 
 #### Softmax function
 
+Each node of output layer will have the value between 0 to 1. And the sum of all node is 1. It can be considered as the probability of likelihood for prediction.
+
+
 $$
 y_k = \frac{\exp({a_k})}{\sum^n_{i=1}\exp({a_i})}
 $$
-
-
-
-
-
-The solution by machine learning has learning and inference. In learning process, Model learn the data, In inference process, model infer the feasible result based on learning data.
-
-
-
-## Learning Neural Network
-
-
-
-### 
-
-
-
-## Back propagation
-
-Using the multi layer perception, we can calculate the hypothesis for the XOR problem.
-
-But how can the machine learn the weight and bias from the multilayer?
-
-Here is a solution called `back propagation`.
-
-
-
-
-
-The input data affect the result by passing the weights. 
-
-Then, using chain rule, the error change the weights by passing from the last layer to first layer.
-
-
-
-### Partial derivative
-
-`Chain rule` is $\frac{df(g(x))}{dx}=\frac{df}{dx} = \frac{df}{dg}\cdot\frac{dg}{dx}$
-
-
-
-It is basic equation for the partial derivative.
-
-The chain rule is an essential idea for back-propagation.
-
-
-
-### Back propagation process
-
-
-
-Here is an example about a neural network.
-
-
+But, we have to change for Implementing code to avoid overflow problem in softmax function.
 $$
-x\overset{\mathtt{}}{ \longrightarrow } 
-\overset{\mathtt{W_1x_1+b_1}}{ \fbox{Input} } 
-\overset{\mathtt{tanh}}{\longrightarrow}
-\overset{\mathtt{W_2a_2+b_2}}{\fbox{Hidden 1} } 
-\overset{\mathtt{softmax}}{\longrightarrow} 
-{\fbox{Output}}
-$$
-
-
-#### forward calculation
-
-$$
-x
-\overset{\mathtt{W1x+b1}}{\longrightarrow}
-z_1
-\overset{\mathtt{tanh(z_1)}}{\longrightarrow}
-a_1
-\overset{\mathtt{W2a1+b_2}}{\longrightarrow} 
-z_2
-\overset{\mathtt{softmax(z_2)}}{\longrightarrow}
-a_2=\hat{y}
-$$
-
-
-
-#### backward calculation
-
-$$
-x
-\overset{\mathtt{ \frac{dz_1}{dW_1} + \frac{dz_1}{db_1} }}{\longleftarrow}
-z_1
-\overset{\mathtt{ \frac{da_1}{dz_1} }}{\longleftarrow}
-a_1
-\overset{\mathtt{  \frac{dz_2}{dW_2} + \frac{dz_2}{db_2} }}{\longleftarrow} 
-z_2
-\overset{\mathtt{ \frac{d\hat{y}}{dz_2} }}{\longleftarrow}
-
-a_2=\hat{y}
+\begin{align}
+y_k &= \frac{\exp(a_k)}{\sum_{i=1}^n\exp(a_i)}\\
+&= \frac{C\exp(a_k)}{C\sum_{i=1}^n\exp(a_i)}\\
+&= \frac{\exp(a_k+logC)}{\sum_{i=1}^n\exp(a_i+logC)}\\
+&= \frac{\exp(a_k+C')}{\sum_{i=1}^n\exp(a_i+C')}
+&\end{align} \\
+\text{normally, $C$ is selected for maximum number in the array.}
 $$
 
 
 
 
-
-#### cost function(loss function)
-
-$$
-L(y,\hat{y}) = -\frac{1}{N}\sum_{n \in N}\sum_{i \in N} y_{n,i}log\hat{y}_{n,i}
-$$
-
-
-
-To update our `weights` on the networks, we need to calculate $\frac{dL}{dw}$ how much the value affect the function. Using chain rule of partial derivative, We can derivative $L(y,\hat{y})$ by our weights $W$.
-
+### Inference on neural network
 
 $$
-\sigma_3 = y - \hat{y}\\
-\sigma_2 = (1 - tanh^2z_1) \cdot \sigma_3W^T_2\\
-\frac{dL}{dW_2}=a_1^T\sigma_3\\
-\frac{dL}{db_2}=\sigma_3\\
-\frac{dL}{dW_1}=x_1^T\sigma_2\\
-\frac{dL}{db_1}=\sigma_2\\
+\begin{align}
+&X & W1 && W2& &W3 & & \rightarrow &&Y\\
+&N\times M & M \times 50 && 50 \times 100& & 100 \times 10 & & &&N \times 10
+\end{align}
 $$
 
 
-
-### The problem in the back propagation
-
-In the case the neural network is deep, the `back propagation` can't affect the first weights.
-
-
-
-#### Solution for this problem
-
->  Neural networks with many layers really could be trained well, If the weights are initialized in a clever way.
-
-
-
-It make rebrand the name to `Deep learning`
+$$
+\begin{align}
+& a1 = X \times W1\\
+& z1 = activation(a1) \\
+& a2 = a2 \times W2\\
+& z2 = activation(a2)\\
+& a3 = z2 \times W3\\
+& Y = softmax(a3)
+\end{align}
+$$
 
 
+### Batch process
 
-- Our labeled datasets were thousands of times too small.
-- Our computers were millions of times too slow.
-- We initialized the weights in a stupid way.
-- We used the wrong type of non-linearity.
+When we learn the model for prediction, we are used to the whole data set, $N \times M$. 
 
 
 
 
-## Setting for the Neural network
 
-
-
-### Activation function
-
-In the neural networks, the output from previous nodes is used as input for current node. And the output values from previous nodes can be activated by `activation function`.
-
-The `activation functions` have some different equation.
-
-
-
-#### Sigmoid
-
-`Sigmoid` is not working well for deep learning. Because it is `non-linearity` function it occur  `vanishing gradient`. It means the effect from last nodes to first nodes is too small.
-
-The `Sigmoid` is used only for the output value for last nodes on neural network.
+What if data size is too big to learn one time? We have to divide our data set with proper size. The solution is using batch process.
 
 
 $$
-f(x) = \frac{1}{(1+e^{-x})}
-$$
-
-#### ReLU(Rectified Linear Unit)
-
-For solving `vanishing gradient`, ReLU is used for deep learning.
-
-
-$$
-f(x) = \begin{cases}
-x & \text{if }x \gt 0 \\
-0 & \text{if } x \le 0
-\end{cases}
+\text{I will select $100$ as the batch size for our model.}\\
+\begin{align}
+&X & W1 && W2& &W3 & & \rightarrow &&Y\\
+&100\times M & M \times 50 && 50 \times 100& & 100 \times 10 & & &&100 \times 10
+\end{align}
 $$
 
 
 ```python
-def relu(x):
-    return x*(x>0)
+batch_size = 100
+accuracy_cnt = 0
 
-def deriv_relu(x):
-    return 1*x(>0)
+for i in range(0,len(x),batch_size):
+    x_batch = x[i:i+batch_size]
+    y_batch = predict(network, x_batch)
+    p = np.argmax(y_batch, axis=1)
+    accuracy_cnt += np.sum(p == t[i:i+batch_size])
+    print("Accuracy:", str(float(accuracy_cnt) / len(x)))
 ```
 
 
 
-#### Leaky ReLU
+It make the learning process faster to decrease processing time on the numerical computing library.
 
-
-$$
-f(x) = \begin{cases}
-x & \text{if }x \gt 0 \\
-0.1x & \text{if } x \le 0
-\end{cases}
-$$
+It is also helpful to prevent overflow and memory exhaustion by reducing burden on the `BUS` on `CPU` or `GPU`.
 
 
 
-#### Max out
-
-$$
-\max(w_1^Tx + b1, w_2^Tx + b_2)
-$$
+## Sample code
 
 
-
-#### ELU
-
-$$
-f(x) = \begin{cases}
-x & \text{if }x \gt 0 \\
-\alpha (exp(x) - 1) & \text{if } x \le 0
-\end{cases}
-$$
-
-
-
-#### tanh
-
-$$
-tanh(x)
-$$
-
-
-
-### Initialize weight values wisely
-
-
-
-#### Restricted Boltmann machine(RBM)
-
-It is not used anymore. But the concept is interesting.
-
-For initializing the weight values, Find the minimum weights between input weights and updated weights after forwarding and backwarding.
-
-It is also called as `Encoder` and `Decoder`.
-
-
-
-##### Fine tuning
-
-The RBM machine can pre-train the neural networks each nodes iteratively. First and second nodes, Second and Third nodes, and $\cdots$.
-
-
-
-#### Other ways
-
-But there are more easy way for weight initialization. Simple methods are OK.
-
-- Xavier initialization
-
-  `np.random.randn(fan_in, fan_out)/np.sqrt(fan_in)`
-
-- He's initialization 
-
-  `np.random.randn(fan_in,fan_out)/sp.sqrt(fan_in/2)`
-
-
-
-### Overfitting
-
-Overfitting can be checked by test data.
-
-- **Very high accuracy** on the training dataset
-- **Poor accuracy** on the test data set
-
-
-
-####  Solution for overfitting
-
-- More training data
-- Reduce the number of features(*Not for deep learning*)
-- Regularization
-
-
-
-#### Regularization
-
-Let's not have too big numbers in the weight
-$$
-cost = cost + \lambda \sum w^2
-$$
-
-
-#### Drop out
-
-"*Randomly set some neurons to zero in the forward pass*"
-
-`Drop out` is a way to avoid overfitting in neural network. It is simple idea that just kill some nodes randomly.
-
-
-
-For training, we can use the dropout, but not for the evaluation.
 
 ```python
-dropout_rate = tf.placeholder("float")
-_L1 = tf.nn.relu(tf.add(tf.matmul(X,X1), B1))
-L1 = tf.nn.dropout(_L1, dropout_rate)
+import pickle
+import numpy as np
 
-# Train
-sess.run(optimizer, feed_dict={X: batch_xs, Y: batch_ys, dropout_rate: 0.7})
+def get_data():
+    (x_train, t_train), (x_test, t_test) = \
+    load_mnist(flatten=True, normalize=True, one_hot_label=False)
 
-# Evaluation
-print ("Accuracy:", accuracy.eval({X: mnist.test.images, Y: mnist.test.labels, dropout_rate: 1}))
+    return x_test, t_test
+
+def init_network():
+    with open("sample_weight.pkl", 'rb') as f:
+        network = pickle.load(f)
+        
+        return network
+    
+
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
+
+def predict(network, x):
+    W1, W2, W3 = network['W1'], network['W2'], network['W3']
+    b1, b2, b3 = network['b1'], network['b2'], network['b3']
+    
+    a1 = np.dot(x,W1) + b1
+    z1 = sigmoid(a1)
+    a2 = np.dot(z1,W2) + b2
+    z2 = sigmoid(a2)
+    a3 = np.dot(z2,W3) + b3
+    y = sigmoid(a3)
+    
+    return y
+
+
+x, t = get_data()
+network = init_network()
+
+batch_size = 100
+accuracy_cnt = 0
+
+for i in range(0,len(x),batch_size):
+    x_batch = x[i:i+batch_size]
+    y_batch = predict(network, x_batch)
+    p = np.argmax(y_batch, axis=1)
+    accuracy_cnt += np.sum(p == t[i:i+batch_size])
+    print("Accuracy:", str(float(accuracy_cnt) / len(x)))
 ```
 
-
-
-
-
-#### Model ensemble
-
-
-
-
-
-
-
-## Neural networks
-
-### CNN
-
-A researcher research the cat's brain to analysis the  brain's reaction when the cat watch the image.
-
-The result is that the partition of neural is activated not total neural to recognize the image.
-
-
-
-#### RNN(LSTM)
-
-This network is useful to learn the language model having sequences data. It is widely used in the language, chat bot and machine translation.
-
-
-
-
-
-### Applications
-
-
-
-#### Image recognition
-
-The image net is a competition for the computer vision to recognize image's categories.
-
-
-
-#### Image caption
-
-Computer can explain the image with categories like human being.
-
-
-
-####  Chat bot
-
-Computer can communicate with human by understanding sentences and 
