@@ -70,6 +70,8 @@ The chain rule is an essential idea for back-propagation.
 
 
 
+
+
 #### forward calculation
 
 
@@ -114,6 +116,12 @@ We want to find the the value to get derivatie value $\frac{dL}{dx}$ for gradien
 
 
 
+![Back propagation](/assets/post_images/DeepLearning/backprop.png)
+
+
+
+
+
 #### Forward computing graph
 
 $$
@@ -148,19 +156,6 @@ $$
 
 To update our `weights` on the networks, we need to calculate $\frac{dL}{dw}$ how much the value affect the function. Using chain rule of partial derivative, We can derivative $L(y,\hat{y})$ by our weights $W$.
 
-
-
-![Back propagation](/assets/post_images/DeepLearning/backprop.png)
-
-
-$$
-\frac{\partial L}{\partial z_2}=\sigma_3 = y - \hat{y}\\
-\sigma_2 = (1 - tanh^2z_1) \cdot \sigma_3W^T_2\\
-\frac{dL}{dW_2}=a_1^T\sigma_3\\
-\frac{dL}{db_2}=\sigma_3\\
-\frac{dL}{dW_1}=x_1^T\sigma_2\\
-\frac{dL}{db_1}=\sigma_2\\
-$$
 
 
 ### Simple example
