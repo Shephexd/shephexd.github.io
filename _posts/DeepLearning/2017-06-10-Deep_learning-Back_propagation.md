@@ -66,32 +66,12 @@ The chain rule is an essential idea for back-propagation.
 
 
 
-Here is an example about a neural network.
 
 
-$$
-x\overset{\mathtt{}}{ \longrightarrow } 
-\overset{\mathtt{W_1x_1+b_1}}{ \fbox{Input} } 
-\overset{\mathtt{tanh}}{\longrightarrow}
-\overset{\mathtt{W_2a_2+b_2}}{\fbox{Hidden 1} } 
-\overset{\mathtt{softmax}}{\longrightarrow} 
-{\fbox{Output}}
-$$
+
 
 #### forward calculation
 
-
-$$
-x
-\overset{\mathtt{W1x+b1}}{\longrightarrow}
-z_1
-\overset{\mathtt{tanh(z_1)}}{\longrightarrow}
-a_1
-\overset{\mathtt{W2a1+b_2}}{\longrightarrow} 
-z_2
-\overset{\mathtt{softmax(z_2)}}{\longrightarrow}
-a_2=\hat{y}
-$$
 
 $$
 \overset{\mathtt{a}}{\longrightarrow}
@@ -100,7 +80,6 @@ softmax
 cross\ entropy
 \overset{\mathtt{L}}{\longrightarrow}
 $$
-
 
 
 > Cross entropy : $L(y,\hat{y}) = -\frac{1}{N}\sum_{n \in N}\sum_{i \in N} y_{n,i}log\hat{y}_{n,i}$
