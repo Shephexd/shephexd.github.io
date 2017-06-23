@@ -103,7 +103,39 @@ The data size is too big, we can use batch processing. Also, In learning process
 
 
 
+## Optimization
+
+
+$$
+f(x_0,x_1) = x_0^2+x_1^2
+$$
+![x^2+y^2](/assets/post_images/DeepLearning/x^2+y^2.png)
+
+
+
+The blue point is small point that has smallest value. We called it as `Saddle point`
+
+
+
+How can we find this point automatically?
+
+
+
+Using derivative, you can find the value to be getting close to `saddle point`
+
+
+
+![gradient_sample](/assets/post_images/DeepLearning/gradient_sample.png)
+
+
+
 #### Derivative
+
+
+$$
+f'(x)=\lim_{h\rightarrow 0} \frac{f(x+h)-f(x-h)}{2h}
+$$
+
 
 ```python
 def numerical_gradient(f,x):
@@ -126,6 +158,13 @@ def numerical_gradient(f,x):
 
 
 #### Gradient descent
+
+$$
+x_0 = x_0 - \alpha \frac{\partial f}{\partial x_0}\\
+x_1 = x_1 - \alpha \frac{\partial f}{\partial x_1}\\
+$$
+
+
 
 ```python
 def gradient_descent(f,init_x, lr=0.1, step_num=100):
@@ -157,10 +196,6 @@ plt.plot(history_x[:,0],history_x[:,1], 'o')
 np.arange()
 plt.show()
 ```
-
-
-
-![gradient_sample](/assets/post_images/DeepLearning/gradient_sample.png)
 
 
 
@@ -252,6 +287,8 @@ $$
 
 
 To update our `weights` on the networks, we need to calculate $\frac{dL}{dw}$ how much the value affect the function. Using chain rule of partial derivative, We can derivative $L(y,\hat{y})$ by our weights $W$.
+
+
 $$
 \sigma_3 = y - \hat{y}\\
 \sigma_2 = (1 - tanh^2z_1) \cdot \sigma_3W^T_2\\
@@ -537,7 +574,7 @@ The result is that the partition of neural is activated not total neural to reco
 
 
 
-#### RNN(LSTM)
+### RNN(LSTM)
 
 This network is useful to learn the language model having sequences data. It is widely used in the language, chat bot and machine translation.
 
