@@ -40,6 +40,8 @@ There are three ways to develop the algorithms.
 
 `Loss function` is one of index to show the performance of model. The reason why we use loss function instead of using accuracy, `loss function` is used for fitting the parameter in `Back propagation process`.
 
+`Loss function` is useful to get the partial derivative of weight variables.
+
 
 
 #### Mean squared error(MSE)
@@ -48,6 +50,16 @@ There are three ways to develop the algorithms.
 $$
 E=\frac{1}{2}\sum_k(y_k - t_k)^2
 $$
+
+$$
+\begin{align}
+&\text{If data size is N,}\\  
+&E = -\frac{1}{2N}\sum_n \sum_k(y_k - t_k)^2
+\end{align}
+$$
+
+
+
 
 
 #### Cross entropy error(CEE)
@@ -64,6 +76,91 @@ $$
 \end{align}
 $$
 
+
+
+$$
+\begin{bmatrix}
+1 \\
+0 \\
+\vdots \\
+0
+\end{bmatrix}^T
+\times
+\ \begin{bmatrix}
+0.6 \\
+0.01 \\
+\vdots \\
+0.4
+\end{bmatrix} = -1 \times \log 0.6 = 0.51
+$$
+
+
+
+
+### Mini-batch learning
+
+The data size is too big, we can use batch processing. Also, In learning process, we can use batch for learing called `mini-batch`. To reduce the learning time, we can select random sample from traing data set. Then the seleted random data set will be used for training samples.
+
+
+
+#### Derivative
+
+```python
+def numerical_gradient(f,x):
+    h = 1e-4
+    grad = np.zeros_like(x)
+    
+    for idx in range(x.size):
+        tmp_val = x[idx]
+        x[idx] = tmp_val + h
+        fxh1 = f(x)
+        
+        x[idx] = tmp_val - h
+        fxh2 = f(x)
+        grad[idx] = (fxh1 - fxh2) /(2*h)
+        x[idx] = tmp_val
+        
+    return grad
+```
+
+
+
+#### Gradient descent
+
+```python
+def gradient_descent(f,init_x, lr=0.1, step_num=100):
+    x = init_x
+    acc_x = list()
+    for i in range(step_num):
+        acc_x.append(x.copy())
+        grad = numerical_gradient(f, x)
+        x -= lr * grad
+
+    return x,np.array(acc_x)
+```
+
+
+
+#### Example
+
+```python
+def f(x):
+    return x[0]**2 + x[1]**2
+
+
+init_x = np.array([-3.0, 4.0])
+x, history_x = gradient_descent(f,init_x)
+
+plt.plot( [-5, 5], [0,0], '-b')
+plt.plot( [0,0], [-5, 5], '-b')
+plt.plot(history_x[:,0],history_x[:,1], 'o')
+np.arange()
+plt.show()
+```
+
+
+
+![gradient_sample](/assets/post_images/DeepLearning/gradient_sample.png)
 
 
 
@@ -165,6 +262,123 @@ $$
 $$
 
 
+
+### Simple example
+
+$$
+\begin{align}
+& z= x\times y\\
+& \frac{\partial z}{\partial x} = y\\
+& \frac{\partial z}{\partial y} = x\\
+\end{align}
+$$
+
+$$
+\begin{align}
+z= x + y\\
+\frac{\partial z}{\partial x} = 1\\
+\frac{\partial z}{\partial y} = 1\\
+\end{align}
+$$
+
+
+
+```python
+import numpy as np
+
+
+class MulLayer:
+    def __init__(self):
+        self.x = None
+        self.y = None
+        
+    
+    def forward(self, x, y):
+        self.x = x
+        self.y = y
+    
+        return x*y
+    
+    
+    def backward(self, dout):
+        dx = dout * self.y
+        dy = dout * self.x
+        
+        return dx, dy
+    
+class AddLayer:
+    def __init__(self):
+        pass
+    
+    def forward(self, x, y):
+        return x+y
+    
+    def backward(self, dout):
+        dx = dout * 1
+        dy = dout * 1
+        return dx, dy
+    
+
+if __name__=='__main__':
+    apple = 100
+    apple_num = 2
+    orange = 150
+    oragne_num = 3
+    tax = 1.1
+
+    #layers
+    mul_apple_layer = MulLayer()
+    mul_orange_layer = MulLayer()
+    add_apple_orange_layer = AddLayer()
+    mul_tax_layer = MulLayer()
+
+    #forwad propagation
+    apple_price = mul_apple_layer.forward(apple, apple_num)
+    orange_price = mul_orange_layer.forward(orange, oragne_num)
+    all_price = add_apple_orange_layer.forward(apple_price,orange_price)
+    price = mul_tax_layer.forward(all_price, tax)
+
+    print("Forward| Price:",price)
+
+    #Back propagation
+    dprice = 1
+    dall_price, dtax = mul_tax_layer.backward(dprice)
+    dapple_price, dorange_price = add_apple_orange_layer.backward(dall_price)
+    dapple, dapple_num = mul_apple_layer.backward(dapple_price)
+    dorange, dorange_num = mul_orange_layer.backward(dorange_price)
+
+    print("Backward| apple price:",dapple," apple num:", dapple_num)
+    print("Backward| orange price:",dorange, " orange num:",dorange_num)
+    print("Backward| tax:", dtax, " all price:",dall_price)
+```
+
+
+
+#### output
+
+```
+Forward| Price: 715.0000000000001
+Backward| apple price: 2.2  apple num: 110.00000000000001
+Backward| orange price: 3.3000000000000003  orange num: 165.0
+Backward| tax: 650  all price: 1.1
+```
+
+
+
+
+
+
+
+### Gradient check
+
+Derivative can be used for checking error of backpropagation. Derivative is easy to make but it is slow comparing to back propagation.
+
+It is obvious that the difference between derivative and backpropagation. If not, it might be error in our codes for back propagation or derviative.
+
+This function is called as `Gradient check`
+
+
+
 ### The problem in the back propagation
 
 In the case the neural network is deep, the `back propagation` can't affect the first weights.
@@ -229,6 +443,8 @@ def deriv_relu(x):
 
 
 
+
+
 ### Initialize weight values wisely
 
 
@@ -260,6 +476,8 @@ But there are more easy way for weight initialization. Simple methods are OK.
 - He's initialization 
 
   `np.random.randn(fan_in,fan_out)/sp.sqrt(fan_in/2)`
+
+
 
 ### Overfitting
 
@@ -307,12 +525,6 @@ print ("Accuracy:", accuracy.eval({X: mnist.test.images, Y: mnist.test.labels, d
 
 
 
-#### Model ensemble
-
-
-
-
-
 
 
 ## Neural networks
@@ -355,24 +567,3 @@ Computer can communicate with human by understanding sentences and
 
 
 
-## Layers
-
-
-
-## Activation function
-
-
-
-## Cost function
-
-Why do we have to use the cost function instead of accuracy for learning neural networks? Because of `derivative` 
-
-## Forward propagation
-
-
-
-## Backward propagation
-
-
-
-## Optimization skills
