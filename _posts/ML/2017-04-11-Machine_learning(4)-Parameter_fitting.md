@@ -1,63 +1,38 @@
 ---
-title: Machine learning(4) - parameter fitting
+title: Elastic search clustering
 layout: post
 categories: 
-- Machine learning
+- Server
 tags:
-- Machine learning
+- Elasticsearch
+- Server
+- Cluster
+- ELK stack
 ---
 
 
+
+AWS 환경에서 Elasticsearch 클러스터(3개) 구축을 위한 셋팅 및 절차에 대한 소개
+
+
+
+$y=1$, but our model predict $y=0$  
+
+else if $y=0$, but our model predict $y=0$  
 $$
-\frac{(a(1+r)^n-1)}{r}
+\begin{align}
+& cost_0=\theta ^T X \ge 1  & \text{if }y=1\\
+&cost_1=\theta ^T X \ge -1 & \text{if }y=0
+\end{align}
 $$
 
 
-
-
-Evaluating a learning algorithm
-
-<!--more-->
-
-## Debugging a learning algorithm
-
-- Get more traing examples
-- Try smaller sets of features
-- Try getting additional features
-- Try adding polynomial features
-- Try decreasing $\lambda$
-- Try increasing $\lambda$
-
-$x_1,x_2, x_3, \dots, x_{100} $
+## Decision Boundary 
 
 
 
-## Machine learning diagnostic
+## Kernel
 
 
 
-## Evaluating a hypothesis
-
-
-
-To find the model that can minimize the trainning error and this model should generalize to new examples not in training set.
-
-
-
-Divide our data set into 70% of training set and 30% of test set.
-
-$m_{test}$ =. nu
-
-
-
-Our purose is finding parameter that can make the training error $J(\theta)$ to be **low** and the test error $J_{test}(\theta)$ to be **high**. 
-
-
-
-1. Learn parameter $\theta$ from training data (minimizing traing error $J(\theta)$) 
-
-2. Compute test set error 
-   $$
-   J_{test}(\theta)=\frac{1}{2m_{test}}\sum_{i=1}^{m_{test}}y_{test}^{(i)}logh_\theta(x^{(i)}_{test})
-   $$
-   ​
+Sw
