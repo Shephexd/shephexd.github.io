@@ -295,7 +295,7 @@ $$
 
 
 
-- ![\alpha ](https://wikimedia.org/api/rest_v1/media/math/render/svg/b79333175c8b3f0840bfb4ec41b8072c83ea88d3)는 $k$ 차원 [디리클레 분포](https://ko.wikipedia.org/wiki/%EB%94%94%EB%A6%AC%ED%81%B4%EB%A0%88_%EB%B6%84%ED%8F%AC)의 매개변수이다.
+- $\alpha$는 $k$ 차원 [디리클레 분포](https://ko.wikipedia.org/wiki/%EB%94%94%EB%A6%AC%ED%81%B4%EB%A0%88_%EB%B6%84%ED%8F%AC)의 매개변수이다.
 - $\theta$는 $k$ 차원 벡터이며, $\theta_i$는 문서가 $i$번째 주제에 속할 확률 분포를 나타낸다.
 - $z_n$는 $k$ 차원 벡터이며, $z_n%i$는 단어 $w_n$이 $i$번째 주제에 속할 확률 분포를 나타낸다.
 - $\beta$는 $k×V$ 크기의 [행렬](https://ko.wikipedia.org/wiki/%ED%96%89%EB%A0%AC) 매개변수로, $\beta_{ij}$는 $i$번째 주제가 단어집의 $j$번째 단어를 생성할 확률을 나타낸다.
