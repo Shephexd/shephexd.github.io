@@ -22,7 +22,7 @@ z<!--more-->
 
 
 
-![nn_vs_rnn](/Users/shephexd/Documents/github/pages/assets/post_images/DeepLearning/nn_vs_rnn.png)
+![nn_vs_rnn](/assets/post_images/DeepLearning/nn_vs_rnn.png)
 
 
 
