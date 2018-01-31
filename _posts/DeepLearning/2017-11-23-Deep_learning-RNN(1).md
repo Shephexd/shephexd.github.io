@@ -12,9 +12,15 @@ tags:
 - Tensorflow
 ---
 
+The RNN is powerful neural network to manage sequential data such as signal, text and time series data.
 
 
-z<!--more-->
+
+In this post, i will introduce about the difference between NN and RNN and the concept of RNN with some equations.
+
+
+
+<!--more-->
 
 
 
@@ -39,6 +45,8 @@ $$
 
 
 Recurrent Neural Networks(RNN) are widely used for processing sequential data.
+
+
 $$
 \begin{align}
 Y_{(t)} &= \phi(X_{(t)} \cdot W_x + Y_{(t-1)} \cdot W_y + b)\\
@@ -55,6 +63,8 @@ W_{x} \\ W_{y}
 
 \end{align}
 $$
+
+
 
 
 - $Y_{(t)}$ is an $m \times n_{neurons}$
