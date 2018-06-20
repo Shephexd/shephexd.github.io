@@ -99,7 +99,7 @@ make
 
 ## CUDNN Download
 
-[CUDNN nvida download](https://developer.nvidia.com/cudnn)
+[CUDNN nvidia download](https://developer.nvidia.com/cudnn)
 
 To download cuDNN, you need to register your account.  
 And after that, you can download the compressed file and uncompress and move to cuda directory.
