@@ -1,5 +1,5 @@
 ---
-title: Machine learning(5) - Neural network
+title: Machine learning(4) - Neural network
 layout: post
 categories:
 - Machine learning
