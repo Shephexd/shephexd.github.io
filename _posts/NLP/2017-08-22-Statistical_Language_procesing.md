@@ -3,7 +3,7 @@ layout: post
 published: True
 title: Stochastic Natural Language Processing
 categories:
-- Machine learning
+- Natural Language Processing
 tags:
 - Data mining
 - NLP
