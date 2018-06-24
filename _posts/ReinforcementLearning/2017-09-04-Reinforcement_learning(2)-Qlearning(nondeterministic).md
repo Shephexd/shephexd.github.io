@@ -1,10 +1,6 @@
 ---
 layout: post
-<<<<<<< HEAD
-title: Reinforcement learning(1) - Q-learning(Nondeterministic)
-=======
 title: Reinforcement learning(2) - Q-learning(Nondeterministic)
->>>>>>> post/rl
 published: True
 categories: 
 - Reinforcement learning
