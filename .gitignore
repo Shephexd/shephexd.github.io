@@ -1,6 +1,5 @@
 *.gem
 *.swp
-*.icloud
 *~
 .DS_Store
 .analysis
