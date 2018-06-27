@@ -10,7 +10,6 @@ tags:
 - Deep learning
 - Python
 - Tensorflow
-typora-root-url: /Users/shephexd/Documents/github/pages/
 ---
 
 
@@ -286,10 +285,12 @@ $$
 #### ELU
 
 $$
+
 f(x) = \begin{cases}
 x & \text{if }x \gt 0 \\
 \alpha (exp(x) - 1) & \text{if } x \le 0
 \end{cases}
+
 $$
 
 

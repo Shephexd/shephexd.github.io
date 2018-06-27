@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep learning(2) - Learning and Testing in Neural networks
+title: Deep learning(2) - Learning and Testing in Nueural networks
 published: True
 categories:
 - Deep learning
@@ -10,7 +10,6 @@ tags:
 - Deep learning
 - Python
 - Tensorflow
-typora-root-url: /Users/shephexd/Documents/github/pages/
 ---
 
 
@@ -342,19 +341,23 @@ To update our `weights` on the networks, we need to calculate $\frac{dL}{dw}$ ho
 
 
 $$
+
 \begin{align}
 & z= x\times y\\
 & \frac{\partial z}{\partial x} = y\\
 & \frac{\partial z}{\partial y} = x\\
 \end{align}
+
 $$
 
 $$
+
 \begin{align}
 z= x + y\\
 \frac{\partial z}{\partial x} = 1\\
 \frac{\partial z}{\partial y} = 1\\
 \end{align}
+
 $$
 
 

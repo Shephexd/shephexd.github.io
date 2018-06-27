@@ -1,7 +1,7 @@
 ---
 layout: post
-title: tensorflow GPU install - Ubuntu 16.04
-categories: Tensorflow
+title: tensorflow GPU install
+categories: Development
 tags:
 - Development
 - Tensorflow
@@ -99,7 +99,7 @@ make
 
 ## CUDNN Download
 
-[CUDNN nvidia download](https://developer.nvidia.com/cudnn)
+[CUDNN nvida download](https://developer.nvidia.com/cudnn)
 
 To download cuDNN, you need to register your account.  
 And after that, you can download the compressed file and uncompress and move to cuda directory.

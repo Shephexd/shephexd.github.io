@@ -1,13 +1,3 @@
----
-layout: post
-title: tensorflow GPU install - Ubuntu 18.04
-categories: Tensorflow
-tags:
-- Development
-- Tensorflow
-- CUDA
----
-
 
 
 

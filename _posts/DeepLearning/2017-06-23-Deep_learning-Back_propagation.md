@@ -10,7 +10,6 @@ tags:
 - Deep learning
 - Python
 - Tensorflow
-typora-root-url: /Users/shephexd/Documents/github/pages/
 ---
 
 

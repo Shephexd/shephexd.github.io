@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep learning(4) - RNN Intro
+title: Deep learning RNN(1) - Intro
 published: True
 categories:
 - Deep learning
