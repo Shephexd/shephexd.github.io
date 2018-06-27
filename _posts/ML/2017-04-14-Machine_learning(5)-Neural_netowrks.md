@@ -1,28 +1,16 @@
 ---
-title: Machine learning(4) - Neural network
+title: Machine learning(5) - Neural network
 layout: post
 categories:
 - Machine learning
 tags:
 - Machine learning
-- Python
-- Tensorflow
-- Matlab
 ---
 
-Neural network algorithm is different from other algortihm like linear regression and logistic regression. It is Non-lienear hypothesis
-
-
-
-I wrote the detail about the neural networks on the [post](http://shephexd.github.io/deep%20learning/2017/02/17/Deep_learning-intro.html)
 
 
 
 <!--more-->
-
-
-
-![neural-network](/assets/post_images/DeepLearning/neural-network.png)
 
 ## Gradient checker
 

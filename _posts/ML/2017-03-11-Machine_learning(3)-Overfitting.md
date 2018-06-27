@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Machine learning(3) - Regularization
+title: Machine learning(3) - Overfitting
 published: True
 categories: 
 - Machine learning
@@ -11,11 +11,9 @@ tags:
 - Matlab
 ---
 
+
+
 What is over fitting and under fitting? How can we avoid this problem?
-
-Are you sure your model is fine for the other cases that is not shown in your training set?
-
-If your model is trained to predcit only your train data, the model is overfitted.
 
 
 
@@ -23,11 +21,11 @@ If your model is trained to predcit only your train data, the model is overfitte
 
 
 
-There are three cases, when your model is validated.
+`under fitting` has **high bias**.
 
-- `under fitting` has **high bias**.
-- `over fitting` has **High variance**.
-- `Just right`
+`over fitting` has **High variance**.
+
+`Just right`
 
 
 
@@ -50,10 +48,6 @@ If we have too many features, the learned hypothesis may fit the training set ve
 
 ## Regularization
 
-The idea of regularization is to avoid the parameter should have similar value. It means that the most parameter will be effective, not biased.
-
-So, when you train your model, you can use this idea by wrting some equation in your cost function to make your parameter not biased.
-
 
 
 Small values for parameters $\theta_0,\theta_1, \dots, \theta_n$  
@@ -74,13 +68,12 @@ J(\theta) = \frac{1}{2m}\\
 \sum^m_{i=1}(h_\theta(x^{(i)}-y^{(i)})^2 ) + \lambda \sum_{i=1}^n \theta^2_j
 $$
 
+
 $\lambda$ is a regularization parameter.
 
+What if $\lambda$ is set to an extremely large value?
 
-
-> Q: What if $\lambda$ is set to an extremely large value?
->
-> A: The model results in underfitting.
+- It can cause `under fitting` problem.
 
 
 
@@ -88,13 +81,7 @@ $\lambda$ is a regularization parameter.
 
 ## Regularized linear regression
 
-In the linear regression, the line will be drawn by training. What if there are some outliers?
 
-Your model can't avoid overfitting.
-
-Look at the below equation. you can see there is one more expression on your gradient descent process. 
-
-$\frac{\lambda}{m} \theta_j $ means you don't want to make any value be extremly large than other.
 
 
 
