@@ -41,6 +41,8 @@ First I need to show the differences between Logistic regression and SVM.
 ### logistic regression
 
 The goal of Logistic regression is to classify $x$.
+
+
 $$
 h_\theta(x) = \frac{1}{1+ e^{(-\theta^T x)}}
 $$
@@ -57,6 +59,8 @@ $$
 #### Cost function
 
 Cost is defined differently by $y$ label.
+
+
 $$
 \begin{align}
 &Cost_0 = 1-\log (h_\theta(x)) &  \text{ if } y=0\\
@@ -64,8 +68,9 @@ $$
 \end{align}
 $$
 
-
 It can be written as an equation like below.
+
+
 $$
 \begin{align}
 Cost(\hat y, y) &=  -(y Cost_1 +(1-y)Cost_0 ) & \\
@@ -79,6 +84,8 @@ $$
 
 
 There are two `cost` for SVM.
+
+
 $$
 \begin{align}
 &Cost_0 = -\theta^T x + b&  \text{ if } y=0\\
@@ -86,8 +93,9 @@ $$
 \end{align}
 $$
 
-
 We want to make the margin larger as much as we can.
+
+
 $$
 \begin{align}
 & \text{if }y=1, \text{we want }h_\theta(x) \approx 1 & \theta^Tx  & \ge 1 \\
@@ -102,6 +110,8 @@ $$
 
 
 The below equation is the cost function of `SVM`.
+
+
 $$
 C \sum_{i=1}^m \left[ y^{(i)} cost_1(\theta^Tx^{(i)}) + (1-y^{(i)}) cost_0(\theta^T x^{(i)}) \right] +\frac{1}{2}\sum_{j=1}^n \theta_j^2
 $$
@@ -147,6 +157,8 @@ The meaning of support vector on the vector space can be expressed as the mathem
 To remind yourself, there is an introduction for inner product of vectors.
 
 Assuming that there are two vectors $u, v$.
+
+
 $$
 u = \begin{bmatrix} u_1 \\ u_2\end{bmatrix}, v = \begin{bmatrix} v_1 \\ v_2\end{bmatrix}
 $$
@@ -207,6 +219,9 @@ s.t.\  & \theta^Tx^{(i)} \ge 1 & \text{ if } y^{(i)}=1 \\
 \end{align}
 $$
 
+
+
+
 $$
 \begin{align}
 & \theta = \begin{bmatrix} \theta_1 \\ \theta_2\end{bmatrix}
@@ -221,11 +236,13 @@ $$
 
 
 
-In the cost function of `SVM`, we want to minimize $ \left\lVert \theta \right\rVert​$, to satisfy the constraints $\left(\theta^T x^{(i)} \ge 1 ,  \theta^T x^{(i)} \le -1 \right)​$ $P^{(i)}​$ must be large. $P^{(i)}​$ is the projection of $x^{(i)}​$ onto the vector $\theta​$. 
+In the cost function of `SVM`, we want to minimize $ \left\lVert \theta \right\rVert$, to satisfy the constraints $\left(\theta^T x^{(i)} \ge 1 ,  \theta^T x^{(i)} \le -1 \right)$ $P^{(i)}$ must be large. $P^{(i)}$ is the projection of $x^{(i)}$ onto the vector $\theta$. 
 
 
 
-![SVM_hyperplane](/assets/post_images/ML/svm_max_sep_hyperplane_with_margin.png)
+
+
+![SVM_hyperplanes](/assets/post_images/ML/svm_max_sep_hyperplane_with_margin.png)
 
 
 
