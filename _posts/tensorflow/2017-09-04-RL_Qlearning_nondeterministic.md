@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Reinforcement learning(2) - Q-learning(Nondeterministic)
+title: Reinforcement learning(1)-Nondeterministic-Qlearning
 published: True
 categories: 
-- Reinforcement learning
+- Machine learning
 tags:
 - Machine learning
 - Tensorflow

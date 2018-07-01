@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Reinforcement learning(1) - Q-learning
+title: Reinforcement learning(1)-Qlearning
 published: True
 categories: 
-- Reinforcement learning
+- Machine learning
 tags:
 - Machine learning
 - Tensorflow

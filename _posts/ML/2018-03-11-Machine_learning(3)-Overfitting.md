@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Machine learning(3) - Regularization
+title: Machine learning(3) - Overfitting
 published: True
 categories: 
 - Machine learning
