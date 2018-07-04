@@ -247,4 +247,3 @@ In the cost function of `SVM`, we want to minimize $ \left\lVert \theta \right\r
 
 
 Two drawn hyperplanes by the vector $w$ with constraints are the decision boundaries of `SVM`. Other linear classification algorithms just care about whether the classifiers work well or not, But `SVM` care about the classifier can classify the samples($x^{(i)}$) with **large margin** by drawing the hyperplane as called `Support Vector`.
-
