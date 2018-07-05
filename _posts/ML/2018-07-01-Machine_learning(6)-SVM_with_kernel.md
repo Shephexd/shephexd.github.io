@@ -1,5 +1,5 @@
 ---
-title: Machine learning(5) - SVM
+title: Machine learning(6) - SVM with kernel
 layout: post
 categories:
 - Machine learning
