@@ -74,6 +74,12 @@ In `PCA`, the goal is to minimize the `projection error`.
 
 
 
+![PCA vs linear regression](/assets/post_images/ML/pca_and_linear_regression.png)
+
+
+
+In the above image, the left one is `linear regression`, the other is `PCA`.
+
 
 
 ### PCA process
@@ -122,12 +128,8 @@ The process of `SVD` is like below.
 
 ##### SVD decomposition
 
-$A$ is a matrix, and it can be
+$A$ is a matrix, and it can be $A = USV^T$.
 
-
-$$
-A = USV^T
-$$
 
 
 where $U, V$ are the rotation(or `unitary`) matrices and $S$ is a diagonal matrix with singular values $\sigma_1,\dots, \sigma_n$ on the diagonal.
