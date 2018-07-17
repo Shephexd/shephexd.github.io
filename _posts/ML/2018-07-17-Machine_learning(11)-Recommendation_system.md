@@ -31,6 +31,8 @@ What if $User_0$ watch the movie, `notebook`? Can you guess the rating?
 Maybe you can guess based on other people's rating and $User_0$'s taste.
 
  
+
+
 $$
 \begin{array}{r|rr} \text{Movies}
 
@@ -41,6 +43,8 @@ $$
 \text{taken}				&  4 & 3 & 2 & 3 &5 \\
 \end{array}
 $$
+
+
 
 
 For each user $j$, learn a parameter $\theta^{(j)} \in R^3$. Predict user $j$ as rating move $i$ with $(\theta^{(j)})^T x^{(i)}$ stars
@@ -160,6 +164,8 @@ $$
 
 
 Minimize $x^{(1)}, \dots, x^{(n_m)}$ and $\theta^{(1)}, \dots, \theta^{(n_m)}$ simultaneously
+
+
 $$
 J(x^{(1)}, \dots, x^{(n_m)}, \theta^{(1)}, \dots, \theta^{(n_u)}) = \\
 \frac{1}{2} \sum_{(i,j):r(i,j)=1} \left( (\theta^{(j)})^Tx^{(i)} - y^{(i, j)}\right)^2 
