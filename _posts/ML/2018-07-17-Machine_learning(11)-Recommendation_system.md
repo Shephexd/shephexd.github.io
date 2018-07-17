@@ -59,7 +59,7 @@ $$
 
 
 
-#### Optimization for Objective function
+### Optimization for Objective function
 
 
 
@@ -77,7 +77,7 @@ $$
 
 
 
-#### Optimization algorithm
+### Optimization algorithm
 
 
 
