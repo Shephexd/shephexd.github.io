@@ -1,3 +1,12 @@
+---
+layout: post
+title: tensorflow GPU install (Ubuntu 18.04 LTS)
+tags:
+- Development
+- Tensorflow
+- CUDA
+---
+
 
 
 

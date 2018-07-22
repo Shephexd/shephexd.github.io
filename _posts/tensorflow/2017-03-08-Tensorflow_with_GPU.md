@@ -1,6 +1,6 @@
 ---
 layout: post
-title: tensorflow GPU install
+title: tensorflow GPU install (Ubuntu 16.04 LTS)
 categories: Development
 tags:
 - Development
