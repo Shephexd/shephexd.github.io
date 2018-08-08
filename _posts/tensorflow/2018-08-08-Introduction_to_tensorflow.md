@@ -19,7 +19,7 @@ This libray support **GPU computing** and **powerful visualization** for your tr
 
 
 
-In this post, i will introduce the below topics about `tensorflow`.
+In this post, I will introduce the below topics about `tensorflow`.
 
 
 
@@ -30,26 +30,28 @@ In this post, i will introduce the below topics about `tensorflow`.
 
 
 
+The sample codes and definitions are from Tensorflow cookbook[^tensorflow_cookbook] and Wikipedia.
+
 <!--more-->
 
 
 
 
 
-## Tensorflow Alogorithm process
+## Tensorflow Algorithm process
 
 
 
 1. Prepare dataset
 2. Data transform and normalization
-3. split dataset into train, test, valid set
+3. split the dataset into train, test, valid set
 4. setting hyperparameters
-5. define model structure
-6. define loss function
-7. init model and train
+5. define the model structure
+6. define the loss function
+7. Initialize model and train
 8. evaluate model
 9. fitting hyperparameter
-10. apply model for your problem
+10. apply the model for your problem
 
 
 
@@ -57,13 +59,15 @@ In this post, i will introduce the below topics about `tensorflow`.
 
 ## Tensorflow concept
 
-Tensorflow means the computed tensors by follwing flows.
+Tensorflow means the computed tensors[^tensor_wiki] by following flows. 
 
-> In mathematics, **tensors** are geometric objects that describe 	linear relations](https://en.wikipedia.org/wiki/Linear_relation) between geometric vectors, scalars, and other tensors.
+The tensors are computing graph as an acyclic graph capable of parallel computation.
+
+> In mathematics, **tensors** are geometric objects that describe linear relations between geometric vectors, scalars, and other tensors.
 
 
 
-Your calculation will be processed sequentially as you defined tensors and arithmetic opertations.
+Your calculation will be processed sequentially as you defined tensors and arithmetic operations.
 
 
 
@@ -141,6 +145,8 @@ numpy array, list can be converted to tensor with the function, `convert_to_tens
 
 
 ### Placeholder and variable
+
+Tensorflow can be declared as `placeholder` to get input and `variable` to update values.
 
 In tensorflow, you must know the differences between `placeholder` and `variable`. 
 
@@ -236,7 +242,7 @@ Tensor("Const_1:0", shape=(3, 3), dtype=float64)
 
 
 
-Like above code snippets, just defining the graph doesn't affect to the calculation. After you run `tf.Session` , the computing will be processed following defined tensors.
+Like the above code snippets, just defining the graph doesn't affect to the calculation. After you run `tf.Session` , the computing will be processed following defined tensors.
 
 
 
@@ -245,7 +251,7 @@ Like above code snippets, just defining the graph doesn't affect to the calculat
 Using the tensor you can build your predictive model. 
 
 
-The input values for model are from `feed_dict` to `placeholder`.
+The input values for a model are from `feed_dict` to `placeholder`.
 
 The `Variables` can be fitted to minimize the `loss function` by  `Optimizer`.
 
@@ -318,7 +324,7 @@ for i in range(generations):
 
 ## Visualization with tensorboard
 
-To visualize interesting values you need for monitoring on tensorboard, use `tf.summary` and select and defined the values after
+To visualize interesting values you need for monitoring on tensorboard, use `tf.summary` and select and define the values after
 
 
 
@@ -454,3 +460,7 @@ Generation 100 of 100. Train loss: 20.6, Test Loss: 54.9
 
 ![tensorboard_sample](/assets/post_images/tensorflow/tensorboard_sample.png)
 
+
+
+[^tensorflow_cookbook]: https://github.com/nfmcclure/tensorflow_cookbook
+[^tensor_wiki]: https://en.wikipedia.org/wiki/Tensor
