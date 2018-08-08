@@ -434,6 +434,18 @@ for i in range(generations):
 
 summary_writer.close()
 
+'''
+Generation 10 of 100. Train loss: 17.6, Test Loss: 46.0
+Generation 20 of 100. Train loss: 19.7, Test Loss: 52.0
+Generation 30 of 100. Train loss: 22.0, Test Loss: 45.8
+Generation 40 of 100. Train loss: 17.0, Test Loss: 53.8
+Generation 50 of 100. Train loss: 21.9, Test Loss: 44.4
+Generation 60 of 100. Train loss: 23.2, Test Loss: 46.7
+Generation 70 of 100. Train loss: 20.1, Test Loss: 49.0
+Generation 80 of 100. Train loss: 15.9, Test Loss: 50.9
+Generation 90 of 100. Train loss: 18.5, Test Loss: 47.5
+Generation 100 of 100. Train loss: 20.6, Test Loss: 54.9
+'''
 ```
 
 
