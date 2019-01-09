@@ -13,6 +13,27 @@ typora-root-url: /Users/shephexd/Documents/github/pages/
 
 
 
+2018 Pycon Korea에서 뱅크샐러드가 주최한 "텍사스 홀덤" 알고리즘 대회가 있었습니다.
+
+마감전까지 시간내에 동작하는 로직 구현을 하지못해서 참여는 못하였지만, 고민하는 과정이 의미있었습니다.
+
+해당 알고리즘에서 계산 한것은 아래와 같습니다.
+
+- 이길 확률
+- 내 패의 강함
+- 상대 패의 강함
+- 배팅 비율
+
+
+
+P.S. 구현은 해두고 시간 제한이 걸려서 이벤트를 참석하지 않았습니다. 서버에서 1초 내에 구현 되는 2번째 로직으로 제출을 했는데, 노트북에서는 시간이 더걸리더군요… 이후 3번째 로직은 노트북에서 동작하도록 마감 이후에 변경하였습니다.
+
+
+
+<!--more-->
+
+
+
 ## 게임 소개
 
 규칙은 텍사스 홀덤과 유사합니다.
@@ -40,15 +61,13 @@ typora-root-url: /Users/shephexd/Documents/github/pages/
 
 
 
-<!--more-->
-
-
-
 ## 알고리즘 구현
 
 
 
-1. 항상 배팅
+### 항상 배팅
+
+
 
 기본제공되는 알고리즘으로 항상 배팅 하는 알고리즘입니다.
 
@@ -58,7 +77,7 @@ typora-root-url: /Users/shephexd/Documents/github/pages/
 
 
 
-```
+```python
 def always_bet(
     my_chips: int,
     my_cards: List[Card],
@@ -79,9 +98,7 @@ def always_bet(
 
 
 
-\2. 카드 EHS 알고리즘을 이용한 배팅
-
-제가 제출한 알고리즘이였는데, 서버에서 시간이 1초내에 나왔지만, 노트북에서 1초내에 나오도록 최적화를 하지 못하여… 이벤트를 참석하지 않았습니다.
+### 카드 EHS 알고리즘을 이용한 배팅
 
 
 
@@ -107,7 +124,13 @@ def always_bet(
 
 
 
-```
+> 대회 이후에 구현한 알고리즘으로 서버에서 테스트시 1초내에 동작하였습니다. 
+>
+> 경우의 수를 너무 많이 고려하여, 노트북에서는 제한시간 내에 동작하지 못하였습니다.
+
+
+
+```python
 import itertools
 from typing import List
 from .player import Other
@@ -239,9 +262,9 @@ def bet(
 
 
 
-3. 카드 스코어 기법을 이용한 배팅
+### 카드 스코어 기법을 이용한 배팅
 
-대회 이후에 구현한 알고리즘으로 노트북에서 1초내에 동작합니다.
+
 
 배팅 로직은 (내 카드와 커뮤니티 카드의 조합) - 커뮤니티 카드의 조합 > cutoff 인경우 에 따라 배팅하고, 그 차액과 phase별 weight만 계산합니다.
 
@@ -251,7 +274,11 @@ def bet(
 
 
 
-```
+> 대회 이후에 구현한 알고리즘으로 노트북에서 1초내에 동작합니다.
+
+
+
+```python
 import itertools
 from collections import defaultdict
 from typing import List
@@ -310,7 +337,7 @@ def bet(
             my_bet_candi = phase_weight[current_phase] * my_strength / 10
             my_bet_basic = min_bet_amt * phase_weight[current_phase] * 100
             my_bet = int(max(my_bet_basic, my_bet_candi))
-            #print(current_phase, my_bet, my_bet_candi)
+
             return my_bet
         elif my_strength < 20 and current_phase > 3:
             return 0
@@ -321,5 +348,3 @@ def bet(
 ```
 
 
-
-P.S. 구현은 해두고 이벤트를 참석하지 않았습니다. 서버에서 1초 내에 구현 되는 2번째 로직으로 제출을 했는데, 노트북에서는 시간이 더걸리더군요…
