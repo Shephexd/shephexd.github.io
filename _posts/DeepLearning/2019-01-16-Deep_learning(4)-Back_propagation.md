@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep learning(3) - Back propagation
+title: Deep learning(4) - Back propagation
 published: True
 categories:
 - Deep learning
@@ -105,7 +105,7 @@ $$
 f(x_0,x_1) = x_0^2+x_1^2
 $$
 
-![x^2+y^2](/Users/shephexd/Documents/github/pages/assets/post_images/DeepLearning/x%5E2+y%5E2.png)
+![x^2+y^2](/assets/post_images/DeepLearning/x%5E2+y%5E2.png)
 
 
 
@@ -191,7 +191,7 @@ plt.show()
 
 
 
-![gradient_sample](/Users/shephexd/Documents/github/pages/assets/post_images/DeepLearning/gradient_sample.png)
+![gradient_sample](/assets/post_images/DeepLearning/gradient_sample.png)
 
 
 
@@ -235,7 +235,7 @@ The chain rule is an essential idea for back-propagation.
 
 
 
-![Softmax with loss](/Users/shephexd/Documents/github/pages/assets/post_images/DeepLearning/softmax_with_loss.png)
+![Softmax with loss](/assets/post_images/DeepLearning/softmax_with_loss.png)
 
 
 
@@ -283,7 +283,7 @@ We want to find the the value to get derivatie value $\frac{dL}{dx}$ for gradien
 
 
 
-![Back propagation](/Users/shephexd/Documents/github/pages/assets/post_images/DeepLearning/backprop.png)
+![Back propagation](/assets/post_images/DeepLearning/backprop.png)
 
 
 
