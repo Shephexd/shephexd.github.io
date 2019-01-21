@@ -323,7 +323,7 @@ $$
 
 
 
-[^1]:	https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning[Coursera]"
+[^1]:	https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning specialization"
 
 [^2]: http://cs231n.stanford.edu/	"Stanford CS231n"
 

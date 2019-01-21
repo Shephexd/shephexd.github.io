@@ -189,6 +189,6 @@ for thinking computer a computer has the `equation` if the input value is enough
 
 
 
-[^1]: https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning[Coursera]"
+[^1]: https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning specialization"
 [^2]: http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/	"wild ml blog"
 

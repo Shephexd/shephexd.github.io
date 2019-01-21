@@ -474,5 +474,5 @@ It make rebrand the name to `Deep learning`
 
 
 
-[^1]: https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning[Coursera]"****
+[^1]: https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning specialization"
 [^2]: book 밑바닥부터 시작하는 딥러닝,한빛미디어, 2017
