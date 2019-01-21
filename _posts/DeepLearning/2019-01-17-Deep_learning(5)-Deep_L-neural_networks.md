@@ -181,6 +181,7 @@ $$
 ### Builing blocks of deep neural network
 
 
+
 $$
 \begin{align}
 & Layer : W^{[l]}, b^{[l]} \\
@@ -209,10 +210,11 @@ $$
 ### Forward propagation
 
 
+
 $$
 \begin{align}
-&Input: a^{[l-1]} \\
-&Ouput: a^{[l]}, cache(z^{[l]}) \\
+& Input: a^{[l-1]} \\
+& Ouput: a^{[l]}, cache(z^{[l]}) \\
 & Z^{[l]} = W^{[l]} \cdot a^{[l-1]} + b^{[l]} \\
 & a^{[l]} = g^{[l]}(z^{[l]})
 \end{align}
@@ -223,6 +225,7 @@ $$
 ### Backward propagation
 
 
+
 $$
 \begin{align}
 &Input: da^{[l]} \\
@@ -230,7 +233,7 @@ $$
 & dZ^{[l]} = da^{[l]} * g'^{[l](z^{[l]})}\\
 & dW^{[l]} = dZ^{[l]} \cdot a^{[l-1]} \\
 & db^{[l]} = dZ^{[l]} \\
-& da^{[l-1]} = W^{{[l]}^{T}} \cdot dZ^{[l]}
+& da^{[l-1]} = W^{[l]^{T}} \cdot dZ^{[l]}
 \end{align}
 $$
 
