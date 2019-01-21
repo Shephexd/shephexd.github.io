@@ -15,7 +15,7 @@ typora-root-url: /Users/shephexd/Documents/github/pages/
 
 
 
-In the previous post, the topic is about the how neural networks work. In this post,  i will introduce the way to learn the neural network. Some text and figure in the post is from the book[^book]
+In the previous post, the topic is about the how neural networks work. In this post,  i will introduce the way to learn the neural network. Some text and figure in the post is from the book[^2]
 
 In learning process, we will compute the `cost function`.
 
@@ -464,4 +464,7 @@ It make rebrand the name to `Deep learning`
 
 
 
-[^book]: 밑바닥부터 시작하는 딥러닝,한빛미디어, 2017
+
+
+[^1]: https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning[Coursera]"****
+[^2]: book 밑바닥부터 시작하는 딥러닝,한빛미디어, 2017

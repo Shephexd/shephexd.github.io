@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep learning(6) - Practica aspect of Deep learning
+title: Deep learning(6) - Practical aspect of Deep learning
 published: True
 categories:
 - Deep learning
@@ -319,6 +319,7 @@ $$
 
 
 
-[Coursera]:	https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning[Coursera]"
+[^1]:	https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning[Coursera]"
 
-[CS231n]: http://cs231n.stanford.edu/	"Stanford CS231n"
+[^2]: http://cs231n.stanford.edu/	"Stanford CS231n"
+

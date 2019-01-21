@@ -366,3 +366,11 @@ for i in range(0,len(x),batch_size):
 ```
 
 
+
+
+
+
+
+
+
+[^1]: https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning[Coursera]"

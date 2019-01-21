@@ -23,7 +23,7 @@ People use the brain to think something. If computer can imitate the human's bra
 
 
 
-This post is based on the [video lecture](https://www.coursera.org/specializations/deep-learning) and [wildml post](http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/)
+This post is based on the video lecture[^1] and wildml[^2]
 
 
 
@@ -182,4 +182,13 @@ for thinking computer a computer has the `equation` if the input value is enough
 > synapse = activation function  
 >
 > signals = input values
+
+
+
+
+
+
+
+[^1]: https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning[Coursera]"
+[^2]: http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/	"wild ml blog"
 
