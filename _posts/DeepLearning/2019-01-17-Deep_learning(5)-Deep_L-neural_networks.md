@@ -21,11 +21,13 @@ In this post, we will study about the different types of neural network with lay
 
 The simple meaning of deep neural network is the neural network with many hidden layers.
 
-> Actually, Deep learning doesn't mean just deeper neural networks.
-
 
 
 <!--more-->
+
+> Actually, Deep learning doesn't mean just deeper neural networks.
+
+
 
 
 
@@ -148,8 +150,8 @@ $$
 
 
 $$
-z^{[l]} = W^{[l]} a^{[l-1]} + b^{[l]} \\
-a^{[l]} = g^{[l]}(z^{[l]})
+z^{[\ell]} = W^{[\ell]} a^{[\ell-1]} + b^{[\ell]} \\
+a^{[\ell]} = g^{[\ell]}(z^{[\ell]})
 $$
 
 
@@ -169,31 +171,53 @@ $$
 
 $$
 \begin{align}
-& z^{[l]}= W^{[l]} \cdot X + b^{[l]}\\
+& z^{[\ell]}= W^{[\ell]} \cdot X + b^{[\ell]}\\
 & (3, 1) = (3, 2) \times (2, 1) + (3, 1)
 \end{align}
 $$
 
 
+$$
+\begin{align}
+& W^{[1]}:& (n^{[1]}, n^{[2]}) \\
+& W^{[2]}:& (n^{[2]}, n^{[1]}) \\
+& \vdots \\
+& W^{[\ell]}:& (n^{[\ell]}, n^{[\ell-1]}) \\
+\\
+& X:& (n^{[\ell - 1]}, 1) \\
+& dW^{[\ell]}: & (n^{[\ell]}, n^{[\ell - 1]}) \\
+& db: & (n^{[\ell]}, 1) \\
+& \hat{y}:& (n^{[l]}, 1)
+\end{align}
+$$
 
 
 
-### Builing blocks of deep neural network
+
+### Building blocks of deep neural network
 
 
 
 $$
 \begin{align}
-& Layer : W^{[l]}, b^{[l]} \\
-& Forward : a^{[l-1]} (Input),\ a^{[l]}(Output) \\
-& Z^{[l]} = W^{[l]} \cdot a^{[l-1]} + b^{[l]} \\
-& cache: Z^{[l]}\\
+& Layer\ \ell : W^{[\ell]}, b^{[\ell]} \\
+& Forward : a^{[\ell-1]} (Input),\ a^{[\ell]}(Output) \\
+& Z^{[\ell]} = W^{[\ell]} \cdot a^{[\ell-1]} + b^{[\ell]} \\
+& cache: Z^{[\ell]}\\
 \\
-& Backward : da^{[l]} (Input),\ da^{[l-1]}(Output) \\
-& cache: Z^{[l]}, dw^{[l]}, db^{[l]}
+& Backward : da^{[\ell]} (Input),\ da^{[\ell-1]}(Output) \\
+& cache: Z^{[\ell]}, dw^{[\ell]}, db^{[\ell]}
 \end{align}
 $$
 
+
+
+$$
+\begin{align}
+&X & W1 && W2& &W3 & & \rightarrow &&\hat{y}\\
+&(N, M) & (M, 50) && (50, 100) & & (100, 1) & & && (N, 1)
+\end{align}
+$$
 
 
 
@@ -213,10 +237,10 @@ $$
 
 $$
 \begin{align}
-& Input: a^{[l-1]} \\
-& Ouput: a^{[l]}, cache(z^{[l]}) \\
-& Z^{[l]} = W^{[l]} \cdot a^{[l-1]} + b^{[l]} \\
-& a^{[l]} = g^{[l]}(z^{[l]})
+& Input: a^{[\ell-1]} \\
+& Ouput: a^{[\ell]}, cache(z^{[\ell]}) \\
+& Z^{[\ell]} = W^{[\ell]} \cdot a^{[\ell-1]} + b^{[\ell]} \\
+& a^{[\ell]} = g^{[\ell]}(z^{[\ell]})
 \end{align}
 $$
 
@@ -228,12 +252,12 @@ $$
 
 $$
 \begin{align}
-&Input: da^{[l]} \\
-&Ouput: da^{[l-1]}, dW^{[l]}, db^{[l]} \\
-& dZ^{[l]} = da^{[l]} * g'^{[l](z^{[l]})}\\
-& dW^{[l]} = dZ^{[l]} \cdot a^{[l-1]} \\
-& db^{[l]} = dZ^{[l]} \\
-& da^{[l-1]} = W^{[l]^{T}} \cdot dZ^{[l]}
+&Input: da^{[\ell]} \\
+&Ouput: da^{[\ell-1]}, dW^{[\ell]}, db^{[\ell]} \\
+& dZ^{[\ell]} = da^{[\ell]} * g'^{[\ell](z^{[\ell]})}\\
+& dW^{[\ell]} = dZ^{[\ell]} \cdot a^{[\ell-1]} \\
+& db^{[\ell]} = dZ^{[\ell]} \\
+& da^{[\ell-1]} = W^{[\ell]^{T}} \cdot dZ^{[\ell]}
 \end{align}
 $$
 
