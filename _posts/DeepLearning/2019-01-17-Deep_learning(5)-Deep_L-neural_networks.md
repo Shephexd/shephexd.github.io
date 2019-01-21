@@ -220,9 +220,6 @@ $$
 
 
 
-
-
-
 ### Backward propagation
 
 
@@ -236,5 +233,4 @@ $$
 & da^{[l-1]} = W^{{[l]}^{T}} \cdot dZ^{[l]}
 \end{align}
 $$
-
 
