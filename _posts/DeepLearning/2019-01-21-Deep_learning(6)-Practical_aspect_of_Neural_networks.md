@@ -19,11 +19,15 @@ We've studied about the process of traning models. How to train and test our mod
 
 How do we evaluate our model after training?
 
-In this post, let's see the way of training and testing to imporve your model performance as you expect.
+In this post, let's see the way of training and testing to improve your model performance as you expect.
+
+
 
 
 
 <!--more-->
+
+> This post is based on the video lecture[^1] and the lecture note[^2]
 
 
 

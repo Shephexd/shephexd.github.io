@@ -21,13 +21,13 @@ Then how to make the thinking machine?
 
 People use the brain to think something. If computer can imitate the human's brain, Can computer think like human?
 
-
+<!--more-->
 
 This post is based on the video lecture[^1] and wildml[^2]
 
 
 
-<!--more-->
+
 
 
 

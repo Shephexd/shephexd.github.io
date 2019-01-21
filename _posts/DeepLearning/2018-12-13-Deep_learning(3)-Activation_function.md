@@ -29,6 +29,12 @@ This post is about the activation function and why we need it.
 
 <!--more-->
 
+> This post is based on the video lecture[^1]
+
+
+
+
+
 
 
 

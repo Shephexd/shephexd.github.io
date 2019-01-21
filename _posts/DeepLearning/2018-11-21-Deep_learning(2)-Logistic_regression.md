@@ -21,9 +21,13 @@ I already posted about the `Logistic regression` on my post for `Machine learnin
 
 To remind, I will explain more detail of `Logistic regression`.
 
-
-
 <!--more-->
+
+> This post is based on the video lecture[^1]
+
+
+
+
 
 
 

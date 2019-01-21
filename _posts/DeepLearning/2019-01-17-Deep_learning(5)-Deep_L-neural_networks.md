@@ -25,9 +25,15 @@ The simple meaning of deep neural network is the neural network with many hidden
 
 <!--more-->
 
+
+
 > Actually, Deep learning doesn't mean just deeper neural networks.
 
 
+
+
+
+> This post is based on the video lecture[^1]
 
 
 

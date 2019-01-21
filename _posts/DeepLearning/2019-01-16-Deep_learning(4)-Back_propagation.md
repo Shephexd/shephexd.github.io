@@ -15,11 +15,19 @@ typora-root-url: /Users/shephexd/Documents/github/pages/
 
 
 
-In the previous post, the topic is about the how neural networks work. In this post,  i will introduce the way to learn the neural network. Some text and figure in the post is from the book[^2]
+In the previous post, the topic is about the how neural networks work. In this post,  i will introduce the way to learn the neural network.
 
 In learning process, we will compute the `cost function`.
 
+
+
 <!--more-->
+
+> This post is based on the video lecture[^1] and the book[^2]
+
+
+
+
 
 
 
