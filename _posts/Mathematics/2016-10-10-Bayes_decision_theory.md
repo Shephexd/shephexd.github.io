@@ -25,10 +25,12 @@ Bayes' theorem describes the probability of event, based on prior knowledge of c
 
 One of the widely used application of Bayes' rule is Bayesian inference, a particular approach to statistical inference.
 
+
+
 ### Bayesian' theorem
-$$ 
+$$
 \begin{align}
-P(A \vert X)& = \frac{P(B \vert A)P(A)}{P(X)}  \\
+P(A \vert X)& = \frac{P(X \vert A)P(A)}{P(X)}  \\
 & \propto P(X \vert A) P(A) \\
 \end{align}\\
 \text{where $A$ and $X$ are events and $P(X) \neq 0$}
@@ -38,9 +40,12 @@ $$
 - $P(X)$ is the posteriori probability
 
 
+
 ### example for throwing a coin
 
-```python% matplotlib inline
+
+
+```python
 from IPython.core.pylabtools import figsize
 import numpy as np
 from matplotlib import pyplot as plt
@@ -77,6 +82,9 @@ plt.tight_layout()
 ```
 
 
+
+
+
 ## Probability distribution function
 
 Probability distribution function is depend of the type of random variable.
@@ -91,7 +99,9 @@ $Z$ is mixed type
 : The random value can be selected from the discrete type and exponential type distribution.
 
 
+
 ### discrete case
+
 if the random variable $Z$ is discrete, the distribution is called *Probability mass function*.
 
 The most useful probability mass function is *Poisson-distribution*.
@@ -109,7 +119,10 @@ Z \sim \text{Poi($\lambda$)}\\
 E[Z \vert \lambda] = \lambda
 $$
 
+
+
 ### Continuous case
+
 If the random variable $Z$ with a parameter $\lambda$ follows exponential distribution, $Z$ is *exponential*.
 
 
@@ -119,9 +132,8 @@ If the random variable $Z$ with a parameter $\lambda$ follows exponential distri
 
 #### The Bayesian classification rule
 
-
 $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$  
-where $A$ and $B$ are events and $P(B) \neq 0$
+where $A$ and $B$ are events and $P(B) \neq 0​$
 
 
 
@@ -241,6 +253,8 @@ If\ p(x|w_1) \> p(x|w_2),\ decide\ w_1
 \\ otherwise,\ decide\ w_2
 \\
 $$
+
+
 
 ## Multiclass Bayesian Classification
 
