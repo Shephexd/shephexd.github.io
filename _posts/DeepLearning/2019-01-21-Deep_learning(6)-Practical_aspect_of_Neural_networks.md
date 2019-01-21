@@ -185,8 +185,6 @@ $$
 
 #### Dropout
 
-
-
 Intution: *Can't rely on any one feature, so have to spread out weights*
 
 
@@ -208,12 +206,6 @@ But, you should not use dropout **on test and validation process**.
 
 
 ## Tips for training
-
-
-
-### Data augmentation
-
-
 
 
 
@@ -253,7 +245,7 @@ Normalization is one of preprocessing technique to make the data in similar rang
 
 ## Debugging
 
-
+When you want to verify the calculation is right, debugging is necessary.
 
 
 
