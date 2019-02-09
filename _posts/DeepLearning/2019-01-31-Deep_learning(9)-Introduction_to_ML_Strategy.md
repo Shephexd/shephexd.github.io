@@ -72,6 +72,9 @@ Assuming that there are three controllable parameters,$p_1, p_2, p_3$, for tunin
 
 Before adapting debugging ideas, You should think about the latent problems your model might have.
 
+Step by step is helpful to solve one problem by tuning one parameter.
+
+
 
 $$
 \begin{CD}
@@ -90,7 +93,7 @@ $$
 $$
 
 
-Step by step is helpful to solve one problem by tuning one parameter.
+
 
 
 
@@ -112,7 +115,7 @@ How can we evaluate our model performance?
 
 
 
-examples recognized what % actuallyara cats.
+examples recognized what $\%$ actually are right.
 
 
 $$
@@ -135,7 +138,7 @@ $$
 
 #### F1-Score
 
-Average of $P$ and $R$.
+Average of $Prcision$ and $Recall$.
 
 
 $$
