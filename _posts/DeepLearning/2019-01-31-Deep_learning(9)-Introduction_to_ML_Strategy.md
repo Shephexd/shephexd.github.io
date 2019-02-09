@@ -76,24 +76,8 @@ Step by step is helpful to solve one problem by tuning one parameter.
 
 
 
-$$
-\begin{CD}
-\text{Fit training set well on cost function} @>{\text{Underfitted?}}>> 
-\text{Higher network, Use Adam }\\
-@VVV @. \\
-\text{Fit dev set well on cost function} @>{\text{Overfitted?}}>> 
-\text{Regularization}\\
-@VVV @. \\
-\text{Fit test set well on cost function} @>{\text{generalized?}}>> 
-\text{Bigger dev set}\\
-@VVV @. \\
-\text{Perform well in real world} @>{\text{Is mis-matched data set?}}>> 
-\text{Change dev set or cost function}\\
-\end{CD}
-$$
 
-
-
+![ChainOfAssumptionForDebugging](/assets/post_images/DeepLearning/DL_debugging.png)
 
 
 
