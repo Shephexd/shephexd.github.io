@@ -360,6 +360,7 @@ $$
 
  
 
-### python code with tensorflow
+## Implementation with Tensorflow
 
  <script src="https://gist.github.com/Shephexd/0d00f3b4d9aff9f0a9d1b425b3a3c100.js?file=logistic.py"></script>
+
