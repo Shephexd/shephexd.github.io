@@ -125,3 +125,23 @@ The difference from other algorithms is Neural network can have multiple layers.
 
 I wrote down about the detail how neural network can be trained on my [post](http;//http://shephexd.github.io/deep%20learning/2017/06/10/Deep_learning-Learning.html) for deep learning.
 
+
+
+## Implementation with Tensorflow
+
+
+### Perceptron
+
+ <script src="https://gist.github.com/Shephexd/0d00f3b4d9aff9f0a9d1b425b3a3c100.js?file=perception.py"></script>
+
+
+### Neural Network
+
+
+ <script src="https://gist.github.com/Shephexd/0d00f3b4d9aff9f0a9d1b425b3a3c100.js?file=NN.py"></script>
+
+
+### Neural Network for MNIST
+
+ <script src="https://gist.github.com/Shephexd/0d00f3b4d9aff9f0a9d1b425b3a3c100.js?file=DNN_MNIST.py"></script>
+

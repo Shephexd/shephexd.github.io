@@ -12,20 +12,9 @@ typora-root-url: /Users/shephexd/Dropbox/github/pages/
 
 
 
-Visual Studio Code를 이용하여 C++코드를 작성하고, 디버깅 하는 방법을 정리해보고자 한다.
+OS X에서 Visual Studio Code를 이용하여 C++코드를 작성하고, 디버깅 하는 방법을 정리해보고자 한다.
 
-
-
-실행 환경
-
-- Mac OS Mojave
-- LLDB
-
-
-
-설치는 [공식 사이트](https://code.visualstudio.com/?wt.mc_id=DX_841432) 에서 쉽게 설치 가능하다.
-
-
+[공식 사이트](https://code.visualstudio.com/?wt.mc_id=DX_841432) 에서 다운로드 후 설치 가능하다.
 
 
 
@@ -40,6 +29,13 @@ Visual Studio Code를 이용하여 C++코드를 작성하고, 디버깅 하는 �
 ## 환경 설정
 
 Visual Studio Code에서 디버깅을 하기 위해서는 아래의 3가지가 필요하다.
+
+
+
+### 실행 환경
+
+- Mac OS Mojave
+- LLDB
 
 
 
@@ -230,4 +226,3 @@ OSX에서 LLDB로 디버깅시 아래와 같은 현상이 발생한다.
 
 
 이 후, `automake` 등 빌드툴로 구성된 프로젝트의 디버깅 환경 구성을 정리해보고자 한다.
-
