@@ -55,7 +55,7 @@ VS extensions에서 C++ 확장자 파일을 작성시, Recommendation으로 나�
 
 
 
-![스크린샷 2019-02-10 16.41.47](/assets/post_images/Development/vs_code_cpp_extensions.png)
+![c++확장프로그램](/assets/post_images/Development/vs_code_cpp_extensions.png)
 
 
 
@@ -156,9 +156,6 @@ VS extensions에서 C++ 확장자 파일을 작성시, Recommendation으로 나�
 
 ```json
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
 
@@ -207,7 +204,7 @@ int main(){
 
 
 
-![image-20190210172604630](/assets/post_images/Development/vs_code_cpp_debugging.png)
+![디버깅 화면](/assets/post_images/Development/vs_code_cpp_debugging.png)
 
 
 
@@ -232,4 +229,5 @@ OSX에서 LLDB로 디버깅시 아래와 같은 현상이 발생한다.
 
 
 
-이 후, `automake` 등 빌드 툴로 구성된 오픈소스에서의 디버깅 환경 구성을 정리해보고자 한다.
+이 후, `automake` 등 빌드툴로 구성된 프로젝트의 디버깅 환경 구성을 정리해보고자 한다.
+
