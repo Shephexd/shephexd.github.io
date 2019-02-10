@@ -26,16 +26,17 @@ OS X에서 Visual Studio Code를 이용하여 C++코드를 작성하고, 디버�
 
 
 
-## 환경 설정
-
-Visual Studio Code에서 디버깅을 하기 위해서는 아래의 3가지가 필요하다.
-
-
-
-### 실행 환경
+## 실행 환경
 
 - Mac OS Mojave
 - LLDB
+- Visual Studio Code
+
+
+
+## 환경 설정
+
+Visual Studio Code에서 디버깅을 하기 위해서는 아래의 3가지가 필요하다.
 
 
 
