@@ -385,6 +385,6 @@ for i in range(10):
 
 
 
-[^1]: https://ko.wikipedia.org/wiki/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EC%9D%B4%EB%A1%A0
+[^1]: https://ko.wikipedia.org/wiki/포트폴리오_이론
 [^2]: https://medium.com/python-data/effient-frontier-in-python-34b0c3043314
 
