@@ -99,18 +99,23 @@ This idea is similar to `convolution`.
 - $f$ is $3 \times 3$ filter.
 - $\hat X$ is $4 \times 4$
 
+
 $$
 X * f = \hat X
 $$
+
+
 
 The equation to get the result of convolution.
 $$
 (n \times n ) * (f \times f) = (n-f+1) \times (n-f+1)
 $$
-disadvantages
+
+
+### disadvantages
 
 - Shrinking output
-- Throw away info from edge
+- Throw away information from edge
 
 
 
@@ -421,5 +426,5 @@ print(time.time() - check_time)
 
 
 
-[^1 ]: https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning	"Deep learning specialization"
+[^1]: https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning
 [^2]: http://cs231n.github.io/convolutional-networks/
