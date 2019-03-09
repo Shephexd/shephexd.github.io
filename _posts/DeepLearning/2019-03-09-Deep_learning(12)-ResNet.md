@@ -119,7 +119,7 @@ a^{[l+2]} &= g(z^{[l+2]} + a^{[l]})\\
 \\
 &\text{If $w^{[l+2]}=0, b^{[l+1]}=0$ and $g$ is ReLU,}
 \\
-&= g(\cancelto{0}{w^{[l+2]}}\cdot a^{[l+1]} + \cancel{b^{[l+1]}} + a^{[l]}) \\
+&= g(\cancelto{0}{w^{[l+2]}}\cdot a^{[l+1]} + \cancelto{0}{b^{[l+1]}} + a^{[l]}) \\
 &= g(a^{[l]}) \\
 & = a^{[l]}
 
