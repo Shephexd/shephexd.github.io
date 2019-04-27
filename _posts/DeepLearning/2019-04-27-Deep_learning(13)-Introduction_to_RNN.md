@@ -73,7 +73,7 @@ Let's see the equation of RNN to see the detail.
 
 
 
-![unfolding_rnn](/assets/post_images/DeepLearning/nn_vs_rnn.png)
+![unfolding_rnn](/assets/post_images/DeepLearning/unfolding_rnn.png)
 
 
 $$
