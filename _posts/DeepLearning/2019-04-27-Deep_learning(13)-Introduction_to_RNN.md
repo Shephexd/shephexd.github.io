@@ -69,6 +69,18 @@ There are two main differences between `Neural network` and `Recurrent neural ne
 
 ## Concept of RNN
 
+The idea of Recurrent Neural Network is the sequence of output can be defined by previous output and sequence input.
+
+Like the image below, a folded node will work recurrently by delivering its output to itself.
+
+And In the unfolded version, the inputs of current node are the output of previous node and the sequence input, $x_t$.
+
+
+
+![unfolding_rnn](/assets/post_images/DeepLearning/unfolding_rnn.png)
+
+
+
 Let's see the equation of RNN to see the detail.
 
 
@@ -107,10 +119,6 @@ x^{<t>}
 & \hat y^{<t>} = g(W_{ya} \cdot a^{<t>} + b_y)
 \end{align}
 $$
-
-
-
-![unfolding_rnn](/assets/post_images/DeepLearning/unfolding_rnn.png)
 
 
 
