@@ -73,8 +73,6 @@ Let's see the equation of RNN to see the detail.
 
 
 
-![unfolding_rnn](/assets/post_images/DeepLearning/unfolding_rnn.png)
-
 
 $$
 \begin{align}
@@ -111,6 +109,11 @@ x^{<t>}
 $$
 
 
+
+![unfolding_rnn](/assets/post_images/DeepLearning/unfolding_rnn.png)
+
+
+
 ### Weights
 
 - $W_{aa}$ is the shared weights for next node.
@@ -120,8 +123,8 @@ $$
 
 ### Output
 
-- In $a^{<t>} = g(W_{aa}a^{<t-1>} + W_{ax}x^{<t>} + b_a)$, $g()$ is $tanh$ or $ReLU$ commonly.
-- In $\hat y^{<t>} = g(W_{ya}a^{<t>} + b_y)$, $g()$ is sigmoid or softmax (depending on the label)
+- In $a^{<t>}$, $g()$ is tanh or ReLU commonly.
+- In $\hat y^{<t>}$, $g()$ is sigmoid or softmax (depending on the label)
 
 
 
