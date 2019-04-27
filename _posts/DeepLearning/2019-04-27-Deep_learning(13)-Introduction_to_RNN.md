@@ -123,8 +123,8 @@ $$
 
 ### Output
 
-- In $a^{<t>}$, $g()$ is tanh or ReLU commonly.
-- In $\hat y^{<t>}$, $g()$ is sigmoid or softmax (depending on the label)
+- In $a$, $g()$ is tanh or ReLU commonly.
+- In $\hat y$, $g()$ is sigmoid or softmax (depending on the label)
 
 
 
