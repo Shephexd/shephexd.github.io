@@ -66,7 +66,7 @@ The idea of residual block is creating shortcut(skip connection) to make shallow
 
 
 
-![neural_block](/assets/post_images/DeepLearning/residual_block.PNG)
+![residual_block](/assets/post_images/DeepLearning/residual_block.PNG)
 
 
 $$
@@ -108,9 +108,11 @@ $$
 
 
 
+When we use `ReLU` as activation function of neural network, $a^{[l]} \ge 0$ 
 
-When we use `ReLU` as activation function of neural network, $a^{[l]} \ge 0​$ 
+
 $$
+\require{cancel}
 \begin{align}
 a^{[l+2]} &= g(z^{[l+2]} + a^{[l]})\\
 &= g(w^{[l+2]}\cdot a^{[l+1]} + b^{[l+1]} + a^{[l]}) \\
@@ -125,7 +127,8 @@ a^{[l+2]} &= g(z^{[l+2]} + a^{[l]})\\
 $$
 
 
-Like the above equation, even the weight of two added layers is zero, the skip connection from layer $l$ to layer $l+2​$ will work as Identity function.
+
+Like the above equation, even the weight of two added layers is zero, the skip connection from layer $l$ to layer $l+2$ will be trained as an Identity function.
 
 
 
@@ -157,7 +160,7 @@ $$
 
 
 
-![neural_block](/assets/post_images/DeepLearning/resnet.PNG)
+![ResNet](/assets/post_images/DeepLearning/resnet.PNG)
 
 
 
