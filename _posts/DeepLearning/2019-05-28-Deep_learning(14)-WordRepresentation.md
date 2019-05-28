@@ -256,7 +256,7 @@ Before explaining word2vec for multiple context words, let's see the detail for 
 
 
 
-####  Forward propagation
+###  Forward propagation
 
 
 
@@ -284,11 +284,11 @@ $$
 
 
 
-#### Backwoard propagation
+### Backwoard propagation
 
 
 
-##### Define loss function for derivation
+#### Define loss function for derivation
 
 
 
@@ -304,7 +304,7 @@ $$
 
 
 
-##### Update $W^\prime$
+#### Update $W^\prime$
 
 
 
@@ -316,9 +316,9 @@ $$
 	0  &\text{otherwise} \\
 	\end{cases}\\
 \\
-&\frac{\part E}{\part u_j} = y_j - t_j := e_j\\
+&\frac{\partial E}{\partial u_j} = y_j - t_j := e_j\\
 \\
-& \frac{\part E}{\part w^\prime_{ij}} = \frac{\part E}{\part u_j} \cdot \frac{\part u_j}{\part w^\prime_{ij}} = e_j \cdot h_i \\
+& \frac{\partial E}{\partial w^\prime_{ij}} = \frac{\partial E}{\partial u_j} \cdot \frac{\partial u_j}{\partial w^\prime_{ij}} = e_j \cdot h_i \\
 \\
 & {w^\prime_{ij}}^{(new)} =  {w^\prime_{ij}}^{(old)} - \eta \cdot e_j \cdot h_{(i,:)} \\
 &or \\
@@ -329,16 +329,16 @@ $$
 
 
 
-##### Update $W$
+#### Update $W$
 
 
 
 $$
 \begin{align}
-& \frac{\part E}{\part h_i} = \sum_{j=1}^V \frac{\part E}{\part u_j} \cdot \frac{\part u_j}{\part h_i}= \sum_{j=1}^V e_j \cdot w_{ij}^\prime := EH_i \\
-& \frac{\part E}{\part w_{ki}} = \frac{\part E}{\part h_i} \cdot \frac{\part h_i}{\part w_{ki}} = EH_i \cdot x_k\\
+& \frac{\partial E}{\partial h_i} = \sum_{j=1}^V \frac{\partial E}{\partial u_j} \cdot \frac{\partial u_j}{\partial h_i}= \sum_{j=1}^V e_j \cdot w_{ij}^\prime := EH_i \\
+& \frac{\partial E}{\partial w_{ki}} = \frac{\partial E}{\partial h_i} \cdot \frac{\partial h_i}{\partial w_{ki}} = EH_i \cdot x_k\\
 
-& \frac{\part E}{\part W} = x \otimes EH = x \cdot EH^T \\
+& \frac{\partial E}{\partial W} = x \otimes EH = x \cdot EH^T \\
 & v^{(new)}_{w_I} = v^{(old)}_{w_I} - \eta EH^T
 \end{align}
 $$
