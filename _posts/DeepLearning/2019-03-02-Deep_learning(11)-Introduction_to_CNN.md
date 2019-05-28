@@ -195,6 +195,10 @@ When output is updated after fooling
 
 Get the max value in the filter and stride iteratively.
 
+- filter size: $2 \times 2$
+- stride: 2
+
+
 
 
 $$
@@ -217,6 +221,8 @@ $$
 
 Get the average value in the filter and stride iteratively.
 
+- filter size: $2 \times 2$
+- stride: 2
 
 
 $$
