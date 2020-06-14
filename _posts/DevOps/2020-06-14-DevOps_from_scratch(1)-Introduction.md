@@ -1,13 +1,16 @@
 ---
 layout: post
-published: True
 title: 밑바닥부터 시작하는 DevOps 생존기(1) - Introduction
+published: True
 categories:
 - Server
-  tags:
+tags:
 - Development
 - DevOps
+- CI/CD
 ---
+
+
 
 배포 프로세스는 개발 환경 혹은 로컬 환경에서 개발을 진행한 후, 테스트 결과에 이상이 없으면 서비스 서버에 코드에 반영합니다.
 여기서 중요한 문제는 *"로컬에서 개발한 소스코드를 각 서버에 어떻게 적용시킬까?"* 입니다
