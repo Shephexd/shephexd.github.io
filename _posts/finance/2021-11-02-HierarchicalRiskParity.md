@@ -105,7 +105,7 @@ $$
 
 
 
-![quansi-dialg](/assets/post_images/2021-11-02-hrp/quansi-diag.png)
+![quansi-dialg](/assets/post_images/hrp/quansi-diag.png)
 
 
 
