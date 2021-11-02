@@ -85,7 +85,10 @@ $$
 
 
 
-**example**
+
+
+#### example
+
 $$
 \left\{\rho_{i, j}\right\}=\left[\begin{array}{ccc}
 1 & .7 & .2 \\
@@ -97,6 +100,7 @@ $$
 .6325 & .7746 & 0
 \end{array}\right]
 $$
+
 
 
 ### 2. Diagonalization
