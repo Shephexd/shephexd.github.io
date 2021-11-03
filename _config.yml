@@ -10,12 +10,12 @@ title: "SHEPHEXD"
 email: shephexd@gmail.com
 #blog logo
 # blog cover
-cover: "/assets/images/blog_cover.jpg"
+cover: "/assets/images/cover.jpg"
 
 name: 'Taekyung Han'
 author: 'Taekyung Han'
 author_image: "/assets/images/author.jpg"
-logo_image: "/assets/images/sheep_logo_black.jpg"
+logo_image: "/assets/images/logo.jpg"
 
 paginate: 8
 collections:
