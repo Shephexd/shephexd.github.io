@@ -77,7 +77,7 @@ Step by step is helpful to solve one problem by tuning one parameter.
 
 
 
-![ChainOfAssumptionForDebugging](/assets/post_images/DeepLearning/DL_debugging.png)
+![ChainOfAssumptionForDebugging](/assets/images/articles/DeepLearning/DL_debugging.png)
 
 
 
@@ -91,7 +91,7 @@ How can we evaluate our model performance?
 
 
 
-![evaluation_metric](/assets/post_images/DeepLearning/evaluation_metric.png)
+![evaluation_metric](/assets/images/articles/DeepLearning/evaluation_metric.png)
 
 
 

@@ -52,7 +52,7 @@ VS extensions에서 C++ 확장자 파일을 작성시, Recommendation으로 나�
 
 
 
-![c++확장프로그램](/assets/post_images/Development/vs_code_cpp_extensions.png)
+![c++확장프로그램](/assets/images/articles/Development/vs_code_cpp_extensions.png)
 
 
 
@@ -201,7 +201,7 @@ int main(){
 
 
 
-![디버깅 화면](/assets/post_images/Development/vs_code_cpp_debugging.png)
+![디버깅 화면](/assets/images/articles/Development/vs_code_cpp_debugging.png)
 
 
 

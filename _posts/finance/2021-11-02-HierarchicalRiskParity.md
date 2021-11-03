@@ -109,7 +109,7 @@ $$
 
 
 
-![quansi-dialg](/assets/post_images/hrp/quansi-diag.png)
+![quansi-dialg](/assets/images/articles/hrp/quansi-diag.png)
 
 
 

@@ -458,7 +458,7 @@ Generation 100 of 100. Train loss: 20.6, Test Loss: 54.9
 
 
 
-![tensorboard_sample](/assets/post_images/tensorflow/tensorboard_sample.png)
+![tensorboard_sample](/assets/images/articles/tensorflow/tensorboard_sample.png)
 
 
 

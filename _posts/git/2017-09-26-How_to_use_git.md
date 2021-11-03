@@ -23,7 +23,7 @@ Git는 분산 처리 버젼관리 시스템으로 개발자가 소스코드를 �
 
 
 
-![](/assets/post_images/git/gitflow.png)
+![](/assets/images/articles/git/gitflow.png)
 
 
 
@@ -186,7 +186,7 @@ git commit -m "initialize project"
 
 
 
-![](/assets/post_images/git/gitflow_with_text.png)
+![](/assets/images/articles/git/gitflow_with_text.png)
 
 
 

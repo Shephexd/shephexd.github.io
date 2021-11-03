@@ -33,7 +33,7 @@ Normalizing inputs can speed up learning.
 
 
 
-![normalize_input](/assets/post_images/DeepLearning/normalize_input.jpeg)
+![normalize_input](/assets/images/articles/DeepLearning/normalize_input.jpeg)
 
 
 
@@ -102,7 +102,7 @@ $$
 
 
 
-![2_neural_network](/assets/post_images/DeepLearning/2_neural_network.PNG)
+![2_neural_network](/assets/images/articles/DeepLearning/2_neural_network.PNG)
 
 $$
 \begin{align}

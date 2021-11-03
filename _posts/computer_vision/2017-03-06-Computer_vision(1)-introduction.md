@@ -117,7 +117,7 @@ You can think ${^A\xi_B}$ as a motion it move $A$ to $B$.
 
   
 
-![](/assets/post_images/cv/muti_coordinate.jpg)
+![](/assets/images/articles/cv/muti_coordinate.jpg)
 
 - *world frame,* ${O}$
 - *robot frame,* $R$
@@ -166,7 +166,7 @@ pose = position + orientation
 
 $\{B\}=\{^AR_B,\ ^AP_{BORG}\}$
 
-![](/assets/post_images/cv/coordinate_mapping.jpg)
+![](/assets/images/articles/cv/coordinate_mapping.jpg)
 
 $^AP=\ ^AR_{B}{^BP} +\ ^AP_{BORG}$
 
@@ -250,7 +250,7 @@ $$
 
 ### Coordination transformation
 
-![](/assets/post_images/cv/transform_ex.jpg)
+![](/assets/images/articles/cv/transform_ex.jpg)
 
 
 

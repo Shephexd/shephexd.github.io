@@ -41,7 +41,7 @@ a^{[l]} \rightarrow Linear \rightarrow ReLU \xrightarrow{a^{[l+1]}} Linear \righ
 $$
 
 
-![neural_block](/assets/post_images/DeepLearning/neural_block.PNG)
+![neural_block](/assets/images/articles/DeepLearning/neural_block.PNG)
 
 
 
@@ -66,7 +66,7 @@ The idea of residual block is creating shortcut(skip connection) to make shallow
 
 
 
-![residual_block](/assets/post_images/DeepLearning/residual_block.PNG)
+![residual_block](/assets/images/articles/DeepLearning/residual_block.PNG)
 
 
 $$
@@ -160,7 +160,7 @@ $$
 
 
 
-![ResNet](/assets/post_images/DeepLearning/resnet.PNG)
+![ResNet](/assets/images/articles/DeepLearning/resnet.PNG)
 
 
 

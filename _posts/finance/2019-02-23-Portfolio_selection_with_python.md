@@ -53,7 +53,7 @@ typora-root-url: /Users/shephexd/Documents/github/pages/
 
 
 
-![efficient_frontier](/assets/post_images/finance/efficient_frontier.jpeg)
+![efficient_frontier](/assets/images/articles/finance/efficient_frontier.jpeg)
 
 
 
@@ -338,7 +338,7 @@ for i in range(10):
 
 
 
-![efficient_frontier_1](/assets/post_images/finance/efficient_frontier_1.png)
+![efficient_frontier_1](/assets/images/articles/finance/efficient_frontier_1.png)
 
 
 
