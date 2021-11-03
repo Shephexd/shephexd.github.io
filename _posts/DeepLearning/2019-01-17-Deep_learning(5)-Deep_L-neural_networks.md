@@ -49,7 +49,7 @@ Let's see the kinds of neural networks from the simplest one to deeper.
 
 
 
-![logistic_regression](/assets/post_images/DeepLearning/logistic_regression.png)
+![logistic_regression](/assets/images/articles/DeepLearning/logistic_regression.png)
 
 
 
@@ -79,7 +79,7 @@ $$
 
 
 
-![neural-network](/assets/post_images/DeepLearning/neural-network.png)
+![neural-network](/assets/images/articles/DeepLearning/neural-network.png)
 
 
 $$
@@ -138,7 +138,7 @@ $$
 
 
 
-![2_neural_network](/assets/post_images/DeepLearning/2_neural_network.PNG)
+![2_neural_network](/assets/images/articles/DeepLearning/2_neural_network.PNG)
 
 
 
@@ -148,7 +148,7 @@ $$
 
 
 
-![5_neural_network](/assets/post_images/DeepLearning/5_neural_network.png)
+![5_neural_network](/assets/images/articles/DeepLearning/5_neural_network.png)
 
 
 

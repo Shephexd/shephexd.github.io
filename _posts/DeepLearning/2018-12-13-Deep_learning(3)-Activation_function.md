@@ -64,7 +64,7 @@ $$
 
 
 
-![step_function](/assets/post_images/DeepLearning/step_function.png)
+![step_function](/assets/images/articles/DeepLearning/step_function.png)
 
 ```python
 def step_function(x):
@@ -91,7 +91,7 @@ $$
 
 
 
-![sigmoid](/assets/post_images/DeepLearning/sigmoid.png)
+![sigmoid](/assets/images/articles/DeepLearning/sigmoid.png)
 
 ```python
 def sigmoid(x):
@@ -119,7 +119,7 @@ $$
 
 
 
-![relu](/assets/post_images/DeepLearning/relu.png)
+![relu](/assets/images/articles/DeepLearning/relu.png)
 
 
 

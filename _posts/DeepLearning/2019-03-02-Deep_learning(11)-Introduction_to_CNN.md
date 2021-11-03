@@ -53,7 +53,7 @@ Let’s see `CNN` that is one of powerful models in image classification. The id
 
 
 
-![CNN_example](/assets/post_images/DeepLearning/CNN_example.png)
+![CNN_example](/assets/images/articles/DeepLearning/CNN_example.png)
 
 
 
@@ -276,7 +276,7 @@ $$
 $$
 
 
-![CNN_flow](/assets/post_images/DeepLearning/CNN_flow.png)
+![CNN_flow](/assets/images/articles/DeepLearning/CNN_flow.png)
 
 
 

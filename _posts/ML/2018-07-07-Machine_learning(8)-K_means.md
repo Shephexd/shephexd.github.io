@@ -198,5 +198,5 @@ for step in range(250):
 
 
 
-![k-means result](/assets/post_images/ML/kmeans_result.png)
+![k-means result](/assets/images/articles/ML/kmeans_result.png)
 

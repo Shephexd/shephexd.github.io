@@ -61,7 +61,7 @@ There are two main differences between `Neural network` and `Recurrent neural ne
 
 
 
-![nn_vs_rnn](/assets/post_images/DeepLearning/nn_vs_rnn.png)
+![nn_vs_rnn](/assets/images/articles/DeepLearning/nn_vs_rnn.png)
 
 
 
@@ -77,7 +77,7 @@ And In the unfolded version, the inputs of current node are the output of previo
 
 
 
-![unfolding_rnn](/assets/post_images/DeepLearning/unfolding_rnn.png)
+![unfolding_rnn](/assets/images/articles/DeepLearning/unfolding_rnn.png)
 
 
 

@@ -115,7 +115,7 @@ If your dev and test set is from users using your app, the distribution is misma
 
 
 
-![bias_variance](/assets/post_images/DeepLearning/bias_variance.png)
+![bias_variance](/assets/images/articles/DeepLearning/bias_variance.png)
 
 
 
@@ -193,7 +193,7 @@ Intution: *Can't rely on any one feature, so have to spread out weights*
 
 
 
-![dropout](/assets/post_images/DeepLearning/dropout.png)
+![dropout](/assets/images/articles/DeepLearning/dropout.png)
 
 
 
@@ -234,7 +234,7 @@ Normalization is one of preprocessing technique to make the data in similar rang
 
 
 
-![prepro1](/assets/post_images/DeepLearning/prepro1.jpeg)
+![prepro1](/assets/images/articles/DeepLearning/prepro1.jpeg)
 
 
 

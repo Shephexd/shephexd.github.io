@@ -163,7 +163,7 @@ But if we know our cost is 100 by the computation of the cost function, $J = w_1
 
 drawing the graph for our cost function give us some insight.
 
-![x^2+y^2](/assets/post_images/DeepLearning/x%5E2+y%5E2.png)
+![x^2+y^2](/assets/images/articles/DeepLearning/x%5E2+y%5E2.png)
 
 
 
@@ -198,7 +198,7 @@ plt.show()
 
 
 
-![gradient_sample](/assets/post_images/DeepLearning/gradient_sample.png)
+![gradient_sample](/assets/images/articles/DeepLearning/gradient_sample.png)
 
 
 

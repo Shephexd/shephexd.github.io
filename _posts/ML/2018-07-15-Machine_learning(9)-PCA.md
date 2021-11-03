@@ -74,7 +74,7 @@ In `PCA`, the goal is to minimize the `projection error`.
 
 
 
-![PCA vs linear regression](/assets/post_images/ML/pca_and_linear_regression.png)
+![PCA vs linear regression](/assets/images/articles/ML/pca_and_linear_regression.png)
 
 
 

@@ -83,7 +83,7 @@ $$
 
 
 
-![batch_vs_mini_batch_gradient](/assets/post_images/DeepLearning/batch_vs_mini_batch_gradient.png)
+![batch_vs_mini_batch_gradient](/assets/images/articles/DeepLearning/batch_vs_mini_batch_gradient.png)
 
 
 
@@ -143,7 +143,7 @@ minibatch = m: Batch gradient Descent
 
 
 
-![sgd_vs_mini_batch](/assets/post_images/DeepLearning/sgd_vs_mini_batch.png)
+![sgd_vs_mini_batch](/assets/images/articles/DeepLearning/sgd_vs_mini_batch.png)
 
 
 
@@ -161,7 +161,7 @@ Let’s see the examples of the temperature of London.
 
 
 
-![temperature_in_london](/assets/post_images/DeepLearning/temperature_in_london.PNG)
+![temperature_in_london](/assets/images/articles/DeepLearning/temperature_in_london.PNG)
 
 
 
@@ -216,7 +216,7 @@ With proper $\beta$, we can get proper trend of our samples.
 
 
 
-![exponentially_weighted_average](/assets/post_images/DeepLearning/exponentially_weighted_average.PNG)
+![exponentially_weighted_average](/assets/images/articles/DeepLearning/exponentially_weighted_average.PNG)
 
 
 
@@ -262,7 +262,7 @@ Gradient descent with momentum will work faster than normal gradient descent.
 
 
 
-![gradient_example](/assets/post_images/DeepLearning/gradient_example.PNG)
+![gradient_example](/assets/images/articles/DeepLearning/gradient_example.PNG)
 
 
 
@@ -438,7 +438,7 @@ Normally, It will be converged at local optima. Because deep neural network mode
 
 
 
-![local_optima](/assets/post_images/DeepLearning/local_optima.PNG)
+![local_optima](/assets/images/articles/DeepLearning/local_optima.PNG)
 
 
 

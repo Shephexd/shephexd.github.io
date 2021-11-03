@@ -132,9 +132,9 @@ $$
 
 ### Cost (logistic vs SVM)
 
-![logit_vs_cost0](/assets/post_images/ML/logit_vs_svm_0.png)
+![logit_vs_cost0](/assets/images/articles/ML/logit_vs_svm_0.png)
 
-![logit_vs_cost1](/assets/post_images/ML/logit_vs_svm_1.png)
+![logit_vs_cost1](/assets/images/articles/ML/logit_vs_svm_1.png)
 
 
 
@@ -242,7 +242,7 @@ In the cost function of `SVM`, we want to minimize $ \left\lVert \theta \right\r
 
 
 
-![SVM_hyperplanes](/assets/post_images/ML/svm_max_sep_hyperplane_with_margin.png)
+![SVM_hyperplanes](/assets/images/articles/ML/svm_max_sep_hyperplane_with_margin.png)
 
 
 

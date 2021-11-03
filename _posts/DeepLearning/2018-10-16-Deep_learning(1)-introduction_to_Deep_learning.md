@@ -175,7 +175,7 @@ for thinking computer a computer has the `equation` if the input value is enough
 
 
 
-![neural-network](/assets/post_images/DeepLearning/neural-network.png)
+![neural-network](/assets/images/articles/DeepLearning/neural-network.png)
 
 
 

@@ -35,7 +35,7 @@ the brain is primarily composed of neurons connected to each other. Each neuron 
 
 Researchers researching neural network want to solve the complex problem by adapting this neural system.
 
-![neural-network](/assets/post_images/DeepLearning/neural-network.png)
+![neural-network](/assets/images/articles/DeepLearning/neural-network.png)
 
 
 
