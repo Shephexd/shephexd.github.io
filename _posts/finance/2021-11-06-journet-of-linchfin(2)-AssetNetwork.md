@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AssetNetwork
+title: Journey of LinchFin(2) - AssetNetwork
 published: True
 categories:
 - Finance
@@ -9,12 +9,10 @@ tags:
 - Finance
 - Python
 - Neo4j
-
-
 ---
 
-I suggest a way to represent the asset's relation called, asset network, based on the graph theory.
 
+I suggest a way to represent the asset's relation called, asset network, based on the graph theory.
 
 
 <!--more-->
