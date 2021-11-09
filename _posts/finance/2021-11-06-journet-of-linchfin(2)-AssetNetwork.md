@@ -11,7 +11,7 @@ tags:
 - Neo4j
 ---
 
-
+What is the best way to represent the relations of assets?
 I suggest a way to represent the asset's relation called, asset network, based on the graph theory.
 
 
@@ -20,9 +20,7 @@ I suggest a way to represent the asset's relation called, asset network, based o
 
 
 ## What is AssetNetwork
-
-What is the best way to represent the relations of assets? 
-
+ 
 I suggest a way to represent the asset's relation based on the Probabilistic Graphical Models, called `AssetNetwork`. 
 
 Assuming that each asset has asset class and sub class to classify its category. `Asset A` can be belonging to asset `class C`. 
