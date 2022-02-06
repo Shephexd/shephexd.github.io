@@ -1,22 +1,18 @@
 ---
 layout: post
-title: Storage
+title: 스토리지란?
 published: True
 Categories:
 - Infra
 Tags:
 - Infra
 - Storages
-
+typora-root-url: ../../
 ---
 
 인프라에서 저장소의 역할을 담당하는 스토리지의 개념에 대해서 정리하였습니다. 인프라 관련 도서[^1] 및 위키피디아를 참고하여 작성하였습니다.
 
-
-
 <!--more-->
-
-[TOC]
 
 
 
@@ -79,9 +75,7 @@ RAID는 주로 미러링과 스트라이핑의 조합 및 수준에 따라 레�
 
 
 
-![](../../assets/images/articles/440px-Data_striping_example.svg.png)
-
-
+![striping](/assets/images/articles/440px-Data_striping_example.svg.png)
 
 
 
