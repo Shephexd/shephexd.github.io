@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shephexd.github.io/sitemap.xml
